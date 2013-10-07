@@ -1,7 +1,7 @@
 all: Benchmarks/sc13-benchmarks-application-info.csv
-	make -c Haskell cabal
-	make -c Haskell
-	make -c Snap
+	make -C Haskell cabal
+	make -C Haskell
+	make -C Snap
 	cp Snap/examples/community/community Bin/
 
 Benchmarks/sc13-benchmarks-application-info.csv: Benchmarks/sc13-benchmarks-application.tgz
