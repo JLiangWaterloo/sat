@@ -9,6 +9,7 @@ cabal:
 	cabal install containers
 	cabal install MonadRandom
 	cabal install monad-supply
+	cabal install text
 
 Average: Average.hs
 	ghc $(OPT) Average.hs
