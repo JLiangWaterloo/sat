@@ -18,7 +18,7 @@ Output: A dimacs file after performing boolean constraint propagation (unit reso
 
 ##### Haskell/Cmty \<vars> \<clauses> \<cmtys> \<q>
 Input: Arguments.
-Output: A dimacs file with \<vars> variables, \<clauses> clauses, and \<cmtys> communities. The strength of these communities is configured by \<q>, a value between 0 and 1. The higher the \<q>, the stronger the community.
+Output: A random dimacs file with \<vars> variables, \<clauses> clauses, and \<cmtys> communities. The strength of these communities is configured by \<q>, a value between 0 and 1. The higher the \<q>, the stronger the community.
 
 ##### Haskell/Graph \<clause or variable>
 Input: Arguments.
