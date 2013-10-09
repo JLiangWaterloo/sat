@@ -60,4 +60,4 @@ pid=$!
 sfdp -Tpng output/graph.dot -o output/communityGraph.png
 
 stop_progress $pid
-xdg-open output/communityGraph.ps
+xdg-open output/communityGraph.png
