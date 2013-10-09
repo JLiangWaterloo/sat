@@ -1,0 +1,63 @@
+###########################
+##   Graph Communities   ##
+###########################
+
+function progress_bar {
+	while true
+	do
+		echo -ne "."
+		sleep 2
+	done
+}
+
+function stop_progress {
+	exec 2>/dev/null
+	kill $1
+	echo -en "\n"
+}
+
+echo "------ Community Grapher ------"
+path="$1"
+mkdir -p output
+
+if [ -z "$path" ]; then
+	echo "Please enter number of variables:"
+	read vars
+	echo "Please enter number of clauses:"
+	read clauses
+	echo "Please enter number of communities:"
+	read cmtys
+	echo "Please enter quality of communities:"
+	read q
+
+	echo -n "Generating dimacs file"
+	progress_bar &
+	pid=$!
+	
+	Haskell/Cmty $vars $clauses $cmtys $q > output/community.dimacs
+	path="output/community.dimacs"
+	
+	stop_progress $pid
+fi
+
+echo "Please enter clause to indicate that clauses are nodes and variables are vertices or variable for the opposite:"
+read isClauseNodes
+
+echo -n "Generating Graph Information"
+progress_bar &
+pid=$!
+
+# Populate community
+cat $path | Haskell/GraphViz $isClauseNodes > output/graph.dot
+stop_progress $pid
+
+echo -n "Waiting on GraphViz"
+progress_bar &
+pid=$!
+
+# Graph
+#gnuplot -persist GnuplotScripts/graph.gnu
+sfdp -Tps output/graph.dot -o output/communityGraph.ps
+
+stop_progress $pid
+xdg-open output/communityGraph.ps
