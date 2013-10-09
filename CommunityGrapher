@@ -57,7 +57,7 @@ pid=$!
 
 # Graph
 #gnuplot -persist GnuplotScripts/graph.gnu
-sfdp -Tps output/graph.dot -o output/communityGraph.ps
+sfdp -Tpng output/graph.dot -o output/communityGraph.ps
 
 stop_progress $pid
 xdg-open output/communityGraph.ps
