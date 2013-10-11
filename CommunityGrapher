@@ -16,6 +16,12 @@ function stop_progress {
 	echo -en "\n"
 }
 
+function parseToGraphVizFormat {
+	sed -i -e 's/ / -> /g' $1
+	sed -i '1idigraph community { \n edge[dir=none] \n node[shape=point]' $1
+	echo "}" >> $1
+}
+
 echo "------ Community Grapher ------"
 path="$1"
 mkdir -p output
@@ -48,7 +54,11 @@ progress_bar &
 pid=$!
 
 # Populate community
-cat $path | Haskell/GraphViz $isClauseNodes > output/graph.dot
+cat $path | Haskell/Bcp | Haskell/Graph $isClauseNodes > output/graph.dot
+cat output/graph.dot | Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot
+parseToGraphVizFormat output/graph.dot
+parseToGraphVizFormat output/communityMapping.dot
+
 stop_progress $pid
 
 echo -n "Waiting on GraphViz"
@@ -57,6 +67,7 @@ pid=$!
 
 # Graph
 #gnuplot -persist GnuplotScripts/graph.gnu
+sfdp -Tpng output/communityMapping.dot -o output/communityMappingGraph.png
 sfdp -Tpng output/graph.dot -o output/communityGraph.png
 
 stop_progress $pid
