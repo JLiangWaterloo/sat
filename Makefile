@@ -4,6 +4,7 @@ all: Benchmarks/sc13-benchmarks-application-info.csv
 	make -C Snap
 	mkdir -p Bin
 	cp Snap/examples/community/community Bin/
+	chmod +x Community
 
 Benchmarks/sc13-benchmarks-application-info.csv: Benchmarks/sc13-benchmarks-application.tgz
 	tar -C Benchmarks -xvzf Benchmarks/sc13-benchmarks-application.tgz

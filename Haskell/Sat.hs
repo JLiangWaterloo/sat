@@ -29,7 +29,7 @@ nClauses :: Sat -> Int
 nClauses = length
 
 nVars :: Sat -> Int
-nVars = maximum . map abs . concat
+nVars = foldl max 0 . map abs . concat
 
 isHorn :: Clause -> Bool
 isHorn c = count isPos c <= 1
@@ -42,6 +42,14 @@ isHornOrAntiHorn c = isHorn c || isAntiHorn c
 
 isAtLeastNeg :: Clause -> Bool
 isAtLeastNeg c = count isNeg c >= 1
+
+is1Sat :: Clause -> Bool
+is1Sat [_] = True
+is1Sat _ = False
+
+is2Sat :: Clause -> Bool
+is2Sat [_, _] = True
+is2Sat _ = False
 
 isComplementary :: Clause -> Bool
 isComplementary (x:xs) = -x `elem` xs || isComplementary xs
