@@ -44,6 +44,13 @@ Input: A dimacs file (optional).
 
 Output: Two GraphViz graphs which show the mapping of clauses or variables as chosen and the mapping of either to their community respectively. If no file was given, the script will prompt to user to enter the desired number of variables, clauses, communities, and quality of communities. They will both have to then choose to either represent nodes as clauses and edges as variables or vice versa.
 
+##### PlotCommunityAnalysis
+Requires: GnuPlot
+
+Input: Will be prompted for the number of variables, clauses, and communities.
+
+Output: A plot of the performance of MiniSAT while varying Q from 0 to 1 by increments of 0.01.
+
 Example
 -------
 ```bash

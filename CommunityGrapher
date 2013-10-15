@@ -17,9 +17,9 @@ function stop_progress {
 }
 
 function parseToGraphVizFormat {
-	sed -i -e 's/ / -> /g' $1
-	sed -i '1idigraph community { \n edge[dir=none] \n node[shape=point]' $1
-	echo "}" >> $1
+	sed -i -e 's/ / -> /g' "$1"
+	sed -i '1idigraph community { \n edge[dir=none, color=blue] \n node[shape=point, color=red]' "$1"
+	echo "}" >> "$1"
 }
 
 echo "------ Community Grapher ------"
@@ -66,7 +66,6 @@ progress_bar &
 pid=$!
 
 # Graph
-#gnuplot -persist GnuplotScripts/graph.gnu
 sfdp -Tpng output/communityMapping.dot -o output/communityMappingGraph.png
 sfdp -Tpng output/graph.dot -o output/communityGraph.png
 
