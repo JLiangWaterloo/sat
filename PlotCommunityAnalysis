@@ -46,12 +46,14 @@ pid=$!
 for (( i=0; i<=100; i++ ))
 do
 	Haskell/CmtyWithInteger $vars $clauses $cmtys $i > output/minisatData.dimacs
-	cat output/minisatData.dimacs | ./CommunityOutputOnlyModularity >> output/plotData.txt
-	echo -n " " >> output/plotData.txt
-	./minisat/minisat output/minisatData.dimacs >> output/plotData.txt
-	echo "" >> output/plotData.txt
+	cat output/minisatData.dimacs | ./CommunityOutputOnlyModularity >> output/tmpData.txt
+	echo -n " " >> output/tmpData.txt
+	./minisat/minisat output/minisatData.dimacs >> output/tmpData.txt
+	echo "" >> output/tmpData.txt
 done
 stop_progress $pid
 
 # Plot data
+sort -n +0 -1 output/tmpData.txt > output/plotData.txt
+rm output/tmpData.txt
 gnuplot -persist GnuplotScripts/graph.gnu
