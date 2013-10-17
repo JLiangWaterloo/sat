@@ -1,21 +1,6 @@
 #######################################
 ##   Plot Graph Community Analysis   ##
 #######################################
-
-function progress_bar {
-	while true
-	do
-		echo -ne "."
-		sleep 2
-	done
-}
-
-function stop_progress {
-	exec 2>/dev/null
-	kill $1
-	echo -en "\n"
-}
-
 echo "------ Plot of Community Quality Impact on MiniSAT ------"
 mkdir -p output
 
@@ -40,18 +25,15 @@ read cmtys
 cat /dev/null > output/plotData.txt
 
 # Loop through 100 iterations
-echo -n "Generating Plot Data"
-progress_bar &
-pid=$!
 for (( i=0; i<=100; i++ ))
 do
+  echo -ne "\rGenerating Plot Data $i/100"
 	Haskell/CmtyWithInteger $vars $clauses $cmtys $i > output/minisatData.dimacs
 	cat output/minisatData.dimacs | ./CommunityOutputOnlyModularity >> output/tmpData.txt
 	echo -n " " >> output/tmpData.txt
 	./minisat/minisat output/minisatData.dimacs >> output/tmpData.txt
 	echo "" >> output/tmpData.txt
 done
-stop_progress $pid
 
 # Plot data
 sort -n +0 -1 output/tmpData.txt > output/plotData.txt
