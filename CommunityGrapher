@@ -16,12 +16,6 @@ function stop_progress {
 	echo -en "\n"
 }
 
-function parseToGraphVizFormat {
-	sed -i -e 's/ / -> /g' "$1"
-	sed -i '1idigraph community { \n edge[dir=none, color=blue] \n node[shape=point, color=red]' "$1"
-	echo "}" >> "$1"
-}
-
 echo "------ Community Grapher ------"
 path="$1"
 mkdir -p output
@@ -48,6 +42,8 @@ fi
 
 echo "Please enter clause to indicate that clauses are nodes and variables are vertices or variable for the opposite:"
 read isClauseNodes
+echo "Do you want to generate the graph slowly but with more detail? (Y/n)"
+read detail
 
 echo -n "Generating Graph Information"
 progress_bar &
@@ -56,8 +52,7 @@ pid=$!
 # Populate community
 cat $path | Haskell/Bcp | Haskell/Graph $isClauseNodes > output/graph.dot
 cat output/graph.dot | Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot
-parseToGraphVizFormat output/graph.dot
-parseToGraphVizFormat output/communityMapping.dot
+./graphHelper.rb
 
 stop_progress $pid
 
@@ -66,8 +61,11 @@ progress_bar &
 pid=$!
 
 # Graph
-sfdp -Tpng output/communityMapping.dot -o output/communityMappingGraph.png
-sfdp -Tpng output/graph.dot -o output/communityGraph.png
+if [ $detail == "Y" ]; then
+  dot -Tsvg output/communitySubGraphs.dot -o output/communityGraph.svg
+else
+  sfdp -Tsvg output/communitySubGraphs.dot -o output/communityGraph.svg
+fi
 
 stop_progress $pid
-xdg-open output/communityGraph.png
+xdg-open output/communityGraph.svg

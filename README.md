@@ -38,11 +38,11 @@ Input: A dimacs file.
 Output: 6 lines of statistics about the dimacs: # of nodes, # of communities, # network modularity, size of the largest community, size of the average community, the number of communities that are larger than average.
 
 ##### CommunityGrapher
-Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x86_64/graphviz_2.34.0-1~raring_amd64.deb)
+Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x86_64/graphviz_2.34.0-1~raring_amd64.deb) and Ruby
 
 Input: A dimacs file (optional).
 
-Output: Two GraphViz graphs which show the mapping of clauses or variables as chosen and the mapping of either to their community respectively. If no file was given, the script will prompt to user to enter the desired number of variables, clauses, communities, and quality of communities. They will both have to then choose to either represent nodes as clauses and edges as variables or vice versa.
+Output: Two GraphViz graphs which show the mapping of clauses or variables as chosen and the mapping of either to their community respectively. If no file was given, the script will prompt to user to enter the desired number of variables, clauses, communities, and quality of communities. They will both have to then choose to either represent nodes as clauses and edges as variables or vice versa. Will also have to choose to either build a detailed version of graph which uses a lot more time or not.
 
 ##### PlotCommunityAnalysis
 Requires: GnuPlot
