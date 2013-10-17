@@ -4,4 +4,5 @@ set title "Plot of Modularity vs CPU Time"
 set title  offset character 0, 0, 0 font ",20" norotate
 set xlabel "Modularity"
 set ylabel "CPU Time(s)"
+set yrange [0:1]
 plot "output/plotData.txt" using 1:2 with lines
