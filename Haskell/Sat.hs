@@ -31,6 +31,10 @@ nClauses = length
 nVars :: Sat -> Int
 nVars = foldl max 0 . map abs . concat
 
+-- Takes into account gaps int the variable numbering.
+nVarsReal :: Sat -> Int
+nVarsReal = Set.size . Set.fromList . map abs . concat
+
 isHorn :: Clause -> Bool
 isHorn c = count isPos c <= 1
 
