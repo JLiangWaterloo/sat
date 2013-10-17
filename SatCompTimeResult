@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+grep $(md5sum "$1" | cut -d' ' -f1) Benchmarks/times.csv | cut -d',' -f26
