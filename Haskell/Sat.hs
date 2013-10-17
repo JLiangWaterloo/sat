@@ -67,6 +67,13 @@ isNeg :: Lit -> Bool
 isNeg 0 = undefined
 isNeg x = x < 0
 
+varsWithSameSign :: Sat -> [Int]
+varsWithSameSign s =
+    [l | l <- Set.toList lits, (-l) `Set.notMember` lits]
+    where
+        lits = Set.fromList $ concat s
+        
+
 bcp :: [Clause] -> [Clause]
 bcp = map Set.toList . bcp' . map Set.fromList
 
