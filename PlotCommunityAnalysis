@@ -1,0 +1,41 @@
+#######################################
+##   Plot Graph Community Analysis   ##
+#######################################
+echo "------ Plot of Community Quality Impact on MiniSAT ------"
+mkdir -p output
+
+# Check to see if minisat has been built or not
+if [ ! -f /minisat/minisat ]; then
+	cd minisat
+	export MROOT=$PWD
+	cd simp
+	make rs
+	cp minisat_static ../minisat
+	cd ../..
+fi
+
+echo "Please enter number of variables:"
+read vars
+echo "Please enter number of clauses:"
+read clauses
+echo "Please enter number of communities:"
+read cmtys
+
+# Create new file to store data indicate
+cat /dev/null > output/plotData.txt
+
+# Loop through 100 iterations
+for (( i=0; i<=100; i++ ))
+do
+  echo -ne "\rGenerating Plot Data $i/100"
+	Haskell/CmtyWithInteger $vars $clauses $cmtys $i > output/minisatData.dimacs
+	cat output/minisatData.dimacs | ./CommunityOutputOnlyModularity >> output/tmpData.txt
+	echo -n " " >> output/tmpData.txt
+	./minisat/minisat output/minisatData.dimacs >> output/tmpData.txt
+	echo "" >> output/tmpData.txt
+done
+
+# Plot data
+sort -n +0 -1 output/tmpData.txt > output/plotData.txt
+rm output/tmpData.txt
+gnuplot -persist GnuplotScripts/graph.gnu
