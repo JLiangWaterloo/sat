@@ -1,4 +1,4 @@
-all: Benchmarks/sc13-benchmarks-application-info.csv
+all: Benchmarks/sc13-benchmarks-application-info.csv Benchmarks/times.csv
 	make -C Haskell cabal
 	make -C Haskell
 	make -C Snap
@@ -12,3 +12,6 @@ Benchmarks/sc13-benchmarks-application-info.csv: Benchmarks/sc13-benchmarks-appl
 
 Benchmarks/sc13-benchmarks-application.tgz:
 	wget -P Benchmarks http://www.satcompetition.org/2013/files/sc13-benchmarks-application.tgz
+
+Benchmarks/times.csv:
+	wget -O Benchmarks/times.csv http://edacc4.informatik.uni-ulm.de/SC13/experiment/19/results/full-csv
