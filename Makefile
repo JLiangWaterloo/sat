@@ -1,6 +1,8 @@
-all: Benchmarks/sc13-benchmarks-application-info.csv Benchmarks/times.csv
+all: Benchmarks/sc13-benchmarks-application-info.csv Benchmarks/times.csv Bin/community
 	make -C Haskell cabal
 	make -C Haskell
+
+Bin/community:
 	make -C Snap
 	mkdir -p Bin
 	cp Snap/examples/community/community Bin/
