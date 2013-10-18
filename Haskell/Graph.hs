@@ -31,7 +31,7 @@ graphLiteral s =
     where
         mapClause :: Clause -> [(Int, Int)]
         mapClause c = pairs c
-        excludedMiddles s = [(x, -x) | x <- nubSet $ map abs $ concat s]
+        excludedMiddles m = [(x, -x) | x <- nubSet $ map abs $ concat m]
 
 graphClause :: Sat -> [(Int, Int)]
 graphClause s =

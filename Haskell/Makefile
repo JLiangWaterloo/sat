@@ -1,6 +1,6 @@
 OPT = -Wall -O2
 
-all: Average Bcp Cmty Cnf Graph Group Horn HornCount Maximum Minimum Shuffle Subgroup Transpose
+all: Average Bcp Cmty Cnf Graph Group Horn HornCount Maximum Minimum Pure Shuffle Subgroup Transpose
 
 cabal:
 	cabal update
@@ -41,6 +41,9 @@ Maximum: Maximum.hs
 Minimum: Minimum.hs
 	ghc $(OPT) Minimum.hs
 
+Pure: Pure.hs
+	ghc $(OPT) Pure.hs
+
 Shuffle: Shuffle.hs Sat.hs
 	ghc $(OPT) Shuffle.hs
 
@@ -51,4 +54,4 @@ Transpose: Transpose.hs Sat.hs
 	ghc $(OPT) Transpose.hs
 
 clean:
-	rm *.o *.hi Average Bcp Cmty Cnf Graph Group Horn HornCount Maximum Minimum Shuffle Subgroup Transpose
+	rm *.o *.hi Average Bcp Cmty Cnf Graph Group Horn HornCount Maximum Minimum Pure Shuffle Subgroup Transpose

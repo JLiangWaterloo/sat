@@ -92,7 +92,23 @@ bcp' s =
             | isComplementary $ Set.toList c = Nothing
             | not $ Set.null $ units `Set.intersection` c = Nothing
             | otherwise                                   = Just $ c `Set.difference` negUnits
-    
+
+pureBcp :: [Clause] -> [Clause] 
+pureBcp = map Set.toList . pureBcp' . map Set.fromList
+            
+pureBcp' :: [Set Lit] -> [Set Lit]
+pureBcp' s =
+    if null unitClauses && null pures then s else unitClauses ++ pureBcp' (mapMaybe unitPropagate clauses)
+    where
+        (unitClauses, clauses) = partition ((== 1) . Set.size) s
+        lits = Set.unions s
+        pures = [l | l <- Set.toList lits, (-l) `Set.notMember` lits]
+        units = Set.fromList $ map (Set.elemAt 0) unitClauses ++ pures
+        negUnits = Set.map negate units
+        unitPropagate c
+            | isComplementary $ Set.toList c = Nothing
+            | not $ Set.null $ units `Set.intersection` c = Nothing
+            | otherwise                                   = Just $ c `Set.difference` negUnits
 
 parseDimacs :: String -> Sat
 parseDimacs = map (map read . init) . dropWhile ((== "p") . head) . dropWhile ((== "c") . head) . filter (not . null) . map words . lines
