@@ -22,10 +22,10 @@ Input: Arguments.
 
 Output: A random dimacs file with \<vars> variables, \<clauses> clauses, and \<cmtys> communities. The strength of these communities is configured by \<q>, a value between 0 and 1. The higher the \<q>, the stronger the community.
 
-##### Haskell/Graph \<clause or variable>
+##### Haskell/Graph \<clause or variable or literal>
 Input: Arguments.
 
-Output: A graph in a format that is parsable by the SNAP library. If the argument is "clause" then clauses are nodes and variables edges. If the argument is "variable" then variables are nodes and claues are edges.
+Output: A graph in a format that is parsable by the SNAP library. If the argument is "clause" then clauses are nodes and variables edges. If the argument is "variable" then variables are nodes and clauses are edges. If the argument is "literal" then literals are nodes and clauses are edges, with the addition that there is an extra edge between every positive and negative literals with the same variable.
 
 ##### Haskell/Shuffle
 Input: A dimacs file.
