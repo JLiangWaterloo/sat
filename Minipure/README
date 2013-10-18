@@ -1,0 +1,18 @@
+================================================================================
+DIRECTORY OVERVIEW:
+
+mtl/            Mini Template Library
+utils/          Generic helper code (I/O, Parsing, CPU-time, etc)
+core/           A core version of the minipure solver
+simp/           An extended solver with simplification capabilities
+README
+LICENSE
+
+buil:
+>sh build.sh
+
+EXAMPLES:
+
+Run minipure with following parameters:
+
+> miniplure <cnf-file> -no-luby  -rnd-freq=0.02 -slowdown_pure=0 -stop_pure=1 -freq_pure=5
