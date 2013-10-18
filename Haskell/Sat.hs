@@ -98,7 +98,7 @@ pureBcp = map Set.toList . pureBcp' . map Set.fromList
             
 pureBcp' :: [Set Lit] -> [Set Lit]
 pureBcp' s =
-    if null unitClauses && null pures then s else unitClauses ++ pureBcp' (mapMaybe unitPropagate clauses)
+    if null unitClauses && null pures then s else unitClauses ++ map Set.singleton pures ++ pureBcp' (mapMaybe unitPropagate clauses)
     where
         (unitClauses, clauses) = partition ((== 1) . Set.size) s
         lits = Set.unions s
