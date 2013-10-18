@@ -1,4 +1,4 @@
-all: Benchmarks/sc13-benchmarks-application-info.csv Benchmarks/times.csv Bin/community
+all: Benchmarks/sc13-benchmarks-application-info.csv Benchmarks/times.csv Bin/community Bin/minipure
 	make -C Haskell cabal
 	make -C Haskell
 
@@ -7,6 +7,10 @@ Bin/community:
 	mkdir -p Bin
 	cp Snap/examples/community/community Bin/
 	chmod +x Community
+
+Bin/minipure:
+	make -C Minipure
+	cp Minipure/binary/minipure Bin/minipure
 
 Benchmarks/sc13-benchmarks-application-info.csv: Benchmarks/sc13-benchmarks-application.tgz
 	tar -C Benchmarks -xvzf Benchmarks/sc13-benchmarks-application.tgz
