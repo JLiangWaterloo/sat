@@ -14,6 +14,7 @@ main = do
     case args of
          ["variable"] -> putStr =<< printGraph . nubSet . graphVariable . parseDimacs <$> getContents
          ["clause"]   -> putStr =<< printGraph . graphClause . parseDimacs <$> getContents
+         ["literal"]  -> putStr =<< printGraph . graphLiteral . parseDimacs <$> getContents
          _            -> error "Unknown argument, must be either \"variable\" or \"clause\"."
          
 
@@ -23,6 +24,14 @@ graphVariable s =
     where
         mapClause :: Clause -> [(Int, Int)]
         mapClause = pairs . map abs
+        
+graphLiteral :: Sat -> [(Int, Int)]
+graphLiteral s =
+    (s >>= mapClause) ++ excludedMiddles s
+    where
+        mapClause :: Clause -> [(Int, Int)]
+        mapClause c = pairs c
+        excludedMiddles s = [(x, -x) | x <- nubSet $ map abs $ concat s]
 
 graphClause :: Sat -> [(Int, Int)]
 graphClause s =
