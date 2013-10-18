@@ -8,7 +8,7 @@ import Data.List
 import Data.Set (Set)
 import qualified Data.Set as Set
 import Data.Maybe
-
+import Debug.Trace
 type Sat = [Clause]
 type Clause = [Lit]
 type Lit = Int
@@ -86,7 +86,7 @@ bcp' s =
     if null unitClauses then s else unitClauses ++ bcp' (mapMaybe unitPropagate clauses)
     where
         (unitClauses, clauses) = partition ((== 1) . Set.size) s
-        units = Set.fromList $ map (Set.elemAt 0) unitClauses
+        units = Set.unions unitClauses
         negUnits = Set.map negate units
         unitPropagate c
             | isComplementary $ Set.toList c = Nothing
@@ -103,13 +103,32 @@ pureBcp' s =
         (unitClauses, clauses) = partition ((== 1) . Set.size) s
         lits = Set.unions s
         pures = [l | l <- Set.toList lits, (-l) `Set.notMember` lits]
-        units = Set.fromList $ map (Set.elemAt 0) unitClauses ++ pures
+        units = Set.union (Set.unions unitClauses) $ Set.fromList pures
         negUnits = Set.map negate units
         unitPropagate c
             | isComplementary $ Set.toList c = Nothing
             | not $ Set.null $ units `Set.intersection` c = Nothing
             | otherwise                                   = Just $ c `Set.difference` negUnits
 
+minipure :: Sat -> Maybe [Int]
+minipure = minipure' . map Set.fromList
+
+minipure' :: [Set Lit] -> Maybe [Int]
+minipure' s =
+    trace (show unsat) $ if unsat then Nothing else recur
+    where
+        s' = pureBcp' s
+        unitClauses = Set.unions $ filter ((== 1) . Set.size) s'
+        unsat = any ((`Set.member` unitClauses) . negate) $ Set.toList unitClauses
+        decided = Set.map abs unitClauses
+        decision = find (`Set.notMember` decided) $ map abs $ Set.toList $ Set.unions s'
+        recur =
+            case decision of
+                 Just decision' -> case minipure' (Set.singleton decision' : s') of
+                        Just solution -> return $ decision' : solution
+                        Nothing       -> minipure' (Set.singleton (negate decision') : s')
+                 Nothing -> return []
+            
 parseDimacs :: String -> Sat
 parseDimacs = map (map read . init) . dropWhile ((== "p") . head) . dropWhile ((== "c") . head) . filter (not . null) . map words . lines
 
