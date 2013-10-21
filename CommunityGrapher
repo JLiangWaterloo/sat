@@ -50,7 +50,7 @@ progress_bar &
 pid=$!
 
 # Populate community
-cat $path | Haskell/Bcp | Haskell/Graph $isClauseNodes > output/graph.dot
+cat $path | Haskell/Graph $isClauseNodes > output/graph.dot
 cat output/graph.dot | Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot
 ./graphHelper.rb
 

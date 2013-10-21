@@ -163,8 +163,8 @@ int main(int argc, char** argv)
                 printf("===============================================================================\n");
                 printf("Solved by simplification\n");
                 printf("\n"); }
-              printStats(S);
-//            printf("UNSATISFIABLE\n");
+            printStats(S);
+            printf("UNSATISFIABLE\n");
             exit(20);
         }
 
