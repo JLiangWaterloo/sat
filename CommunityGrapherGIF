@@ -1,0 +1,36 @@
+##################################
+##   Graph Communities as GIF   ##
+##################################
+
+function progress_bar {
+	while true
+	do
+		echo -ne "."
+		sleep 2
+	done
+}
+
+function stop_progress {
+	exec 2>/dev/null
+	kill $1
+	echo -en "\n"
+}
+
+# Take a zip of dimacs or cnf files and extract them
+rm -r GIFFiles
+mkdir -p GIFFiles
+sudo unzip "$1"
+
+FILES="${1%.*}"/*
+i=0
+for f in $FILES
+do
+  i=$(($i+1))
+  ./CommunityGrapher $f graphviz variable n gif
+  mv output/communityGraph.jpg GIFFiles/
+  mv GIFFiles/communityGraph.jpg GIFFiles/"$i".jpg
+done
+
+mogrify -resize 1024x1024 GIFFiles/*.jpg
+convert -delay 100 -loop 0 GIFFiles/*.jpg output/anim.gif
+xdg-open output/anim.gif

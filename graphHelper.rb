@@ -4,11 +4,12 @@ File.open("output/communitySubGraphs.dot", "w") do |f|
   
   communities = {}
   subgraphs = {}
+  previousNodes = {}
   nonSubGraphNodes = Array.new
   colors = { 0 => "aqua", 1 => "blue", 2 => "blueviolet", 3 => "brown", 4 => "cadetblue", 5 => "chartreuse", 6 => "chocolate", 7 => "coral", 8 => "cornflowerblue", 9 => "crimson", 10 => "darkgoldenrod", 11 => "darkgreen", 12 => "darkmagenta", 13 => "darkolivegreen", 14 => "darkorange", 15 => "darkred", 16 => "darkslategray", 17 => "deeppink", 18 => "gold", 19 => "hotpink" }
   counter = 0
   
-  # Read community data and build hash
+  # Read community data and an array for each community
   file = File.open("output/communityMapping.dot", "r")
   while (line = file.gets)
     info = "#{line}".split(' ')
@@ -27,17 +28,22 @@ File.open("output/communitySubGraphs.dot", "w") do |f|
   end
   file.close
   
-  # Read original graph file and build a hash
+  # Read original graph file and add to the community hash if they are in that community
   file = File.open("output/graph.dot", "r")
   while (line = file.gets)
     info = "#{line}".split(' ')
     
-    if communities.has_key?(info[0]) && communities.has_key?(info[1]) && communities[info[0]] == communities[info[1]]
-      newGraph = {communities[info[0]] => subgraphs[communities[info[0]]] + "    " + info[0] + " -- " + info[1] + ";\n"}
-      subgraphs.merge!(newGraph)
-    else
-      nonSubGraphNodes.push(info[0] + " -- " + info[1])
+    if previousNodes[info[1]].nil? || (!previousNodes[info[1]].nil? && previousNodes[info[1]] != info[0])
+      if communities.has_key?(info[0]) && communities.has_key?(info[1]) && communities[info[0]] == communities[info[1]]
+        newGraph = {communities[info[0]] => subgraphs[communities[info[0]]] + "    " + info[0] + " -- " + info[1] + ";\n"}
+        subgraphs.merge!(newGraph)
+      else
+        nonSubGraphNodes.push(info[0] + " -- " + info[1])
+      end
     end
+    
+    newNode = {info[0] => info[1]}
+    previousNodes.merge!(newNode)
   end
   file.close
   

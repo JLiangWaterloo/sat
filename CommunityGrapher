@@ -40,32 +40,64 @@ if [ -z "$path" ]; then
 	stop_progress $pid
 fi
 
-echo "Please enter clause to indicate that clauses are nodes and variables are vertices or variable for the opposite:"
-read isClauseNodes
-echo "Do you want to generate the graph slowly but with more detail? (Y/n)"
-read detail
+if [ -z "$2" ]; then
+  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph:"
+  read graph
+else
+  graph="$2"
+fi
+
+if [ -z "$3" ]; then
+  echo "Please enter clause to indicate that clauses are nodes and variables are vertices or variable for the opposite:"
+  read isClauseNodes
+else
+  isClauseNodes="$3"
+fi
+if [ $graph == "graphviz" ]; then
+  if [ -z "$4" ]; then
+    echo "Do you want to generate the graph slowly but with more detail? (Y/n)"
+    read detail
+  else
+    detail="$4"
+  fi
+fi
 
 echo -n "Generating Graph Information"
 progress_bar &
 pid=$!
 
 # Populate community
-cat $path | Haskell/Graph $isClauseNodes > output/graph.dot
+cat $path | Haskell/Bcp | Haskell/Graph $isClauseNodes > output/graph.dot
 cat output/graph.dot | Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot
-./graphHelper.rb
 
-stop_progress $pid
-
-echo -n "Waiting on GraphViz"
-progress_bar &
-pid=$!
-
-# Graph
-if [ $detail == "Y" ]; then
-  dot -Tsvg output/communitySubGraphs.dot -o output/communityGraph.svg
+if [ $graph == "graphviz" ]; then
+  ./graphHelper.rb
 else
-  sfdp -Tsvg output/communitySubGraphs.dot -o output/communityGraph.svg
+  ./graphHelperUbi.rb
 fi
 
 stop_progress $pid
-xdg-open output/communityGraph.svg
+
+if [ $graph == "graphviz" ]; then
+  echo -n "Waiting on GraphViz"
+  progress_bar &
+  pid=$!
+
+  # Graph
+  if [ $5 == "gif" ]; then
+    ext="jpg"
+  else
+    ext="svg"
+  fi
+
+  if [ $detail == "Y" ]; then
+    dot -T"$ext" output/communitySubGraphs.dot -o output/communityGraph."$ext"
+  else
+    sfdp -T"$ext" output/communitySubGraphs.dot -o output/communityGraph."$ext"
+  fi
+
+  stop_progress $pid
+  if [ -z "$5" ]; then
+    xdg-open output/communityGraph.svg
+  fi
+fi
