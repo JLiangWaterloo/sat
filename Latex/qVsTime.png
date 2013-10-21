@@ -1,0 +1,15 @@
+set terminal pngcairo size 1300,800
+
+set title "SAT competition"
+set xlabel "Q"
+set ylabel "Time (s)"
+
+set pointintervalbox 3
+set grid
+
+plot "< sort -t' ' -k3 0-1000.dat | awk '{if ($2 < 1000) {printf \"%f %f\\n\", $3, $7}}'" using 1:2 title "0-1000 variables" with lines, \
+     "< sort -t' ' -k3 0-1000.dat | awk '{if ($2 >= 1000 && $2 < 5000) {printf \"%f %f\\n\", $3, $7}}'" using 1:2 title "1000-5000 variables" with lines, \
+     "< sort -t' ' -k3 0-1000.dat | awk '{if ($2 >= 5000 && $2 < 10000) {printf \"%f %f\\n\", $3, $7}}'" using 1:2 title "5000-10000 variables" with lines, \
+     "< sort -t' ' -k3 0-1000.dat | awk '{if ($2 >= 10000 && 2 < 20000) {printf \"%f %f\\n\", $3, $7}}'" using 1:2 title "10000-20000 variables" with lines, \
+     "< sort -t' ' -k3 0-1000.dat | awk '{if ($2 >= 20000 && $2 < 50000) {printf \"%f %f\\n\", $3, $7}}'" using 1:2 title "20000-50000 variables" with lines, \
+     "< sort -t' ' -k3 0-1000.dat | awk '{if ($2 >= 50000) {printf \"%f %f\\n\", $3, $7}}'" using 1:2 title "50000+ variables" with lines
