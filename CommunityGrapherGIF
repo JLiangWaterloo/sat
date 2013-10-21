@@ -31,6 +31,6 @@ do
   mv GIFFiles/communityGraph.jpg GIFFiles/"$i".jpg
 done
 
-mogrify -resize 1024x1024 GIFFiles/*.jpg
+#mogrify -resize 1024x1024 GIFFiles/*.jpg
 convert -delay 100 -loop 0 GIFFiles/*.jpg output/anim.gif
 xdg-open output/anim.gif
