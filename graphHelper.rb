@@ -33,17 +33,19 @@ File.open("output/communitySubGraphs.dot", "w") do |f|
   while (line = file.gets)
     info = "#{line}".split(' ')
     
-    if previousNodes[info[1]].nil? || (!previousNodes[info[1]].nil? && previousNodes[info[1]] != info[0])
-      if communities.has_key?(info[0]) && communities.has_key?(info[1]) && communities[info[0]] == communities[info[1]]
-        newGraph = {communities[info[0]] => subgraphs[communities[info[0]]] + "    " + info[0] + " -- " + info[1] + ";\n"}
-        subgraphs.merge!(newGraph)
-      else
-        nonSubGraphNodes.push(info[0] + " -- " + info[1])
+    if !info[0].nil? && !info[1].nil?
+      if previousNodes[info[1]].nil? || (!previousNodes[info[1]].nil? && previousNodes[info[1]] != info[0])
+        if communities.has_key?(info[0]) && communities.has_key?(info[1]) && communities[info[0]] == communities[info[1]]
+          newGraph = {communities[info[0]] => subgraphs[communities[info[0]]] + "    " + info[0] + " -- " + info[1] + ";\n"}
+          subgraphs.merge!(newGraph)
+        else
+          nonSubGraphNodes.push(info[0] + " -- " + info[1])
+        end
       end
-    end
     
-    newNode = {info[0] => info[1]}
-    previousNodes.merge!(newNode)
+      newNode = {info[0] => info[1]}
+      previousNodes.merge!(newNode)
+    end
   end
   file.close
   

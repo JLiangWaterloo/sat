@@ -55,7 +55,7 @@ while (line = file.gets)
     end
   end
   
-  if edgeObjects[info[1] + " -> " + info[0]].nil? && edgeObjects[info[0] + " -> " + info[1]].nil?
+  if !info[0].nil? && !info[1].nil? && edgeObjects[info[1] + " -> " + info[0]].nil? && edgeObjects[info[0] + " -> " + info[1]].nil?
     newEdgeObject = {info[0] + " -> " + info[1] => Rubigraph::Edge.new(nodes[info[0]], nodes[info[1]])}
     edgeObjects.merge!(newEdgeObject)
     
