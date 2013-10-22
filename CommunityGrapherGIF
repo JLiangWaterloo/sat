@@ -2,20 +2,6 @@
 ##   Graph Communities as GIF   ##
 ##################################
 
-function progress_bar {
-	while true
-	do
-		echo -ne "."
-		sleep 2
-	done
-}
-
-function stop_progress {
-	exec 2>/dev/null
-	kill $1
-	echo -en "\n"
-}
-
 # Take a zip of dimacs or cnf files and extract them
 rm -r GIFFiles
 mkdir -p GIFFiles

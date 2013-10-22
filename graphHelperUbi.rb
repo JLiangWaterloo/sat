@@ -5,7 +5,6 @@ Rubigraph.init
 Rubigraph.clear
 
 nodes = {}
-edges = {}
 edgeObjects = {}
 communities = {}
 communityColor = {}
@@ -56,12 +55,13 @@ while (line = file.gets)
     end
   end
   
-  if edges[info[1]].nil? || (!edges[info[1]].nil? && edges[info[1]] != info[0])
-    newEdge = {info[0] => info[1]}
-    edges.merge!(newEdge)
-    
+  if edgeObjects[info[1] + " -> " + info[0]].nil? && edgeObjects[info[0] + " -> " + info[1]].nil?
     newEdgeObject = {info[0] + " -> " + info[1] => Rubigraph::Edge.new(nodes[info[0]], nodes[info[1]])}
     edgeObjects.merge!(newEdgeObject)
+    
+    if communities[info[0]] == communities[info[1]]
+      edgeObjects[info[0] + " -> " + info[1]].color = communityColor[communities[info[0]]]
+    end
   end
 end
 file.close
