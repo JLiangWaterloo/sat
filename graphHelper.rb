@@ -4,9 +4,9 @@ File.open("output/communitySubGraphs.dot", "w") do |f|
   
   communities = {}
   subgraphs = {}
-  previousNodes = {}
+  previousNodes = Array.new
   nonSubGraphNodes = Array.new
-  colors = ["#FF00FF", "#CC00FF", "#9900FF", "#6600FF", "#3300FF", "#0000FF", "#FF00CC", "#FF33FF", "#CC33FF", "#9933FF", "#6633FF", "#3333FF", "#0033FF", "#FF0099", "#FF33CC", "#FF66FF", "#CC66FF", "#9966FF", "#6666FF", "#3366FF", "#0066FF", "#FF0066", "#FF3399", "#FF66CC", "#FF99FF", "#CC99FF", "#9999FF", "#6699FF", "#3399FF", "#0099FF", "#FF0000", "#FF3333", "#FF6666", "#FF9999", "#FFCCCC", "#CCFFFF", "#99FFFF", "#66FFFF", "#33FFFF", "#00FFFF", "#FF3300", "#FF6633", "#FF9966", "#FFCC99", "#FFFFCC", "#CCFFCC", "#99FFCC", "#66FFCC", "#33FFCC", "#00FFCC", "#FF6600", "#FF9933", "#FFCC66", "#FFFF99", "#CCFF99", "#99FF99", "#66FF99", "#33FF99", "#00FF99", "#FF9900", "#FFCC33", "#FFFF66", "#CCFF66", "#99FF66", "#66FF66", "#33FF66", "#00FF66", "#FFCC00", "#FFFF33", "#CCFF33", "#99FF33", "#66FF33", "#33FF33", "#00FF33", "#FFFF00", "#CCFF00", "#99FF00", "#66FF00", "#33FF00", "#00FF00"]
+  colors = ["#FF00FF", "#00FF00", "#CC00FF", "#33FF00", "#9900FF", "#66FF00", "#6600FF", "#99FF00", "#3300FF", "#CCFF00", "#0000FF", "#FFFF00", "#FF00CC", "#00FF33", "#FF33FF", "#33FF33", "#CC33FF", "#66FF33", "#9933FF", "#99FF33", "#6633FF", "#CCFF33", "#3333FF", "#FFFF33", "#0033FF", "#FFCC00", "#FF0099", "#00FF66", "#FF33CC", "#33FF66", "#FF66FF", "#66FF66", "#CC66FF", "#99FF66", "#9966FF", "#CCFF66", "#6666FF", "#FFFF66", "#3366FF", "#FFCC33", "#0066FF", "#FF9900", "#FF0066", "#00FF99", "#FF3399", "#33FF99", "#FF66CC", "#66FF99", "#FF99FF", "#99FF99", "#CC99FF", "#CCFF99", "#9999FF", "#FFFF99", "#6699FF", "#FFCC66", "#3399FF", "#FF9933", "#0099FF", "#FF6600", "#FF0000", "#00FFCC", "#FF3333", "#33FFCC", "#FF6666", "#66FFCC", "#FF9999", "#99FFCC", "#FFCCCC", "#CCFFCC", "#CCFFFF", "#FFFFCC", "#99FFFF", "#FFCC99", "#66FFFF", "#FF9966", "#33FFFF", "#FF6633", "#00FFFF", "#FF3300"]
   counter = 0
   
   # Read community data and an array for each community
@@ -33,17 +33,18 @@ File.open("output/communitySubGraphs.dot", "w") do |f|
   while (line = file.gets)
     info = "#{line}".split(' ')
     
-    if previousNodes[info[1]].nil? || (!previousNodes[info[1]].nil? && previousNodes[info[1]] != info[0])
-      if communities.has_key?(info[0]) && communities.has_key?(info[1]) && communities[info[0]] == communities[info[1]]
-        newGraph = {communities[info[0]] => subgraphs[communities[info[0]]] + "    " + info[0] + " -- " + info[1] + ";\n"}
-        subgraphs.merge!(newGraph)
-      else
-        nonSubGraphNodes.push(info[0] + " -- " + info[1])
+    if !info[0].nil? && !info[1].nil?
+      if !(previousNodes.include?(info[0] + " -> " + info[1]) || previousNodes.include?(info[1] + " -> " + info[0]))
+        if communities.has_key?(info[0]) && communities.has_key?(info[1]) && communities[info[0]] == communities[info[1]]
+          newGraph = {communities[info[0]] => subgraphs[communities[info[0]]] + "    " + info[0] + " -- " + info[1] + ";\n"}
+          subgraphs.merge!(newGraph)
+        else
+          nonSubGraphNodes.push(info[0] + " -- " + info[1])
+        end
       end
-    end
     
-    newNode = {info[0] => info[1]}
-    previousNodes.merge!(newNode)
+      previousNodes.push(info[0] + " -> " + info[1])
+    end
   end
   file.close
   
