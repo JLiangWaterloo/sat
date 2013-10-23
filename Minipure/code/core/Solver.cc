@@ -45,6 +45,10 @@ static DoubleOption  opt_garbage_frac      (_cat, "gc-frac",     "The fraction o
 static IntOption     opt_slowdown_pure     (_cat, "slowdown_pure", "Controls which restart level to slown down the pure literection ", 0, IntRange(0, INT32_MAX));
 static IntOption     opt_stop_pure         (_cat, "stop_pure",     "Controls which restart level to stop the pure literal detection ", 1, IntRange(0, INT32_MAX));
 static IntOption     opt_freq_pure         (_cat, "freq_pure",     "After stop pure literal detection after how much restart level start again pure literal detetion ", 5, IntRange(0, INT32_MAX));
+static BoolOption    opt_dis_act           (_cat, "dis-act",     "Disable the activity heuristic", false);
+static StringOption  opt_dump_file         (_cat, "dump-file", "If given, dump the dimacs file of the internal solver during solving.");
+static IntOption     opt_dump_freq         (_cat, "dump-freq", "How often to dump.", 1, IntRange(1, INT32_MAX));
+
 //=================================================================================================
 // Constructor/Destructor:
 
@@ -69,6 +73,11 @@ Solver::Solver() :
   , slowdown_pure    (opt_slowdown_pure)
   , stop_pure        (opt_stop_pure)
   , freq_pure        (opt_freq_pure)
+  , dis_act          (opt_dis_act)
+  , dump_file        ((const char*) opt_dump_file)
+  , dump_file_stream (NULL)
+  , dump_freq        (opt_dump_freq)
+  , dump_counter     (0)
     // Parameters (the rest):
     //
   , learntsize_factor((double)1/(double)3), learntsize_inc(1.1)
@@ -321,7 +330,7 @@ void Solver::cancelUntil(int level) {
 
 Lit Solver::pickBranchLit()
 {
-    //printf("in pickbranch\n");
+
     Var next = var_Undef;
 
     // Random decision:
@@ -946,8 +955,7 @@ bool Solver::simplify(bool  ini )
 	tenth_var=nVars()/10;
 	fourth_var=nVars()/4;
 	half_var=nVars()/2;
-	
-	
+       
     //printf("in simp\n");
     if (!ok || propagate(ini) != CRef_Undef)
         return ok = false;
@@ -1014,8 +1022,9 @@ lbool Solver::search(int nof_conflicts)
     starts++;
 
     for (;;){
-	       
+	
         CRef confl = propagate(false);
+        dump();
         if (confl != CRef_Undef){
             // CONFLICT
 			//printf("in conflict\n");
@@ -1103,9 +1112,10 @@ lbool Solver::search(int nof_conflicts)
                 decisions++;
                 next = pickBranchLit();
                
-                if (next == lit_Undef)
+                if (next == lit_Undef) {
                     // Model found:
                     return l_True;
+                }
             }
 
             // Increase decision level and enqueue 'next'
@@ -1352,8 +1362,6 @@ lbool Solver::solve_()
 		 }
 	}
 	
-	
-	
 	for(int f=0;f<clauses_data.size();f++)
 		{
 		     CRef cr=clauses_data[f].cref;
@@ -1377,8 +1385,6 @@ lbool Solver::solve_()
 				}
 			//printf("after for\n");
 		}
-	
-	
 	
 	
 	
@@ -1428,7 +1434,6 @@ lbool Solver::solve_()
 	}
 	
 	//rebuildOrderHeap();
-	
 	
     if (verbosity >= 1){
         printf("c ============================[ Search Statistics ]==============================\n");
@@ -1542,9 +1547,24 @@ void Solver::toDimacs(FILE* f, const vec<Lit>& assumps)
 
     for (int i = 0; i < clauses.size(); i++)
         toDimacs(f, ca[clauses[i]], map, max);
+}
 
-    if (verbosity > 0)
-        printf("Wrote %d clauses with %d variables.\n", cnt, max);
+void Solver::dump() {
+    if (dump_file) {
+        if (dump_counter == 0) {
+            if (!dump_file_stream) {
+                dump_file_stream = fopen(dump_file, "wr");
+            }
+            vec<Lit> as;
+            toDimacs(dump_file_stream, as);
+            fprintf(dump_file_stream, "$\n");
+            fflush(dump_file_stream);
+        }
+        dump_counter++;
+        if (dump_counter == dump_freq) {
+            dump_counter = 0;
+        }
+    }
 }
 
 

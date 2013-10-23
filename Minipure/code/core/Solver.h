@@ -74,6 +74,8 @@ public:
     void    toDimacs     (const char* file, Lit p, Lit q);
     void    toDimacs     (const char* file, Lit p, Lit q, Lit r);
     
+    void    dump();
+    
     // Variable mode:
     // 
     void    setPolarity    (Var v, bool b); // Declare which polarity the decision heuristic should use for a variable. Requires mode 'polarity_user'.
@@ -205,6 +207,11 @@ public:
 	int                      stop_pure;
 	bool                     implement_pure;
 	int                      freq_pure;
+        bool                     dis_act;
+        const char*              dump_file;
+        FILE*                    dump_file_stream;
+        int                      dump_freq;
+        int                      dump_counter;
 	bool                     begin_solve;
 	//vec< vec<Lit>  * >        affect;          // which lieral are affect when assign value
 	int  *              clause_trail;
@@ -301,7 +308,7 @@ public:
     int      level            (Var x) const;
     double   progressEstimate ()      const; // DELETE THIS ?? IT'S NOT VERY USEFUL ...
     bool     withinBudget     ()      const;
-
+    
     // Static helpers:
     //
 
@@ -328,25 +335,31 @@ inline void Solver::insertVarOrder(Var x) {
     if (!order_heap.inHeap(x) && decision[x]) order_heap.insert(x); }
 
 inline void Solver::varDecayActivity() { var_inc *= (1 / var_decay); }
-inline void Solver::varBumpActivity(Var v) { varBumpActivity(v, var_inc); }
+inline void Solver::varBumpActivity(Var v) { if (!dis_act) varBumpActivity(v, var_inc); }
 inline void Solver::varBumpActivity(Var v, double inc) {
-    if ( (activity[v] += inc) > 1e100 ) {
-        // Rescale:
-        for (int i = 0; i < nVars(); i++)
-            activity[i] *= 1e-100;
-        var_inc *= 1e-100; }
+    if (!dis_act) {
+        if ( (activity[v] += inc) > 1e100 ) {
+            // Rescale:
+            for (int i = 0; i < nVars(); i++)
+                activity[i] *= 1e-100;
+            var_inc *= 1e-100;
+        }
+        // Update order_heap with respect to new activity:
+        if (order_heap.inHeap(v))
+            order_heap.decrease(v);
+    }
+}
 
-    // Update order_heap with respect to new activity:
-    if (order_heap.inHeap(v))
-        order_heap.decrease(v); }
-
-inline void Solver::claDecayActivity() { cla_inc *= (1 / clause_decay); }
+inline void Solver::claDecayActivity() { if (!dis_act) cla_inc *= (1 / clause_decay); }
 inline void Solver::claBumpActivity (Clause& c) {
+    if (!dis_act) {
         if ( (c.activity() += cla_inc) > 1e20 ) {
             // Rescale:
             for (int i = 0; i < learnts.size(); i++)
                 ca[learnts[i]].activity() *= 1e-20;
-            cla_inc *= 1e-20; } }
+            cla_inc *= 1e-20; }
+    }
+}
 
 inline void Solver::checkGarbage(void){ return checkGarbage(garbage_frac); }
 inline void Solver::checkGarbage(double gf){

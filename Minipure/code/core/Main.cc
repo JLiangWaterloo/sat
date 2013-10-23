@@ -166,7 +166,7 @@ int main(int argc, char** argv)
             exit(20);
         }
         
-		
+	S.dump();
 		
 		
 		

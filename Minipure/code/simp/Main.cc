@@ -159,6 +159,7 @@ int main(int argc, char** argv)
         signal(SIGXCPU,SIGINT_interrupt);
 
         S.parsing = 0;
+        S.dump();
         S.eliminate(true,true);
         double simplified_time = cpuTime();
         if (S.verbosity > 0){
