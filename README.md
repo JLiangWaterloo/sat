@@ -58,6 +58,11 @@ Input: Will be prompted for the number of variables, clauses, and communities.
 
 Output: A plot of the performance of MiniSAT while varying Q from 0 to 1 by increments of 0.01.
 
+##### CommunityEvolution
+Input: DIMACS file, dump frequency, and graphing technique (graphviz or ubigraph)
+
+Output: If graphviz was chosen, this will generate a GIF of the evolution of the SAT instance. If ubigraph was chosen, will create a dynamic evolution of the SAT instance.
+
 Example
 -------
 ```bash
