@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'rubigraph'
+load 'rubigraph-mine.rb'
 load 'RubiGraphBuilder.rb'
 
 class DynamicUbigraph
@@ -23,19 +23,20 @@ class DynamicUbigraph
   end
   
   def work()
-    # Populate communities
-    file = File.open("output/addRemoveCommunities.dot", "r")
+    # Populate Nodes and Edges
+    file = File.open("output/addRemoveNodesAndEdges.dot", "r")
     while (line = file.gets)
       info = "#{line}".split(' ')
       
-      if info[0] == ">"
-        @@rubiGraph.addToAddedCommunity(info[1], info[2])
-      elsif info[0] == "<"
-        @@rubiGraph.removeFromAddedCommunity(info[1])
+      # Check for added lines
+      if info[0] == "<"
+        @@rubiGraph.removeEdge(info[1], info[2])
+        @@rubiGraph.removeNode(info[1])
+        @@rubiGraph.removeNode(info[2])
       end
     end
     file.close
-  
+    
     # Populate Nodes and Edges
     file = File.open("output/addRemoveNodesAndEdges.dot", "r")
     while (line = file.gets)
@@ -46,11 +47,19 @@ class DynamicUbigraph
         @@rubiGraph.addNode(info[1])
         @@rubiGraph.addNode(info[2])
         @@rubiGraph.addEdge(info[1], info[2])
-      # Check for removed lines
+      end
+    end
+    file.close
+    
+    # Populate communities
+    file = File.open("output/addRemoveCommunities.dot", "r")
+    while (line = file.gets)
+      info = "#{line}".split(' ')
+      
+      if info[0] == ">"
+        @@rubiGraph.addToAddedCommunity(info[1], info[2])
       elsif info[0] == "<"
-        @@rubiGraph.removeEdge(info[1], info[2])
-        @@rubiGraph.removeNode(info[1])
-        @@rubiGraph.removeNode(info[2])
+        @@rubiGraph.removeFromAddedCommunity(info[1])
       end
     end
     file.close

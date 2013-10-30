@@ -6,4 +6,3 @@ Rubigraph.init
 Rubigraph.clear
 rubiGraph = RubiGraphBuilder.new()
 rubiGraph.buildOriginalGraph()
-rubiGraph.clear()

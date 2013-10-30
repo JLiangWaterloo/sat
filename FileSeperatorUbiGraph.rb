@@ -40,7 +40,6 @@ while (line = file.gets)
   end
 end
 file.close
-graph.clear()
 
 system 'gnuplot -persist GnuplotScripts/CommunityVsIntercommunityTotal.gnu'
 system 'gnuplot -persist GnuplotScripts/CommunityVsIntercommunityRemoved.gnu'
