@@ -95,6 +95,11 @@ if [ $graph == "graphviz" ]; then
   else
     sfdp -T"$ext" output/communitySubGraphs.dot -o output/communityGraph."$ext"
   fi
+  
+  if [ $5 == "gif" ]; then
+    modularity=$(cat $path | ./CommunityOutputOnlyModularity)
+    convert output/communityGraph."$ext" -gravity north -stroke none -fill black -annotate 0 "Modularity = $modularity" output/communityGraph."$ext"
+  fi
 
   stop_progress $pid
   if [ -z "$5" ]; then

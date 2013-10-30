@@ -38,4 +38,4 @@ done
 # Plot data
 sort -n +0 -1 output/tmpData.txt > output/plotData.txt
 rm output/tmpData.txt
-gnuplot -persist GnuplotScripts/graph.gnu
+gnuplot -persist GnuplotScripts/qualityAnalysis.gnu

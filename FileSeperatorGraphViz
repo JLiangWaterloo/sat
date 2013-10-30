@@ -31,6 +31,5 @@ do
   fi
 done
 
-#mogrify -resize 1024x1024 GIFFiles/*.jpg
 convert -delay 300 -loop 0 -gravity center -background white -extent $size -fill white GIFFiles/*.jpg output/anim.gif
 xdg-open output/anim.gif
