@@ -208,6 +208,11 @@ public:
 	bool                     implement_pure;
 	int                      freq_pure;
         bool                     dis_act;
+        bool                     dis_learn;
+        bool                     dis_bj;
+        bool                     dis_restart;
+        const char*              dump_decision;
+        FILE*                    dump_decision_stream;
         const char*              dump_file;
         FILE*                    dump_file_stream;
         int                      dump_freq;
@@ -233,6 +238,7 @@ public:
     vec<char>           decision;         // Declares if a variable is eligible for selection in the decision heuristic.
     vec<Lit>            trail;            // Assignment stack; stores all assigments made in the order they were made.
     vec<int>            trail_lim;        // Separator indices for different decision levels in 'trail'.
+    vec<bool>           decs;
     vec<VarData>        vardata;          // Stores reason and level for each variable.
     int                 qhead;            // Head of queue (as index into the trail -- no more explicit propagation queue in MiniSat).
     int                 simpDB_assigns;   // Number of top-level assignments since last execution of 'simplify()'.
@@ -334,7 +340,7 @@ inline int  Solver::level (Var x) const { return vardata[x].level; }
 inline void Solver::insertVarOrder(Var x) {
     if (!order_heap.inHeap(x) && decision[x]) order_heap.insert(x); }
 
-inline void Solver::varDecayActivity() { var_inc *= (1 / var_decay); }
+inline void Solver::varDecayActivity() { if (!dis_act) var_inc *= (1 / var_decay); }
 inline void Solver::varBumpActivity(Var v) { if (!dis_act) varBumpActivity(v, var_inc); }
 inline void Solver::varBumpActivity(Var v, double inc) {
     if (!dis_act) {
