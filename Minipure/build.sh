@@ -2,7 +2,7 @@
 mkdir binary
 cd code
 cd simp
-gmake rs
+make rs
 cd ..
 cd ..
 cp ./code/simp/minisat_static ./binary/minipure

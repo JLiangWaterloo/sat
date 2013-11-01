@@ -46,7 +46,11 @@ static IntOption     opt_slowdown_pure     (_cat, "slowdown_pure", "Controls whi
 static IntOption     opt_stop_pure         (_cat, "stop_pure",     "Controls which restart level to stop the pure literal detection ", 1, IntRange(0, INT32_MAX));
 static IntOption     opt_freq_pure         (_cat, "freq_pure",     "After stop pure literal detection after how much restart level start again pure literal detetion ", 5, IntRange(0, INT32_MAX));
 static BoolOption    opt_dis_act           (_cat, "dis-act",     "Disable the activity heuristic", false);
-static StringOption  opt_dump_file         (_cat, "dump-file", "If given, dump the dimacs file of the internal solver during solving.");
+static BoolOption    opt_dis_learn         (_cat, "dis-learn",   "Disable the learning heuristic", false);
+static BoolOption    opt_dis_bj            (_cat, "dis-bj",      "Disable backjumping", false);
+static BoolOption    opt_dis_restart       (_cat, "dis-restart", "Disable restarts", false);
+static StringOption  opt_dump_decision     (_cat, "dump-decision", "If given, dump the decisions");
+static StringOption  opt_dump_file         (_cat, "dump-file", "If given, dump the dimacs file of the internal solver during solving");
 static IntOption     opt_dump_freq         (_cat, "dump-freq", "How often to dump.", 1, IntRange(1, INT32_MAX));
 
 //=================================================================================================
@@ -74,6 +78,10 @@ Solver::Solver() :
   , stop_pure        (opt_stop_pure)
   , freq_pure        (opt_freq_pure)
   , dis_act          (opt_dis_act)
+  , dis_learn        (opt_dis_learn)
+  , dis_bj           (opt_dis_bj)
+  , dis_restart      (opt_dis_restart)
+  , dump_decision    (opt_dump_decision)
   , dump_file        ((const char*) opt_dump_file)
   , dump_file_stream (NULL)
   , dump_freq        (opt_dump_freq)
@@ -380,6 +388,12 @@ Lit Solver::pickBranchLit()
 |________________________________________________________________________________________________@*/
 void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 {
+    if (dis_bj) {
+        out_btlevel = decisionLevel() - 1;
+        out_learnt.push(~trail[trail_lim[out_btlevel]]);
+        return;
+    }
+    
   //  printf("in analyze\n");
     int pathC = 0;
     Lit p     = lit_Undef;
@@ -516,7 +530,7 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         out_learnt[1]     = p;
         out_btlevel       = level(var(p));
     }
-
+    
     for (int j = 0; j < analyze_toclear.size(); j++) seen[var(analyze_toclear[j])] = 0;    // ('seen[]' is now cleared)
 	//printf("out of analyze\n");
 }
@@ -1041,10 +1055,15 @@ lbool Solver::search(int nof_conflicts)
                 uncheckedEnqueue(learnt_clause[0]);
             }else{
                 CRef cr = ca.alloc(learnt_clause, true);
-                learnts.push(cr);
-                attachClause(cr);
+                if (!dis_learn) {
+                    learnts.push(cr);
+                    attachClause(cr);
+                }
                 claBumpActivity(ca[cr]);
                 uncheckedEnqueue(learnt_clause[0], cr);
+                if (!dis_learn) {
+                    ca.free(cr);
+                }
             }
             
             if (output != NULL) {
@@ -1075,7 +1094,9 @@ lbool Solver::search(int nof_conflicts)
             if (nof_conflicts >= 0 && conflictC >= nof_conflicts || !withinBudget()){
                 // Reached bound on number of conflicts:
                 progress_estimate = progressEstimate();
-                cancelUntil(0);
+                if(!dis_restart) {
+                        cancelUntil(0);
+                }
                 return l_Undef; }
 
             // Simplify the set of problem clauses:
@@ -1118,6 +1139,13 @@ lbool Solver::search(int nof_conflicts)
                 }
             }
 
+            if (dump_decision) {
+                if (!dump_decision_stream) {
+                    dump_decision_stream = fopen(dump_decision, "wr");
+                }
+                fprintf(dump_decision_stream, "%d\n", var(next));
+            }
+            
             // Increase decision level and enqueue 'next'
             newDecisionLevel();
 			//printf("new deci level: %d\n", decisionLevel()-1);
@@ -1455,7 +1483,9 @@ lbool Solver::solve_()
 		{implement_pure=false; status = search(rest_base * restart_first);}
 		
         if (!withinBudget()) break;
+                if(!dis_restart) {
         curr_restarts++;restart=curr_restarts;
+                }
 		//if(curr_restarts>stop_pure)
 		//{phase_saving=2;}
     }
