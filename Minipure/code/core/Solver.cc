@@ -1061,7 +1061,7 @@ lbool Solver::search(int nof_conflicts)
                 }
                 claBumpActivity(ca[cr]);
                 uncheckedEnqueue(learnt_clause[0], cr);
-                if (!dis_learn) {
+                if (dis_learn) {
                     ca.free(cr);
                 }
             }
