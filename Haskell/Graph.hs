@@ -15,7 +15,7 @@ main = do
          ["variable"] -> putStr =<< printGraph . nubSet . graphVariable . parseDimacs <$> getContents
          ["clause"]   -> putStr =<< printGraph . graphClause . parseDimacs <$> getContents
          ["literal"]  -> putStr =<< printGraph . graphLiteral . parseDimacs <$> getContents
-         _            -> error "Unknown argument, must be either \"variable\" or \"clause\"."
+         _            -> error "Unknown argument, must be either \"variable\" or \"clause\" or \"literal\"."
          
 
 graphVariable :: Sat -> [(Int, Int)]
