@@ -63,12 +63,10 @@ module Rubigraph
     end
 
     def fontfamily=(f)
-      # TODO: should assert 'Helvetica' | 'Times Roman'
       set_attribute('fontfamily', f)
     end
 
     def fontsize=(s)
-      # TODO: should assert 10, 12, 18. 24
       set_attribute('fontsize', s)
     end
   end # Vertex
@@ -117,12 +115,10 @@ module Rubigraph
     end
 
     def fontfamily=(f)
-      # TODO: should assert 'Helvetica' | 'Times Roman'
       set_attribute('fontfamily', f)
     end
 
     def fontsize=(s)
-      # TODO: should assert 10, 12, 18. 24
       set_attribute('fontsize', s)
     end
 
@@ -150,7 +146,7 @@ module Rubigraph
 
 
   # initialize XML-RPC client
-  def self.init(host='127.0.0.1', port='20738',ttl=0.01)
+  def self.init(host='127.0.0.1', port='20738',ttl=1)
     @server = XMLRPC::Client.new2("http://#{host}:#{port}/RPC2")
     @mutex  = Mutex.new
     @pool   = Array.new
@@ -163,7 +159,7 @@ module Rubigraph
     end
     at_exit { flush! }
   end
-
+  
   # clear all vertex, edges
   def self.clear
     call('ubigraph.clear')
@@ -188,6 +184,7 @@ module Rubigraph
     @mutex.synchronize {
       @pool.push argv
     }
-    flush! if @pool.size >= 128
+    
+    flush! if @pool.size >= 512
   end
 end # Rubigraph
