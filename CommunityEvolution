@@ -12,7 +12,7 @@ else
   dump="$2"
 fi
 if [ -z "$3" ]; then
-  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph:"
+  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph or to Plot link informatin enter plot:"
   read graph
 else
   graph="$3"
@@ -21,10 +21,10 @@ fi
 mkfifo output/input.txt
 if [ "$graph" == "graphviz" ]; then
   ./FileSeperatorGraphViz output/input.txt &
-  pid=$!
-else
+elif [ "$graph" == "ubigraph" ]; then
   ./FileSeperatorUbiGraph.rb output/input.txt &
-  pid=$!
+else
+  ./FileSeperatorPlot.rb output/input.txt &
 fi
 
 ./Minipure/binary/minipure $1 -dump-freq=$dump -dump-file=output/input.txt > /dev/null

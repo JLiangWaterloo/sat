@@ -59,16 +59,11 @@ Input: Will be prompted for the number of variables, clauses, and communities.
 Output: A plot of the performance of MiniSAT while varying Q from 0 to 1 by increments of 0.01.
 
 ##### CommunityEvolution
-Input: DIMACS file, dump frequency, and graphing technique (graphviz or ubigraph)
+Requires: For GraphViz: GraphViz, Ruby, and ImageMagick. For UbiGraph: Ubigraph, Ruby, and ImageMagick. For Plot: GnuPlot and Ruby.
 
-Output: If graphviz was chosen, this will generate a GIF of the evolution of the SAT instance. If ubigraph was chosen, will create a dynamic evolution of the SAT instance.
+Input: A dimacs file of the SAT instance. Will be promted for dump-frequency (start with 1) and to either use graphviz or ubigraph or a plot.
 
-##### CommunityEvolution
-Requires: For GraphViz: GraphViz, Ruby, and ImageMagick. For UbiGraph: Ubigraph, Ruby, ImageMagick, and GnuPlot.
-
-Input: A dimacs file of the SAT instance. Will be promted for dump-frequency (start with 1) and to either use graphviz or ubigraph.
-
-Output: If GraphViz was chosen, a GIF showing the evolution of the SAT instance with the modularity of each dump printed at the top of each frame. If UbiGrap was chosen, a dynamic 3D graph of the SAT instance which evolves and a Plot of how many intercommunity links and community links are in each step and are removed in each step.
+Output: If GraphViz was chosen, a GIF showing the evolution of the SAT instance with the modularity of each dump printed at the top of each frame. If UbiGrap was chosen, a dynamic 3D graph of the SAT instance which evolves. If Plot was chosen, a plot of how many intercommunity links and community links are in each step and are removed in each step.
 
 Example
 -------
