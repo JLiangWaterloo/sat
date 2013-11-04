@@ -3,7 +3,7 @@
 #############################
 c=0000
 i=0
-rm -r GIFFiles
+rm -rf GIFFiles
 mkdir -p GIFFiles
 echo "" > output/dump"$c".txt
 
@@ -31,5 +31,5 @@ do
   fi
 done
 
-convert -delay 300 -loop 0 -gravity center -background white -extent $size -fill white GIFFiles/*.jpg output/anim.gif
+convert -delay 150 -loop 0 -gravity center -background white -extent $size -fill white GIFFiles/*.jpg output/anim.gif
 xdg-open output/anim.gif
