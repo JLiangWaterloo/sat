@@ -3,6 +3,7 @@
 #####################################
 
 echo "------ Community Evolution ------"
+mkdir -p output
 rm -f output/input.txt
 
 if [ -z "$2" ]; then
