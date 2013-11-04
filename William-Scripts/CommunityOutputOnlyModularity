@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+out=$(../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout")
+nodes=$(echo "$out" | grep "Nodes" | cut -d: -f2 | ../Bash/Trim)
+communities=$(echo "$out" | grep "Communities" | cut -d: -f2 | ../Bash/Trim)
+modularity=$(echo "$out" | grep "Modularity" | cut -d: -f2 | ../Bash/Trim)
+communitySplit=$(echo "$out" | grep "#" -v | cut -d' ' -f2 | uniq -c | ../Bash/Trim | cut -d' ' -f1)
+
+echo -n "$modularity"

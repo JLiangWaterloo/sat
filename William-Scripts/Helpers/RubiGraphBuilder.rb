@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-load 'rubigraph-mine.rb'
+load 'Helpers/rubigraph-mine.rb'
 
 class RubiGraphBuilder
   
@@ -108,7 +108,6 @@ class RubiGraphBuilder
   #
   def removeNode(node)
     if @edge_counter[node] <= 0 && !@nodes[node].nil?
-      puts "Node Removal = " + node
       @nodes[node].remove
       @nodes.delete(node)
     end

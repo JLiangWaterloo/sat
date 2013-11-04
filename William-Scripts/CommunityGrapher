@@ -34,7 +34,7 @@ if [ -z "$path" ]; then
 	progress_bar &
 	pid=$!
 	
-	Haskell/Cmty $vars $clauses $cmtys $q > output/community.dimacs
+	../Haskell/Cmty $vars $clauses $cmtys $q > output/community.dimacs
 	path="output/community.dimacs"
 	
 	stop_progress $pid
@@ -67,13 +67,13 @@ progress_bar &
 pid=$!
 
 # Populate community
-cat $path | Haskell/Bcp | Haskell/Graph $isClauseNodes > output/graph.dot
-cat output/graph.dot | Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot
+cat $path | ../Haskell/Bcp | ../Haskell/Graph $isClauseNodes > output/graph.dot
+cat output/graph.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot
 
 if [ $graph == "graphviz" ]; then
-  ./graphHelper.rb
+  ./Helpers/graphHelper.rb
 else
-  ./graphHelperUbi.rb
+  ./Helpers/graphHelperUbi.rb
 fi
 
 stop_progress $pid

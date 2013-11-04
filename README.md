@@ -38,6 +38,8 @@ Input: A dimacs file.
 Output: 6 lines of statistics about the dimacs: # of nodes, # of communities, # network modularity, size of the largest community, size of the average community, the number of communities that are larger than average.
 
 ##### CommunityGrapher
+MUST BE EXECUTED FROM William-Scripts
+
 Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x86_64/graphviz_2.34.0-1~raring_amd64.deb) and Ruby. May require UbiGraph if you choose to use that tool.
 
 Input: A dimacs file (optional).
@@ -45,6 +47,8 @@ Input: A dimacs file (optional).
 Output: Two GraphViz graphs which show the mapping of clauses or variables as chosen and the mapping of either to their community respectively. If no file was given, the script will prompt to user to enter the desired number of variables, clauses, communities, and quality of communities. They will both have to then choose to either represent nodes as clauses and edges as variables or vice versa. Will also have to choose to either build a detailed version of graph which uses a lot more time or not. Now has the option to use UbiGraph as well. To use UbiGraph, its server must be started first. To do that, run the following command from the 'sat' folder: UbiGraph-alpha-0.2.4-Linux64-Ubuntu-8.04/bin/ubigraph_server &.
 
 ##### CommunityGrapherGIF
+MUST BE EXECUTED FROM William-Scripts
+
 Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x86_64/graphviz_2.34.0-1~raring_amd64.deb), Ruby and ImageMagick
 
 Input: A zip file with an alphabetically sorted set of dimacs files or cnf (untested)
@@ -52,6 +56,8 @@ Input: A zip file with an alphabetically sorted set of dimacs files or cnf (unte
 Output: Will generate a GIF of going from the first file to the last.
 
 ##### PlotCommunityAnalysis
+MUST BE EXECUTED FROM William-Scripts
+
 Requires: GnuPlot
 
 Input: Will be prompted for the number of variables, clauses, and communities.
@@ -59,6 +65,8 @@ Input: Will be prompted for the number of variables, clauses, and communities.
 Output: A plot of the performance of MiniSAT while varying Q from 0 to 1 by increments of 0.01.
 
 ##### CommunityEvolution
+MUST BE EXECUTED FROM William-Scripts
+
 Requires: For GraphViz: GraphViz, Ruby, and ImageMagick. For UbiGraph: Ubigraph, Ruby, and ImageMagick. For Plot: GnuPlot and Ruby.
 
 Input: A dimacs file of the SAT instance. Will be promted for dump-frequency (start with 1) and to either use graphviz or ubigraph or a plot.

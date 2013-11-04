@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-load 'RubiPlotBuilder.rb'
+load 'Helpers/RubiPlotBuilder.rb'
 
 class PlotHelper
 

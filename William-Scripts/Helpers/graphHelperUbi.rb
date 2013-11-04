@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-require 'rubigraph'
-load 'RubiGraphBuilder.rb'
+load 'Helpers/rubigraph.mine'
+load 'Helpers/RubiGraphBuilder.rb'
 
 Rubigraph.init
 Rubigraph.clear

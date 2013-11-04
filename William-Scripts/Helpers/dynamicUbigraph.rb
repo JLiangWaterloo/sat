@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
-load 'rubigraph-mine.rb'
-load 'RubiGraphBuilder.rb'
+load 'Helpers/rubigraph-mine.rb'
+load 'Helpers/RubiGraphBuilder.rb'
 
 class DynamicUbigraph
 
@@ -34,13 +34,13 @@ class DynamicUbigraph
         @rubiGraph.addNode(info[2])
         @rubiGraph.addEdge(info[1], info[2])
       elsif info[0] == "<"
+        Rubigraph.setPoolSize(1)
         @rubiGraph.removeEdge(info[1], info[2])
         @rubiGraph.removeNode(info[1])
         @rubiGraph.removeNode(info[2])
       end
     end
     file.close
-    Rubigraph.flush!
   end
   
 end

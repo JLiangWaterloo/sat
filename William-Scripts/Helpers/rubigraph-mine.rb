@@ -143,7 +143,7 @@ module Rubigraph
     end
 
   end # Edge
-
+  
 
   # initialize XML-RPC client
   def self.init(host='127.0.0.1', port='20738',ttl=1)
@@ -151,6 +151,7 @@ module Rubigraph
     @mutex  = Mutex.new
     @pool   = Array.new
     @num    = -1 * (1 << 31) - 1 # XMLPRC i4's minimum
+    @pool_size = 256
     @flusher = Thread.start(ttl) do |ttl|
       while true do
         sleep ttl
@@ -179,12 +180,16 @@ module Rubigraph
     }
     @num
   end
+  
+  def self.setPoolSize(i)
+    @pool_size = i
+  end
 
   def self.call(*argv)
     @mutex.synchronize {
       @pool.push argv
     }
     
-    flush! if @pool.size >= 512
+    flush! if @pool.size >= @pool_size
   end
 end # Rubigraph

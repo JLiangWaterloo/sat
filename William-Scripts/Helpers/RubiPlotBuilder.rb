@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-load 'rubigraph-mine.rb'
+load 'Helpers/rubigraph-mine.rb'
 
 class RubiPlotBuilder
   

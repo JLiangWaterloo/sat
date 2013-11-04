@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-load 'dynamicUbigraph.rb'
+load 'Helpers/dynamicUbigraph.rb'
 
 i = 0
 graph = DynamicUbigraph.new()
@@ -8,11 +8,11 @@ system 'rm -f output/dump.dimacs'
 file = File.open(ARGV[0], "r")
 while (line = file.gets)
   if "#{line}".include? "$"
-    system 'cat output/dump.dimacs | Haskell/Bcp | Haskell/Graph variable > output/graph' + i.to_s + '.dot'
+    system 'cat output/dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > output/graph' + i.to_s + '.dot'
     
     if i == 0
       system 'diff /dev/null output/graph' + i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
-      system 'cat output/graph' + i.to_s + '.dot | Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot'
+      system 'cat output/graph' + i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot'
       graph.createCommunities()
     else
       system 'diff output/graph' + (i - 1).to_s + '.dot output/graph' + i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'

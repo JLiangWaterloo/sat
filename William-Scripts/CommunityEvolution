@@ -20,11 +20,11 @@ fi
 
 mkfifo output/input.txt
 if [ "$graph" == "graphviz" ]; then
-  ./FileSeperatorGraphViz output/input.txt &
+  ./Helpers/FileSeperatorGraphViz output/input.txt &
 elif [ "$graph" == "ubigraph" ]; then
-  ./FileSeperatorUbiGraph.rb output/input.txt &
+  ./Helpers/FileSeperatorUbiGraph.rb output/input.txt &
 else
-  ./FileSeperatorPlot.rb output/input.txt &
+  ./Helpers/FileSeperatorPlot.rb output/input.txt &
 fi
 
-./Minipure/binary/minipure $1 -dump-freq=$dump -dump-file=output/input.txt > /dev/null
+./../Minipure/binary/minipure $1 -dump-freq=$dump -dump-file=output/input.txt > /dev/null
