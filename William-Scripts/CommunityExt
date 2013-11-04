@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+out=$(../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout")
+nodes=$(echo "$out" | grep "Nodes" | cut -d: -f2 | ../Bash/Trim)
+communities=$(echo "$out" | grep "Communities" | cut -d: -f2 | ../Bash/Trim)
+modularity=$(echo "$out" | grep "Modularity" | cut -d: -f2 | ../Bash/Trim)
+communitySplit=$(echo "$out" | grep "#" -v | cut -d' ' -f2 | uniq -c | ../Bash/Trim | cut -d' ' -f1)
+
+information=$(sed -n -e '/^p cnf/p' $1)
+IFS=' ' read -ra INFO <<< "$information"
+clauses="${INFO[3]}"
+
+echo "$nodes"
+echo "$clauses"
+echo "$communities"
+echo "$modularity"
+echo "$communitySplit" | ../Haskell/Maximum | cut -d'.' -f1
+echo "$nodes $communities" | awk '{printf "%.2f\n", $1/$2}'
+echo "$communitySplit" | awk -v nodes="$nodes" -v communities="$communities" '{if ($1 >= (nodes / communities)) print $1}' | wc -l
