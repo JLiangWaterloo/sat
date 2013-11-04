@@ -5,6 +5,7 @@ c=0000
 i=0
 rm -rf GIFFiles
 mkdir -p GIFFiles
+mkdir -p output
 echo "" > output/dump"$c".txt
 
 while read line
