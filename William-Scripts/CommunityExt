@@ -1,0 +1,18 @@
+#!/bin/bash
+mkdir -p output
+
+cat $1 | ../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout" > output/communityExt.txt
+modularity=$(grep "Modularity" "output/communityExt.txt" | cut -d: -f2 | ../Bash/Trim)
+communities=$(grep "Communities" "output/communityExt.txt" | cut -d: -f2 | ../Bash/Trim)
+
+information=$(sed -n -e '/^p cnf/p' $1)
+IFS=' ' read -ra INFO <<< "$information"
+nodes="${INFO[2]}"
+clauses="${INFO[3]}"
+
+
+echo "$nodes"
+echo "$clauses"
+echo "$communities"
+echo "$modularity"
+#echo "$hairiness"

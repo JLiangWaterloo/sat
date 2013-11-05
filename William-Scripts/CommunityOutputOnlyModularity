@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+out=$(../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout")
+modularity=$(echo "$out" | grep "Modularity" | cut -d: -f2 | ../Bash/Trim)
+
+echo -n "$modularity"

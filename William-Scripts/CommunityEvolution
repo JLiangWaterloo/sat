@@ -1,0 +1,31 @@
+#####################################
+##   Graph Communinity Evolution   ##
+#####################################
+
+echo "------ Community Evolution ------"
+mkdir -p output
+rm -f output/input.txt
+
+if [ -z "$2" ]; then
+  echo "Enter the dump frequency:"
+  read dump
+else
+  dump="$2"
+fi
+if [ -z "$3" ]; then
+  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph or to Plot link informatin enter plot:"
+  read graph
+else
+  graph="$3"
+fi
+
+mkfifo output/input.txt
+if [ "$graph" == "graphviz" ]; then
+  ./Helpers/FileSeperatorGraphViz output/input.txt $1 &
+elif [ "$graph" == "ubigraph" ]; then
+  ./Helpers/FileSeperatorUbiGraph.rb output/input.txt &
+else
+  ./Helpers/FileSeperatorPlot.rb output/input.txt &
+fi
+
+./../Minipure/binary/minipure $1 -dump-freq=$dump -dump-file=output/input.txt > /dev/null
