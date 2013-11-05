@@ -24,7 +24,6 @@ class RubiGraphBuilder
     @edge_counter = {}
     @communities = {}
     @community_color = {}
-    @counter = 0
   end
 
   #
@@ -55,17 +54,10 @@ class RubiGraphBuilder
   # Adds the given node and community to the mapping with a color
   #
   def addToCommunity(node, community)
-    communities = {node => community}
-    @communities.merge!(communities)
+    @communities[node] = community
     
     if @community_color[community].nil?
-      newColor = {community => COLORS[@counter]}
-      @community_color.merge!(newColor)
-      
-      @counter += 1
-      if @counter >= COLORS.length
-        @counter = 0
-      end
+      @community_color[community] = COLORS[(community.to_i % COLORS.length)]
     end
   end
   
@@ -74,15 +66,13 @@ class RubiGraphBuilder
   #
   def addNode(node)
     if @nodes[node].nil?
-      newNode = {node => Rubigraph::Vertex.new}
-      @nodes.merge!(newNode)
+      @nodes[node] = Rubigraph::Vertex.new
       @nodes[node].shape = 'sphere'
       if !@communities[node].nil?
         @nodes[node].color = @community_color[@communities[node]]
       end
       
-      newCounter = { node => 0}
-      @edge_counter.merge!(newCounter)
+      @edge_counter[node] = 0
     end
   end
   
@@ -91,15 +81,13 @@ class RubiGraphBuilder
   #
   def addEdge(node0, node1)
     if !node0.nil? && !node1.nil? && @edge_objects[node1 + " -> " + node0].nil? && @edge_objects[node0 + " -> " + node1].nil?
-      newEdgeObject = {node0 + " -> " + node1 => Rubigraph::Edge.new(@nodes[node0], @nodes[node1])}
-      @edge_objects.merge!(newEdgeObject)
+      @edge_objects[node0 + " -> " + node1] = Rubigraph::Edge.new(@nodes[node0], @nodes[node1])
       
       if !@communities[node0].nil? && !@communities[node1].nil? && @communities[node0] == @communities[node1]
         @edge_objects[node0 + " -> " + node1].color = @community_color[@communities[node0]]
       end
       
-      newCounter = { node0 => (@edge_counter[node0] + 1), node1 => (@edge_counter[node1] + 1)}
-      @edge_counter.merge!(newCounter)
+      @edge_counter[node0] = (@edge_counter[node0] + 1), node1 => (@edge_counter[node1] + 1)
     end
   end
   
@@ -121,8 +109,7 @@ class RubiGraphBuilder
       @edge_objects[node0 + " -> " + node1].remove
       @edge_objects.delete(node0 + " -> " + node1)
   
-      newCounter = {node0 => (@edge_counter[node0] - 1), node1 => (@edge_counter[node1] - 1)}
-      @edge_counter.merge!(newCounter)
+      @edge_counter[node0] = (@edge_counter[node0] - 1), node1 => (@edge_counter[node1] - 1)
     end
   end
 end

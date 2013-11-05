@@ -21,7 +21,7 @@ fi
 
 mkfifo output/input.txt
 if [ "$graph" == "graphviz" ]; then
-  ./Helpers/FileSeperatorGraphViz output/input.txt &
+  ./Helpers/FileSeperatorGraphViz output/input.txt $1 &
 elif [ "$graph" == "ubigraph" ]; then
   ./Helpers/FileSeperatorUbiGraph.rb output/input.txt &
 else
