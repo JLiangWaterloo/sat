@@ -4,7 +4,7 @@ require 'thread'
 mutex1 = Mutex.new
 mutex2 = Mutex.new
 mutex3 = Mutex.new
-threadCount = 8
+threadCount = 16
 threads = []
 
 communities = {}
