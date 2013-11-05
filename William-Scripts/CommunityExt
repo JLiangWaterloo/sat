@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir -p output
 
-cat $1 | ../Haskell/Bcp +RTS -K32M | ../Haskell/Graph variable +RTS -K32M | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout" > output/communityExt.txt
+cat $1 | ../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout" > output/communityExt.txt
 modularity=$(grep "Modularity" "output/communityExt.txt" | cut -d: -f2 | ../Bash/Trim)
 communities=$(grep "Communities" "output/communityExt.txt" | cut -d: -f2 | ../Bash/Trim)
 
