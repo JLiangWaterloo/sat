@@ -94,7 +94,7 @@ if [ $graph == "graphviz" ]; then
   if [ $5 == "gif" ]; then
     ext="jpg"
   else
-    ext="svg"
+    ext="pdf"
   fi
 
   if [ $detail == "Y" ]; then
@@ -110,6 +110,6 @@ if [ $graph == "graphviz" ]; then
 
   stop_progress $pid
   if [ -z "$5" ]; then
-    xdg-open output/communityGraph.svg
+    xdg-open output/communityGraph."$ext"
   fi
 fi
