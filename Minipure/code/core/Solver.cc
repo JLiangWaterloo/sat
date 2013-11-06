@@ -1038,7 +1038,9 @@ lbool Solver::search(int nof_conflicts)
     for (;;){
 	
         CRef confl = propagate(false);
+        
         dump();
+        
         if (confl != CRef_Undef){
             // CONFLICT
 			//printf("in conflict\n");
@@ -1556,10 +1558,20 @@ void Solver::toDimacs(FILE* f, const vec<Lit>& assumps)
     for (int i = 0; i < clauses.size(); i++)
         if (!satisfied(ca[clauses[i]]))
             cnt++;
+    for (int i = 0; i < learnts.size(); i++)
+        if (!satisfied(ca[learnts[i]]))
+            cnt++;
         
     for (int i = 0; i < clauses.size(); i++)
         if (!satisfied(ca[clauses[i]])){
             Clause& c = ca[clauses[i]];
+            for (int j = 0; j < c.size(); j++)
+                if (value(c[j]) != l_False)
+                    mapVar(var(c[j]), map, max);
+        }
+    for (int i = 0; i < learnts.size(); i++)
+        if (!satisfied(ca[learnts[i]])){
+            Clause& c = ca[learnts[i]];
             for (int j = 0; j < c.size(); j++)
                 if (value(c[j]) != l_False)
                     mapVar(var(c[j]), map, max);
@@ -1577,6 +1589,8 @@ void Solver::toDimacs(FILE* f, const vec<Lit>& assumps)
 
     for (int i = 0; i < clauses.size(); i++)
         toDimacs(f, ca[clauses[i]], map, max);
+    for (int i = 0; i < learnts.size(); i++)
+        toDimacs(f, ca[learnts[i]], map, max);
 }
 
 void Solver::dump() {
