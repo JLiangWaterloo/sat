@@ -1,0 +1,6 @@
+############################
+##   ImageMagick Helper   ##
+############################
+
+convert -delay 150 -loop 0 -gravity center -background white -extent $2 -fill white EvolutionData/$1/*.jpg output/anim.gif
+xdg-open output/anim.gif
