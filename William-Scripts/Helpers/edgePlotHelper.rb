@@ -32,12 +32,14 @@ class EdgePlotHelper
   end
   
   def finish()
+    puts "Finalizing"
     @i = 0
     system 'gnuplot -persist GnuplotScripts/CommunityVsIntercommunityTotal.gnu'
     system 'gnuplot -persist GnuplotScripts/CommunityVsIntercommunityRemoved.gnu'
   end
   
   def createCommunities()
+    puts "Creating Communities"
     # Populate communities
     file = File.open("output/communityMapping.dot", "r")
     while (line = file.gets)
@@ -48,6 +50,7 @@ class EdgePlotHelper
   end
   
   def createNodesAndEdges(i)
+    puts "Adding Nodes and Edges"
     # Populate nodes and edges
     file = File.open("output/graph" + i.to_s + ".dot", "r")
     while (line = file.gets)
@@ -60,6 +63,7 @@ class EdgePlotHelper
   end
   
   def workOnDiff()
+    puts "Adding and Removing Nodes and Edges"
     # Populate Nodes and Edges
     file = File.open("output/addRemoveNodesAndEdges.dot", "r")
     while (line = file.gets)
@@ -74,11 +78,13 @@ class EdgePlotHelper
   end
   
   def populateDiffInformation(dumpCount)
+    puts "Populating Node and Edge Information"
     system 'echo "' + dumpCount.to_s + ' ' + @graph.getRemovedCommunityEdgeCount().to_s + ' ' + @graph.getRemovedIntercommunityEdgeCount().to_s + '" >> output/removedEdgeTypeCountData.txt'
     
   end
   
   def populateCommunityInformation(dumpCount)
+    puts "Populating Community Information"
     system 'echo "' + dumpCount.to_s + ' ' + @graph.getCommunityEdgeCount().to_s + ' ' + @graph.getIntercommunityEdgeCount().to_s + '" >> output/edgeTypeCountData.txt'
   end
 

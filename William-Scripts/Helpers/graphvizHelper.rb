@@ -43,19 +43,20 @@ class GraphvizHelper
     else
       type = 'sfdp'
     end
-    system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o output/communityGraph.' + @ext
     
     if @file_type == "gif"
-      modularity = `cat #{@file_name} | ./CommunityOutputOnlyModularity`
-      system 'convert output/communityGraph.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" output/communityGraph.' + @ext
-      
       c = format('%04d', @i)
-      system 'mv output/communityGraph.jpg EvolutionData/' + @dir_name
-      system 'mv EvolutionData/' + @dir_name + '/communityGraph.jpg EvolutionData/' + @dir_name + '/' + c.to_s + '.jpg'
+      system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+    
+      modularity = `cat #{@file_name} | ./CommunityOutputOnlyModularity`
+      system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+    else
+      system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o output/communityGraph.' + @ext
     end
   end
   
   def createCommunities()
+    puts "Creating Communities"
     @graph.clearCommunities()
   
     # Populate communities
@@ -67,7 +68,8 @@ class GraphvizHelper
     file.close
   end
   
-  def addRemoveNodesAndEdges()  
+  def addRemoveNodesAndEdges()
+    puts "Adding and Removing Nodes and Edges"
     # Populate Nodes and Edges
     file = File.open("output/addRemoveNodesAndEdges.dot", "r")
     file.readlines.each do |line|
@@ -89,6 +91,7 @@ class GraphvizHelper
   end
   
   def buildOutput()
+    puts "Building image"
     File.open("output/communitySubGraphs.dot", "w") do |f|
       f.write("graph communities { \n  edge[dir=none, color=black]; \n  node[shape=point, color=red];\n  overlap=false;\n")
       
@@ -105,6 +108,7 @@ class GraphvizHelper
   end
   
   def finish()
+    puts "Finalizing"
     @i = 0
     
     if @file_type == "gif"

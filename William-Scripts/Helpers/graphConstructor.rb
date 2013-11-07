@@ -28,10 +28,12 @@ class GraphConstructor
   
   def work(file)
     done = false
+    puts "Reading file"
+    @time1 = Time.now
     
-    file = File.open(file, "r")
-    file.readlines.each do |line|
+    File.open(file).each do |line|
       if "#{line}"[0,1] == "$"
+        printTime()
         @graph.work()
         system 'rm -f output/dump.dimacs'
         done = true
@@ -40,7 +42,6 @@ class GraphConstructor
         done = false
       end
     end
-    file.close
     
     if !done
       @graph.work()
@@ -50,6 +51,12 @@ class GraphConstructor
   
   def finish()
     @graph.finish()
+  end
+  
+  def printTime()
+    time2 = Time.now
+    puts "Time = " + ((time2 - @time1)).to_s + "s"
+    @time1 = time2
   end
 
 end

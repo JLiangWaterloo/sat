@@ -29,6 +29,7 @@ class UbigraphHelper
   end
   
   def createCommunities()
+    puts "Creating Communities"
     # Populate communities
     file = File.open("output/communityMapping.dot", "r")
     file.readlines.each do |line|
@@ -38,7 +39,8 @@ class UbigraphHelper
     file.close
   end
   
-  def addRemoveNodesAndEdges()  
+  def addRemoveNodesAndEdges() 
+    puts "Adding and Removing Nodes and Edges" 
     # Populate Nodes and Edges
     file = File.open("output/addRemoveNodesAndEdges.dot", "r")
     file.readlines.each do |line|
@@ -60,6 +62,7 @@ class UbigraphHelper
   end
   
   def finish()
+    puts "Finalizing"
     @i = 0
     return true
   end
