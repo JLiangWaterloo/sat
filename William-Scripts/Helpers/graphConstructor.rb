@@ -31,21 +31,24 @@ class GraphConstructor
     puts "Reading file"
     @time1 = Time.now
     
+    dump = File.open("output/dump.dimacs", "w")
     File.open(file).each do |line|
       if "#{line}"[0,1] == "$"
-        printTime()
+        dump.close
         @graph.work()
-        system 'rm -f output/dump.dimacs'
+        dump = File.open("output/dump.dimacs", "w")
+        dump.truncate(0)
         done = true
+        printTime()
       else
-        system 'echo -n "' + "#{line}" + '" >> output/dump.dimacs'
+        dump.write(line)
         done = false
       end
     end
     
     if !done
+      dump.close
       @graph.work()
-      system 'rm -f output/dump.dimacs'
     end
   end
   

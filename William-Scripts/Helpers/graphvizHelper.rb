@@ -81,7 +81,6 @@ class GraphvizHelper
         @graph.addNode(info[2])
         @graph.addEdge(info[1], info[2])
       elsif info[0] == "<"
-        Rubigraph.setPoolSize(1)
         @graph.removeEdge(info[1], info[2])
         @graph.removeNode(info[1])
         @graph.removeNode(info[2])
