@@ -60,12 +60,12 @@ if [ ! -f "$dimacs" ]; then
     exit 1
 fi
 
-cmtyfile="${dimacs%.*}.cmty"
+cmtyfile="$dimacs.cmty"
 
 if [ ! -f "$cmtyfile" ]; then
     cat "$dimacs" | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
 fi
-    
+
 args=()
 if [ -n "$timeout" ]; then
     args+=("-cpu-lim=$timeout")
