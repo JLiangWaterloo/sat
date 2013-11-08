@@ -40,7 +40,7 @@ Output: 6 lines of statistics about the dimacs: # of nodes, # of communities, # 
 ##### CommunityGrapher
 MUST BE EXECUTED FROM William-Scripts
 
-Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x86_64/graphviz_2.34.0-1~raring_amd64.deb) and Ruby. May require UbiGraph if you choose to use that tool.
+Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x86_64/graphviz_2.34.0-1~raring_amd64.deb) and Ruby. May require UbiGraph if you choose to use that tool. Also requires Diffy (sudo gem install diffy)
 
 Input: A dimacs file (optional).
 
@@ -60,7 +60,7 @@ Output: A plot of the performance of MiniSAT while varying Q from 0 to 1 by incr
 ##### CommunityEvolution
 MUST BE EXECUTED FROM William-Scripts
 
-Requires: For GraphViz: GraphViz, Ruby, and ImageMagick. For UbiGraph: Ubigraph, Ruby, and ImageMagick. For Plot: GnuPlot and Ruby.
+Requires: For GraphViz: GraphViz, Ruby, and ImageMagick. For UbiGraph: Ubigraph, Ruby, and ImageMagick. For Plot: GnuPlot and Ruby. Also requires Diffy (sudo gem install diffy)
 
 Input: A dimacs file of the SAT instance. Will be promted for dump-frequency (start with 1) and to either use graphviz or ubigraph or a plot.
 
