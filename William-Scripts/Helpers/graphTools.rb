@@ -8,7 +8,7 @@ class GraphTools
   
   def clear()
     @subgraphs = {}
-    @nonSubGraphNodes = Array.new
+    @nonSubGraphNodes = ""
   end
   
   def newNode(node, color)
@@ -24,7 +24,7 @@ class GraphTools
   end
   
   def newIntercommunityEdge(edge)
-    @nonSubGraphNodes.push(edge)
+    @nonSubGraphNodes = @nonSubGraphNodes + "\n  " + edge + ";"
   end
   
   def removeNode(node)
