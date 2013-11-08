@@ -4,7 +4,6 @@ import Control.Applicative
 import Data.List
 import Data.Map (Map)
 import qualified Data.Map as Map
-import qualified Data.Set as Set
 import Sat
 import System.Environment
 
@@ -12,7 +11,7 @@ main :: IO ()
 main = do
     args <- getArgs
     case args of
-         ["variable"] -> putStr =<< printGraph . nubSet . graphVariable . parseDimacs <$> getContents
+         ["variable"] -> putStr =<< printGraph . graphVariable . parseDimacs <$> getContents
          ["clause"]   -> putStr =<< printGraph . graphClause . parseDimacs <$> getContents
          ["literal"]  -> putStr =<< printGraph . graphLiteral . parseDimacs <$> getContents
          _            -> error "Unknown argument, must be either \"variable\" or \"clause\" or \"literal\"."
@@ -27,11 +26,15 @@ graphVariable s =
         
 graphLiteral :: Sat -> [(Int, Int)]
 graphLiteral s =
-    (s >>= mapClause) ++ excludedMiddles s
+    map (mapTuple mapLiteral) $ s >>= mapClause
     where
         mapClause :: Clause -> [(Int, Int)]
-        mapClause c = pairs c
-        excludedMiddles m = [(x, -x) | x <- nubSet $ map abs $ concat m]
+        mapClause c = pairs c ++ excludedMiddles c
+        mapTuple f (a, b) = (f a, f b)
+        mapLiteral l
+            | l < 0     = (-l * 2)
+            | otherwise = l * 2 -1
+        excludedMiddles c = [(x, -x) | x <- c]
 
 graphClause :: Sat -> [(Int, Int)]
 graphClause s =
@@ -57,6 +60,3 @@ canonicalPair :: Ord a => (a, a) -> (a, a)
 canonicalPair (a, b)
     | a <= b    = (a, b)
     | otherwise = (b, a)
-    
-nubSet :: Ord a => [a] -> [a]
-nubSet = Set.toList . Set.fromList

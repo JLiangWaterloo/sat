@@ -1,0 +1,84 @@
+#!/bin/bash
+
+while test $# -gt 0; do
+        case "$1" in
+                -h|--help)
+                        echo "Map the decisions to the community."
+                        echo " "
+                        echo "MapDecision [options] dimacs-file"
+                        echo " "
+                        echo "options:"
+                        echo "-h, --help                show brief help"
+                        echo "-t, --timeout             set timeout"
+                        echo "-a, --dis-act             disable activity"
+                        exit 0
+                        ;;
+                -t)
+                        shift
+                        if test $# -gt 0; then
+                                timeout=$1
+                        else
+                                echo "No timeout specified." 1>&2
+                                exit 1
+                        fi
+                        shift
+                        ;;
+                --timeout*)
+                        timeout=`echo $1 | sed -e 's/^[^=]*=//g'`
+                        shift
+                        ;;
+                -a)
+                        disact="true"
+                        shift
+                        ;;
+                --dis-act)
+                        disact="true"
+                        shift
+                        ;;
+                -*)
+                        echo "Bad option \"$1\"." 1>&2
+                        exit 1
+                        ;;
+                *)
+                        if [ -n "$dimacs" ]
+                        then
+                            echo "Multiple dimacs file." 1>&2
+                            exit 1
+                        fi
+                        dimacs="$1"
+                        shift
+                        ;;
+        esac
+done
+
+if [ -z "$dimacs" ]; then
+    echo "Missing dimacs file." 1>&2
+    exit 1
+fi
+if [ ! -f "$dimacs" ]; then
+    echo "File \"$dimacs\" does not exist." 1>&2
+    exit 1
+fi
+
+cmtyfile="$dimacs.cmty"
+
+if [ ! -f "$cmtyfile" ]; then
+    cat "$dimacs" | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+fi
+
+args=()
+if [ -n "$timeout" ]; then
+    args+=("-cpu-lim=$timeout")
+fi
+if [ -n "$disact" ]; then
+    echo "add"
+    args+=("-dis-act")
+fi
+
+pipe=$(mktemp -u)
+mkfifo "$pipe"
+
+../Bin/minipure -dump-decision="$pipe" "${args[@]}" "$dimacs" > /dev/null &
+
+java Mapped "$cmtyfile" < "$pipe"
+rm "$pipe"

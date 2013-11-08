@@ -1145,7 +1145,7 @@ lbool Solver::search(int nof_conflicts)
                 if (!dump_decision_stream) {
                     dump_decision_stream = fopen(dump_decision, "wr");
                 }
-                fprintf(dump_decision_stream, "%d\n", var(next));
+                fprintf(dump_decision_stream, "%d\n", var(next) + 1);
             }
             
             // Increase decision level and enqueue 'next'

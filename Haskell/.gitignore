@@ -1,0 +1,17 @@
+*.o
+*.hi
+Average
+Bcp
+Cmty
+Cnf
+Graph
+Group
+Horn
+HornCount
+Maximum
+Minimum
+Minipure
+Pure
+Shuffle
+Subgroup
+Transpose
