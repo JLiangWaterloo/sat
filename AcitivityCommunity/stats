@@ -1,0 +1,660 @@
+>>>>File: ../Benchmarks/satcomp09-main-track-unselected/application/SAT09/APPLICATIONS/satComp09_BioInstances/rpoc_xits_15_SAT.cnf
+#Nodes: 2385
+#Modularity: 0.162432
+#Communities: 259
+#Largest Communities: 1007 (42%)
+#Stayed within community: 5082/7707 (65%) (1.39s)
+>>>>Without activity
+#Stayed within community: 1069674/1869579 (57%) (4991.16s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 24611/50230 (48%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 856303/1837772 (46%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_16.cnf
+#Nodes: 105744
+#Modularity: 0.739601
+#Communities: 33
+#Largest Communities: 26974 (25%)
+#Stayed within community: 35476/47161 (75%) (2233.08s)
+>>>>Without activity
+#Stayed within community: 29399/40600 (72%) (2332.72s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 27684/43494 (63%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2365554/4592113 (51%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_14.cnf
+#Nodes: 105742
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 19183/20875 (91%) (523.61s)
+>>>>Without activity
+#Stayed within community: 29817/31051 (96%) (673.00s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 23759/24590 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2241707/3432797 (65%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_15.cnf
+#Nodes: 105743
+#Modularity: 0.739341
+#Communities: 33
+#Largest Communities: 27802 (26%)
+#Stayed within community: 37543/41144 (91%) (1043.68s)
+>>>>Without activity
+#Stayed within community: 27479/41059 (66%) (1244.18s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 25274/35813 (70%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 4202154/5334593 (78%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_24.cnf
+#Nodes: 105752
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 59800/69327 (86%) (4995.58s)
+>>>>Without activity
+#Stayed within community: 40434/42112 (96%) (4996.16s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 26870/53508 (50%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1259701/2453668 (51%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_5_32.cnf
+#Nodes: 23148
+#Modularity: 0.740638
+#Communities: 17
+#Largest Communities: 5779 (24%)
+#Stayed within community: 262472/450527 (58%) (4994.73s)
+>>>>Without activity
+#Stayed within community: 210886/275202 (76%) (4993.99s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 193504/393752 (49%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 3391400/6221330 (54%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_64.cnf
+#Nodes: 105792
+#Modularity: 0.740984
+#Communities: 42
+#Largest Communities: 27628 (26%)
+#Stayed within community: 141116/214776 (65%) (4995.12s)
+>>>>Without activity
+#Stayed within community: 54883/56671 (96%) (4994.04s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 82952/142286 (58%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2089211/3774313 (55%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_56.cnf
+#Nodes: 105784
+#Modularity: 0.740749
+#Communities: 52
+#Largest Communities: 27622 (26%)
+#Stayed within community: 113372/169785 (66%) (4994.67s)
+>>>>Without activity
+#Stayed within community: 44967/46458 (96%) (4996.00s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 68959/110546 (62%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2022952/4255101 (47%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_40.cnf
+#Nodes: 105768
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 73258/92151 (79%) (4994.65s)
+>>>>Without activity
+#Stayed within community: 40634/41930 (96%) (4995.74s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 32988/69501 (47%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2661487/4537490 (58%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_9_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.761984
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 4504461/4662896 (96%) (1068.23s)
+>>>>Without activity
+#Stayed within community: 2694312/6192912 (43%) (4988.2s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3381432/3499160 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1372092/4476138 (30%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_12_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.507275
+#Communities: 1912
+#Largest Communities: 4403 (28%)
+#Stayed within community: 276811/1825245 (15%) (946.09s)
+>>>>Without activity
+#Stayed within community: 526628/2344790 (22%) (4991.5s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 246601/1284992 (19%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 280209/1589209 (17%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_7_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.767190
+#Communities: 11
+#Largest Communities: 3570 (19%)
+#Stayed within community: 3989798/4141226 (96%) (1368.14s)
+>>>>Without activity
+#Stayed within community: 2459507/5374556 (45%) (4987.58s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3191553/3304976 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1429142/4668793 (30%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4201_555_unsat_pre.cnf
+#Nodes: 14757
+#Modularity: 0.762955
+#Communities: 10
+#Largest Communities: 2856 (19%)
+#Stayed within community: 4618332/4774492 (96%) (1966.52s)
+>>>>Without activity
+#Stayed within community: 3231676/6725733 (48%) (4988.59s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3758639/3883739 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2187161/5503278 (39%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_11_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.779864
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 3916564/4056247 (96%) (4992.90s)
+>>>>Without activity
+#Stayed within community: 4926005/9785964 (50%) (4989.84s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3543171/3668806 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2131104/6009249 (35%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_1_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.780526
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 4635901/4799416 (96%) (2598.49s)
+>>>>Without activity
+#Stayed within community: 3307475/7476226 (44%) (4989.01s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3822680/3955657 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1729359/4930224 (35%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_2_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.777843
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 4590341/4749309 (96%) (4299.64s)
+>>>>Without activity
+#Stayed within community: 3328496/6514825 (51%) (4987.70s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3967272/4102272 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2065047/5943552 (34%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_10_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.774650
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 4011953/4154150 (96%) (1300.55s)
+>>>>Without activity
+#Stayed within community: 2859978/6329719 (45%) (4988.44s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3365594/3484853 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1185444/4127219 (28%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_10_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.774584
+#Communities: 11
+#Largest Communities: 3570 (19%)
+#Stayed within community: 4060339/4198572 (96%) (1367.78s)
+>>>>Without activity
+#Stayed within community: 3004780/6389016 (47%) (4986.4s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3109812/3215791 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1227721/4212952 (29%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_8_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.779460
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 3846294/3982969 (96%) (4993.27s)
+>>>>Without activity
+#Stayed within community: 3614688/7854719 (46%) (4989.82s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3026989/3135993 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2054860/5301513 (38%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4201_555_unsat.cnf
+#Nodes: 17375
+#Modularity: 0.768840
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 4571270/4731080 (96%) (1861.36s)
+>>>>Without activity
+#Stayed within community: 3523814/7689928 (45%) (4989.34s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3225561/3337651 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1697001/5192338 (32%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_6_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.782890
+#Communities: 12
+#Largest Communities: 3213 (17%)
+#Stayed within community: 4379222/4536126 (96%) (4994.09s)
+>>>>Without activity
+#Stayed within community: 6661449/10437874 (63%) (4991.93s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 4095186/4241289 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2494388/6357323 (39%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_1_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.777494
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 4132313/4270549 (96%) (2324.87s)
+>>>>Without activity
+#Stayed within community: 2815329/5707636 (49%) (4988.19s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3502410/3623449 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1733949/5160727 (33%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_3082_415_unsat_pre.cnf
+#Nodes: 9521
+#Modularity: 0.729768
+#Communities: 9
+#Largest Communities: 2142 (22%)
+#Stayed within community: 5332979/5513878 (96%) (2164.26s)
+>>>>Without activity
+#Stayed within community: 3944342/9561365 (41%) (4988.25s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 4221728/4370489 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2090706/6446803 (32%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_3082_415_unsat.cnf
+#Nodes: 12377
+#Modularity: 0.718494
+#Communities: 169
+#Largest Communities: 3094 (24%)
+#Stayed within community: 5342340/5522769 (96%) (2341.22s)
+>>>>Without activity
+#Stayed within community: 4483197/8831592 (50%) (4986.97s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3942687/4078278 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2369680/6413510 (36%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/k_unsat.cnf
+#Nodes: 7022
+#Modularity: 0.444800
+#Communities: 4
+#Largest Communities: 2711 (38%)
+#Stayed within community: 2633682/4532394 (58%) (4991.75s)
+>>>>Without activity
+#Stayed within community: 3248149/5021167 (64%) (4988.34s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 2096995/3663475 (57%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2637233/4302586 (61%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_2_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.780909
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 4726317/4895939 (96%) (3948.96s)
+>>>>Without activity
+#Stayed within community: 2806976/6397390 (43%) (4988.34s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3793925/3929301 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1587024/4743096 (33%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_8_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.777518
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 3640786/3768564 (96%) (4993.42s)
+>>>>Without activity
+#Stayed within community: 3790235/7647904 (49%) (4990.52s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3418516/3537800 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2091961/5921527 (35%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_5_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.783357
+#Communities: 12
+#Largest Communities: 3213 (17%)
+#Stayed within community: 5087115/5269157 (96%) (4993.58s)
+>>>>Without activity
+#Stayed within community: 5680609/9759867 (58%) (4990.51s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 4320040/4474122 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 3089214/7190029 (42%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_12_unsat.cnf
+#Nodes: 17851
+#Modularity: 0.792597
+#Communities: 12
+#Largest Communities: 3094 (17%)
+#Stayed within community: 2073608/2314049 (89%) (893.17s)
+>>>>Without activity
+#Stayed within community: 1135171/2801041 (40%) (4990.44s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 2100479/2278016 (92%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 583083/2208620 (26%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_7_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.749157
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 3806175/3942775 (96%) (1016.09s)
+>>>>Without activity
+#Stayed within community: 2656263/5912721 (44%) (4987.64s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 2663238/2758063 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1184167/4313142 (27%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_3791_556_unsat.cnf
+#Nodes: 16542
+#Modularity: 0.819038
+#Communities: 41
+#Largest Communities: 1904 (11%)
+#Stayed within community: 9242557/9591950 (96%) (4992.56s)
+>>>>Without activity
+#Stayed within community: 12175680/12713562 (95%) (4990.6s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 8228652/8539435 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 9196035/9583065 (95%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_9_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.747538
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 3783180/3913649 (96%) (1223.89s)
+>>>>Without activity
+#Stayed within community: 2510019/5823049 (43%) (4985.60s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 2936396/3037579 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1186116/4488268 (26%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_11_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.778018
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 3608194/3733734 (96%) (4993.36s)
+>>>>Without activity
+#Stayed within community: 3835995/6998713 (54%) (4989.85s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 2921022/3021759 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2150648/5527423 (38%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_6_unsat_pre.cnf
+#Nodes: 15233
+#Modularity: 0.774791
+#Communities: 10
+#Largest Communities: 3213 (21%)
+#Stayed within community: 4919567/5092360 (96%) (4992.56s)
+>>>>Without activity
+#Stayed within community: 4873902/7311712 (66%) (4989.05s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 4018531/4159671 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 3324430/7116323 (46%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/nonopt/6s20.cnf
+#Nodes: 61556
+#Modularity: 0.748322
+#Communities: 18
+#Largest Communities: 15627 (25%)
+#Stayed within community: 4473841/6949492 (64%) (4991.54s)
+>>>>Without activity
+#Stayed within community: 2534065/4620174 (54%) (4991.82s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 3458627/5785433 (59%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 2412574/4410530 (54%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s133.cnf
+#Nodes: 45620
+#Modularity: 0.814546
+#Communities: 31
+#Largest Communities: 10277 (22%)
+#Stayed within community: 9102580/13861231 (65%) (4988.36s)
+>>>>Without activity
+#Stayed within community: 5981010/9995021 (59%) (4991.25s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 8633228/13014825 (66%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 6859101/14852913 (46%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/beempgsol5b1.cnf
+#Nodes: 21466
+#Modularity: 0.807537
+#Communities: 17
+#Largest Communities: 3401 (15%)
+#Stayed within community: 1385432/4502450 (30%) (4990.72s)
+>>>>Without activity
+#Stayed within community: 1949042/4949873 (39%) (4991.30s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 1144637/3865835 (29%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 1912238/5860704 (32%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s165.cnf
+#Nodes: 3099
+#Modularity: 0.798183
+#Communities: 20
+#Largest Communities: 534 (17%)
+#Stayed within community: 6094748/20712350 (29%) (4996.35s)
+>>>>Without activity
+#Stayed within community: 3560497/20252837 (17%) (4997.03s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 6221314/23274872 (26%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 4241361/19212123 (22%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s9.cnf
+#Nodes: 33561
+#Modularity: 0.792110
+#Communities: 31
+#Largest Communities: 6597 (19%)
+#Stayed within community: 9632567/15879350 (60%) (4990.67s)
+>>>>Without activity
+#Stayed within community: 7189633/13886849 (51%) (4992.91s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 6196525/10219492 (60%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 8878499/17696040 (50%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s153.cnf
+#Nodes: 58952
+#Modularity: 0.908431
+#Communities: 57
+#Largest Communities: 7162 (12%)
+#Stayed within community: 9029434/13986840 (64%) (4989.90s)
+>>>>Without activity
+#Stayed within community: 6779065/10631844 (63%) (4991.17s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 7962709/13159348 (60%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 10827628/30517097 (35%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime9600/hitag2-7-60-0-0xe8fa35372ed37e2-80.cnf
+#Nodes: 2188
+#Modularity: 0.635413
+#Communities: 51
+#Largest Communities: 317 (14%)
+#Stayed within community: 5608770/5859413 (95%) (4696.33s)
+>>>>Without activity
+#Stayed within community: 759780/5727077 (13%) (4997.06s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 5607889/5832239 (96%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 435658/6732212 (6%)
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime9600/hitag2-7-60-0-0xc048b9ebae66e9d-32-SAT.cnf
+#Nodes: 2230
+#Modularity: 0.636040
+#Communities: 51
+#Largest Communities: 327 (14%)
+#Stayed within community: 1956462/2048144 (95%) (260.48s)
+>>>>Without activity
+#Stayed within community: 778800/5777683 (13%) (4997.37s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 6126732/6447040 (95%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 335861/5811230 (5%)
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
+#Nodes: 31614
+#Modularity: 0.915476
+#Communities: 57
+#Largest Communities: 5250 (16%)
+#Stayed within community: 78932/158032 (49%) (260.48s)
+>>>>Without activity
+#Stayed within community: 392840/1493720 (26%) (4997.37s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 92633/258880 (35%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 477924/2110410 (22%)
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/crypto/desgen/gss-22-s100.cnf
+#Nodes: 31617
+#Modularity: 0.918586
+#Communities: 54
+#Largest Communities: 4513 (14%)
+#Stayed within community: 116027/311209 (37%) (260.48s)
+>>>>Without activity
+#Stayed within community: 378332/1597422 (23%) (4997.37s)
+>>>>Variables and clauses shuffled
+#Stayed within community: 79289/248268 (31%)
+>>>>Variables and clauses shuffled and without activity.
+#Stayed within community: 287275/1800316 (15%)
+
+
+
