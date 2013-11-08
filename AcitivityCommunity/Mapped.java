@@ -73,8 +73,9 @@ public class Mapped {
 
         System.out.println("#Nodes: " + map.size());
         System.out.println("#Modularity: " + modularity);
-        System.out.println("#Communities: " + communitySize.size() + "(" + (map.size() * 100 / communitySize.size()));
-        System.out.println("#Largest Communities: " + Collections.max(communitySize.values()));
+        System.out.println("#Communities: " + communitySize.size());
+        int largest = Collections.max(communitySize.values());
+        System.out.println("#Largest Communities: " + largest + " (" + (largest * 100 / map.size()) + ")");
         System.out.println("#Stayed within community: " + same + "/" + total
                 + " (" + (same * 100 / total) + "%)");
     }
