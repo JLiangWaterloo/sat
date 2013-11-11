@@ -5,25 +5,22 @@ class UbigraphHelper
   def initialize()
     @graph = GraphBuilder.new("ubigraph")
     @i = 0
-    @communityFile = ""
-    @previousGraphFile = ""
-    @graphFile = ""
   end
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
     puts 'Applying Bcp, Graph, and Snap'
-        
-    @graphFile = `cat output/dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable`
-    @graphDiff = Diffy::Diff.new(@previousGraphFile, @graphFile).to_s
-    @previousGraphFile = @graphFile
+    
+    system 'echo "-- Pass ' + @i.to_s + ' --"'
+    system 'cat output/dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > output/graph' + @i.to_s + '.dot'
     
     if @i == 0
-      file = File.open("output/graph.dot", "w")
-      file.write(@graphFile)
-      file.close
-      @communityFile = `cat output/graph.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#"`
+      system 'diff /dev/null output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
+      system 'cat output/graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot'
       createCommunities()
+    else
+      system 'diff output/graph' + (@i - 1).to_s + '.dot output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
+      system 'rm -f output/graph' + (@i - 1).to_s + '.dot'
     end
     
     addRemoveNodesAndEdges()
@@ -35,31 +32,34 @@ class UbigraphHelper
   def createCommunities()
     puts "Creating Communities"
     # Populate communities
-    @communityFile.each_line do |line|
+    file = File.open("output/communityMapping.dot", "r")
+    file.readlines.each do |line|
       info = "#{line}".split(' ')
       @graph.addToCommunity(info[0], info[1])
     end
+    file.close
   end
   
   def addRemoveNodesAndEdges() 
     puts "Adding and Removing Nodes and Edges" 
     # Populate Nodes and Edges
-    @graphDiff.each_line do |line|
-      line =  line.gsub(/[+-]/, '+' => '+ ', '-' => '- ')
+    file = File.open("output/addRemoveNodesAndEdges.dot", "r")
+    file.readlines.each do |line|
       info = "#{line}".split(' ')
       
       # Check for added lines
-      if info[0] == "+"
+      if info[0] == ">"
         @graph.addNode(info[1])
         @graph.addNode(info[2])
         @graph.addEdge(info[1], info[2])
-      elsif info[0] == "-"
+      elsif info[0] == "<"
 #        Rubigraph.setPoolSize(1)
         @graph.removeEdge(info[1], info[2])
         @graph.removeNode(info[1])
         @graph.removeNode(info[2])
       end
     end
+    file.close
   end
   
   def finish()
