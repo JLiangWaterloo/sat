@@ -24,7 +24,6 @@ class GraphvizHelper
     puts '--- Pass ' + @i.to_s + ' ---'
     puts 'Applying Bcp, Graph, and Snap'
     
-    system 'echo "-- Pass ' + @i.to_s + ' --"'
     system 'cat output/dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > output/graph' + @i.to_s + '.dot'
     system 'cat output/graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot'
     
@@ -38,8 +37,8 @@ class GraphvizHelper
     
     createCommunities()
     addRemoveNodesAndEdges()
+    color()
     buildOutput()
-    @i += 1
     
     if @details == "Y"
       type = 'dot'
@@ -56,6 +55,7 @@ class GraphvizHelper
     else
       system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o output/communityGraph.' + @ext
     end
+    @i += 1
   end
   
   def createCommunities()
@@ -90,6 +90,11 @@ class GraphvizHelper
       end
     end
     file.close
+  end
+  
+  def color()
+    puts "Coloring Graph"
+    @graph.color()
   end
   
   def buildOutput()

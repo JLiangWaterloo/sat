@@ -75,16 +75,28 @@ class GraphBuilder
     if !node0.nil? && !node1.nil? && @edge_objects[edge].nil? && @edge_objects[node1 + " -- " + node0].nil?
       @edge_objects[edge] = @tools.newEdge(@nodes[node0], @nodes[node1])
       
-      if !@communities[node0].nil? && !@communities[node1].nil? && @communities[node0] == @communities[node1]
-        @tools.newCommunityEdge(@edge_objects[edge], @community_color[@communities[node0]], @communities[node0])
-        @communityEdgeCount += 1
-      else
-        @tools.newIntercommunityEdge(edge)
-        @intercommunityEdgeCount += 1
-      end
-      
       @edge_counter[node0] = (@edge_counter[node0] + 1)
       @edge_counter[node1] = (@edge_counter[node1] + 1)
+    end
+  end
+  
+  #
+  # Color the Graph
+  #
+  def color()
+    @nodes.each do |node|
+      @tools.colorNode(node, @community_color[@communities[node]])
+    end
+    @edge_objects.each do |key, value|
+      info = key.split(" -- ")
+      
+      if !@communities[info[0]].nil? && !@communities[info[1]].nil? && @communities[info[0]] == @communities[info[1]]
+        @tools.newCommunityEdge(value, @community_color[@communities[info[0]]], @communities[info[0]])
+        @communityEdgeCount += 1
+      else
+        @tools.newIntercommunityEdge(key)
+        @intercommunityEdgeCount += 1
+      end
     end
   end
   

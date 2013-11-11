@@ -14,6 +14,10 @@ class EdgePlotTools
     return node0.to_s + " -> " + node1.to_s
   end
   
+  def colorNode(node, color)
+    return true
+  end
+  
   def newCommunityEdge(edge, color, community)
     return true
   end

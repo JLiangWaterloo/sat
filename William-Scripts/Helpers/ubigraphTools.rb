@@ -15,9 +15,12 @@ class UbigraphTools
   def newNode(n, color)
     node = Rubigraph::Vertex.new
     node.shape = 'sphere'
-    node.color = color
     
     return node
+  end
+  
+  def colorNode(node, color)
+    node.color = color
   end
   
   def newEdge(node0, node1)

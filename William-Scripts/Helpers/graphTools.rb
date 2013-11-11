@@ -19,6 +19,10 @@ class GraphTools
     return node0 + " -- " + node1
   end
   
+  def colorNode(node, color)
+    return true
+  end
+  
   def newCommunityEdge(edge, color, community)
     @subgraphs[community] = @subgraphs[community] + "    " + edge + ";\n"
   end

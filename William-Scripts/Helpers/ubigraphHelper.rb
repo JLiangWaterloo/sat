@@ -24,6 +24,7 @@ class UbigraphHelper
     end
     
     addRemoveNodesAndEdges()
+    @graph.color()
     @i += 1
     system 'echo "Wait for 5 seconds"'
     system 'sleep 5'
