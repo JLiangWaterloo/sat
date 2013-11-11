@@ -4,12 +4,11 @@ class GraphvizHelper
 
   GIF = "gif"
 
-  def initialize(file_name, file_type, details)
+  def initialize(file_name,file_type, details)
     @graph = GraphBuilder.new("graphviz")
     @i = 0
     @details = details
     @file_type = file_type
-    @file_name = file_name
     
     if file_type == "gif"
       @ext = "jpg"
@@ -52,7 +51,7 @@ class GraphvizHelper
       c = format('%04d', @i)
       system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     
-      modularity = `cat #{@file_name} | ./CommunityOutputOnlyModularity`
+      modularity = `cat output/dump.dimacs | ./CommunityOutputOnlyModularity`
       system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     else
       system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o output/communityGraph.' + @ext
