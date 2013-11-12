@@ -32,7 +32,7 @@ class GraphvizHelper
       system 'diff /dev/null output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
     else
       system 'diff output/graph' + (@i - 1).to_s + '.dot output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
-#      system 'rm -f output/graph' + (@i - 1).to_s + '.dot'
+      system 'rm -f output/graph' + (@i - 1).to_s + '.dot'
     end
     
     createCommunities()
