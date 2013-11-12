@@ -85,7 +85,9 @@ class GraphBuilder
   #
   def color()
     @nodes.each do |node|
-      @tools.colorNode(node, @community_color[@communities[node]])
+      if !@communities[node].nil?
+        @tools.colorNode(node, @community_color[@communities[node]])
+      end
     end
     @edge_objects.each do |key, value|
       info = key.split(" -- ")

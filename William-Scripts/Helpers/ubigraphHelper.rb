@@ -24,7 +24,7 @@ class UbigraphHelper
     end
     
     addRemoveNodesAndEdges()
-    @graph.color()
+    color()
     @i += 1
     system 'echo "Wait for 5 seconds"'
     system 'sleep 5'
@@ -61,6 +61,11 @@ class UbigraphHelper
       end
     end
     file.close
+  end
+  
+  def color()
+    puts "Coloring Graph"
+    @graph.color()
   end
   
   def finish()
