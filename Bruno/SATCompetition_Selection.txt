@@ -1,0 +1,11 @@
+Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s133.cnf
+Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s153.cnf
+Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s166.cnf
+Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_3791_556_unsat.cnf
+Benchmarks/SC13_submissions/kummling_grosmann--pesp/b04_s_unknown_pre.cnf
+Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_1_unsat.cnf
+Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_2_unsat.cnf
+Benchmarks/SC13_submissions/kummling_grosmann—pesp/ctl_4291_567_1_unsat_pre.cnf
+Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_14.cnf
+Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_15.cnf
+Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_16.cnf
