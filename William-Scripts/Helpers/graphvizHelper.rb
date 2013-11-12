@@ -4,15 +4,16 @@ class GraphvizHelper
 
   GIF = "gif"
 
-  def initialize(file_name,file_type, details)
+  def initialize(dir_name, file_type, details)
     @graph = GraphBuilder.new("graphviz")
     @i = 0
     @details = details
     @file_type = file_type
+    @dir_name = dir_name
+    @path = 'output/' + dir_name + '/'
     
     if file_type == "gif"
       @ext = "jpg"
-      @dir_name = File.basename( file_name, ".*" )
       system 'rm -rf EvolutionData/' + @dir_name
       system 'mkdir -p EvolutionData/' + @dir_name
     else
@@ -24,15 +25,15 @@ class GraphvizHelper
     puts '--- Pass ' + @i.to_s + ' ---'
     puts 'Applying Bcp, Graph, and Snap'
     
-    system 'cat output/dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > output/graph' + @i.to_s + '.dot'
-    system 'cat output/graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot'
+    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
     
     
     if @i == 0
-      system 'diff /dev/null output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
+      system 'diff /dev/null ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
     else
-      system 'diff output/graph' + (@i - 1).to_s + '.dot output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
-      system 'rm -f output/graph' + (@i - 1).to_s + '.dot'
+      system 'diff ' + @path + 'graph' + (@i - 1).to_s + '.dot ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
+      system 'rm -f ' + @path + 'graph' + (@i - 1).to_s + '.dot'
     end
     
     createCommunities()
@@ -48,12 +49,12 @@ class GraphvizHelper
     
     if @file_type == "gif"
       c = format('%04d', @i)
-      system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+      system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     
-      modularity = `cat output/dump.dimacs | ./CommunityOutputOnlyModularity`
+      modularity = `cat ' + @path + 'dump.dimacs | ./CommunityOutputOnlyModularity`
       system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     else
-      system type + ' -T' + @ext + ' output/communitySubGraphs.dot -o output/communityGraph.' + @ext
+      system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o ' + @path + 'communityGraph.' + @ext
     end
     @i += 1
   end
@@ -63,7 +64,7 @@ class GraphvizHelper
     @graph.clearCommunities()
   
     # Populate communities
-    file = File.open("output/communityMapping.dot", "r")
+    file = File.open(@path + "communityMapping.dot", "r")
     file.readlines.each do |line|
       info = "#{line}".split(' ')
       @graph.addToCommunity(info[0], info[1])
@@ -74,7 +75,7 @@ class GraphvizHelper
   def addRemoveNodesAndEdges()
     puts "Adding and Removing Nodes and Edges"
     # Populate Nodes and Edges
-    file = File.open("output/addRemoveNodesAndEdges.dot", "r")
+    file = File.open(@path + "addRemoveNodesAndEdges.dot", "r")
     file.readlines.each do |line|
       info = "#{line}".split(' ')
       
@@ -99,7 +100,7 @@ class GraphvizHelper
   
   def buildOutput()
     puts "Building image"
-    File.open("output/communitySubGraphs.dot", "w") do |f|
+    File.open(@path + "communitySubGraphs.dot", "w") do |f|
       f.write("graph communities { \n  edge[dir=none, color=black]; \n  node[shape=point, color=red];\n  overlap=false;\n")
       
       @graph.getSubgraphs.each do |key, value|
@@ -118,8 +119,9 @@ class GraphvizHelper
     if @file_type == "gif"
       buildGif()
     else
-      system 'xdg-open output/communityGraph.' + @ext
+      system 'xdg-open ' + @path + 'communityGraph.' + @ext
     end
+    system 'rm -rf ' + @path
   end
   
   def buildGif()

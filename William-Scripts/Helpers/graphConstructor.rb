@@ -12,15 +12,17 @@ class GraphConstructor
   THREAD_COUNT = 16
   
   def initialize(type, details, filename, file_type)
-    system 'mkdir -p output'
-    system 'rm -f output/dump.dimacs'
+    dir_name = File.basename( filename, ".*" )
+    @dump_path = 'output/' + dir_name + '/dump.dimacs'
+    system 'rm -rf output/' + dir_name
+    system 'mkdir -p output/' + dir_name
   
     if type == "graphviz"
-      @graph = GraphvizHelper.new(filename, file_type, details)
+      @graph = GraphvizHelper.new(dir_name, file_type, details)
     elsif type == "ubigraph"
-      @graph = UbigraphHelper.new()
+      @graph = UbigraphHelper.new(dir_name)
     elsif type == "plot"
-      @graph = EdgePlotHelper.new()
+      @graph = EdgePlotHelper.new(dir_name)
     else
       puts "Wrong type was entered. Must be either graphviz, ubigraph, or plot."
     end    
@@ -31,12 +33,12 @@ class GraphConstructor
     puts "Reading file"
     @time1 = Time.now
     
-    dump = File.open("output/dump.dimacs", "w")
+    dump = File.open(@dump_path, "w")
     File.open(file).each do |line|
       if "#{line}"[0,1] == "$"
         dump.close
         @graph.work()
-        dump = File.open("output/dump.dimacs", "w")
+        dump = File.open(@dump_path, "w")
         dump.truncate(0)
         done = true
         printTime()

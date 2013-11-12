@@ -84,9 +84,9 @@ class GraphBuilder
   # Color the Graph
   #
   def color()
-    @nodes.each do |node|
-      if !@communities[node].nil?
-        @tools.colorNode(node, @community_color[@communities[node]])
+    @nodes.each do |key, value|
+      if !@communities[key].nil?
+        @tools.colorNode(value, @community_color[@communities[key]])
       end
     end
     @edge_objects.each do |key, value|

@@ -2,10 +2,11 @@
 
 class EdgePlotHelper
 
-  def initialize()
+  def initialize(dir_name)
+    @path = 'output/' + dir_name + '/'
     @graph = GraphBuilder.new("plot")
-    system 'rm -f output/edgeTypeCountData.txt'
-    system 'rm -f output/removedEdgeTypeCountData.txt'
+    system 'rm -f ' + @path + 'edgeTypeCountData.txt'
+    system 'rm -f ' + @path + 'removedEdgeTypeCountData.txt'
     @i = 0
   end
   
@@ -13,15 +14,14 @@ class EdgePlotHelper
     puts '--- Pass ' + @i.to_s + ' ---'
     puts 'Applying Bcp, Graph, and Snap'
     
-    system 'echo "-- Pass ' + @i.to_s + ' --"'
-    system 'cat output/dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > output/graph' + @i.to_s + '.dot'
-    system 'cat output/graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > output/communityMapping.dot'
+    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
     
     if @i == 0
-      system 'diff /dev/null output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
+      system 'diff /dev/null ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
     else
-      system 'diff output/graph' + (@i - 1).to_s + '.dot output/graph' + @i.to_s + '.dot > output/addRemoveNodesAndEdges.dot'
-      system 'rm -f output/graph' + (@i - 1).to_s + '.dot'
+      system 'diff ' + @path + 'graph' + (@i - 1).to_s + '.dot ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
+      system 'rm -f ' + @path + 'graph' + (@i - 1).to_s + '.dot'
     end
     
     workOnDiff()
@@ -30,6 +30,7 @@ class EdgePlotHelper
     @graph.clear()
     createCommunities()
     createNodesAndEdges()
+    @graph.color()
     populateCommunityInformation()
     @i += 1
   end
@@ -44,7 +45,7 @@ class EdgePlotHelper
   def createCommunities()
     puts "Creating Communities"
     # Populate communities
-    file = File.open("output/communityMapping.dot", "r")
+    file = File.open(@path + "communityMapping.dot", "r")
     file.readlines.each do |line|
       info = "#{line}".split(' ')
       @graph.addToCommunity(info[0], info[1])
@@ -55,7 +56,7 @@ class EdgePlotHelper
   def createNodesAndEdges()
     puts "Adding Nodes and Edges"
     # Populate nodes and edges
-    file = File.open("output/graph" + @i.to_s + ".dot", "r")
+    file = File.open(@path + "graph" + @i.to_s + ".dot", "r")
     file.readlines.each do |line|
       info = "#{line}".split(' ')
       @graph.addNode(info[0])
@@ -68,7 +69,7 @@ class EdgePlotHelper
   def workOnDiff()
     puts "Adding and Removing Nodes and Edges"
     # Populate Nodes and Edges
-    file = File.open("output/addRemoveNodesAndEdges.dot", "r")
+    file = File.open(@path + "addRemoveNodesAndEdges.dot", "r")
     file.readlines.each do |line|
       info = "#{line}".split(' ')
       
