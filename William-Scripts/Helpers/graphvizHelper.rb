@@ -23,7 +23,8 @@ class GraphvizHelper
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Bcp, Graph, and Snap'
+    puts 'Applying Bcp, Graph, Snap and Diff'
+    @time1 = Time.now
     
     system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
     system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
@@ -35,6 +36,7 @@ class GraphvizHelper
       system 'diff ' + @path + 'graph' + (@i - 1).to_s + '.dot ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
       system 'rm -f ' + @path + 'graph' + (@i - 1).to_s + '.dot'
     end
+    printTime()
     
     createCommunities()
     addRemoveNodesAndEdges()
@@ -51,7 +53,7 @@ class GraphvizHelper
       c = format('%04d', @i)
       system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     
-      modularity = `cat ' + @path + 'dump.dimacs | ./CommunityOutputOnlyModularity`
+      modularity = `cat #{@path}dump.dimacs | ./CommunityOutputOnlyModularity`
       system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     else
       system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o ' + @path + 'communityGraph.' + @ext
@@ -61,6 +63,7 @@ class GraphvizHelper
   
   def createCommunities()
     puts "Creating Communities"
+    @time1 = Time.now
     @graph.clearCommunities()
   
     # Populate communities
@@ -70,10 +73,13 @@ class GraphvizHelper
       @graph.addToCommunity(info[0], info[1])
     end
     file.close
+    printTime()
   end
   
   def addRemoveNodesAndEdges()
     puts "Adding and Removing Nodes and Edges"
+    @time1 = Time.now
+    
     # Populate Nodes and Edges
     file = File.open(@path + "addRemoveNodesAndEdges.dot", "r")
     file.readlines.each do |line|
@@ -91,15 +97,20 @@ class GraphvizHelper
       end
     end
     file.close
+    printTime()
   end
   
   def color()
     puts "Coloring Graph"
+    @time1 = Time.now
     @graph.color()
+    printTime()
   end
   
   def buildOutput()
     puts "Building image"
+    @time1 = Time.now
+    
     File.open(@path + "communitySubGraphs.dot", "w") do |f|
       f.write("graph communities { \n  edge[dir=none, color=black]; \n  node[shape=point, color=red];\n  overlap=false;\n")
       
@@ -110,6 +121,7 @@ class GraphvizHelper
       
       f.write("\n}")
     end
+    printTime()
   end
   
   def finish()
@@ -138,6 +150,12 @@ class GraphvizHelper
     end
 
     system './Helpers/imagemagickHelper ' + @dir_name + ' ' + size
+  end
+  
+  def printTime()
+    time2 = Time.now
+    puts "    Time = " + ((time2 - @time1)).to_s + "s"
+    @time1 = time2
   end
 
 end

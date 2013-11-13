@@ -6,11 +6,6 @@ load 'Helpers/edgePlotHelper.rb'
 
 class GraphConstructor
 
-  #
-  # Constants
-  #
-  THREAD_COUNT = 16
-  
   def initialize(type, details, filename, file_type)
     dir_name = File.basename( filename, ".*" )
     @dump_path = 'output/' + dir_name + '/dump.dimacs'
@@ -60,7 +55,7 @@ class GraphConstructor
   
   def printTime()
     time2 = Time.now
-    puts "Time = " + ((time2 - @time1)).to_s + "s"
+    puts "Total Time = " + ((time2 - @time1)).to_s + "s"
     @time1 = time2
   end
 
