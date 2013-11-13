@@ -6,7 +6,7 @@ load 'Helpers/edgePlotHelper.rb'
 
 class GraphConstructor
 
-  def initialize(type, details, filename, output_type)
+  def initialize(type, details, output_type, filename)
     @init_time = Time.now
     dir_name = File.basename( filename, ".*" )
     @dump_path = 'output/' + dir_name + '/dump.dimacs'

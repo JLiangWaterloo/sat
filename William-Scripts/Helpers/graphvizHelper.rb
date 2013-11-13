@@ -134,7 +134,7 @@ class GraphvizHelper
         modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
         system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
       else
-        system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o ' + @path + 'communityGraph.' + @ext
+        system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o ' + @path + 'communityGraph.' + @ext
       end
     end
   end
@@ -153,7 +153,7 @@ class GraphvizHelper
       puts "Go to EvolutionData/" + @dir_name + " to see the outputted images."
     end
     
-#    system 'rm -rf ' + @path
+    system 'rm -rf ' + @path
     @i = 0
   end
   
