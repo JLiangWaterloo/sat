@@ -12,7 +12,7 @@ class EdgePlotHelper
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Graph, and Snap'
+    puts '  Applying Graph, and Snap'
     @time1 = Time.now
     
     system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
@@ -45,7 +45,7 @@ class EdgePlotHelper
   end
   
   def createCommunities()
-    puts "Creating Communities"
+    puts "  Creating Communities"
     @time1 = Time.now
     
     # Populate communities
@@ -59,7 +59,7 @@ class EdgePlotHelper
   end
   
   def createNodesAndEdges()
-    puts "Adding Nodes and Edges"
+    puts "  Adding Nodes and Edges"
     @time1 = Time.now
     
     # Populate nodes and edges
@@ -75,7 +75,7 @@ class EdgePlotHelper
   end
   
   def workOnDiff()
-    puts "Adding and Removing Nodes and Edges"
+    puts "  Adding and Removing Nodes and Edges"
     @time1 = Time.now
     
     # Populate Nodes and Edges
@@ -93,7 +93,7 @@ class EdgePlotHelper
   end
   
   def populateDiffInformation()
-    puts "Populating Node and Edge Information"
+    puts "  Populating Node and Edge Information"
     @time1 = Time.now
     
     system 'echo "' + @i.to_s + ' ' + @graph.getRemovedCommunityEdgeCount().to_s + ' ' + @graph.getRemovedIntercommunityEdgeCount().to_s + '" >> output/removedEdgeTypeCountData.txt'
@@ -101,7 +101,7 @@ class EdgePlotHelper
   end
   
   def populateCommunityInformation()
-    puts "Populating Community Information"
+    puts "  Populating Community Information"
     @time1 = Time.now
     
     system 'echo "' + @i.to_s + ' ' + @graph.getCommunityEdgeCount().to_s + ' ' + @graph.getIntercommunityEdgeCount().to_s + '" >> output/edgeTypeCountData.txt'

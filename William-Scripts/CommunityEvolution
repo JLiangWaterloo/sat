@@ -20,5 +20,5 @@ else
 fi
 
 mkfifo output/input.txt
-./Helpers/graphHelper.rb output/input.txt $graph n $1 gif & 
+./Helpers/graphHelper.rb output/input.txt $graph n $1 evolution & 
 ./../Minipure/binary/minipure $1 -dump-freq=$dump -dump-file=output/input.txt > /dev/null

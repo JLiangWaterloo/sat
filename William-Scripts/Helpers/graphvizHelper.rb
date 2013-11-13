@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+require 'thread'
 
 class GraphvizHelper
 
@@ -11,6 +12,7 @@ class GraphvizHelper
     @type = type
     @dir_name = dir_name
     @path = 'output/' + dir_name + '/'
+    @threads = []
     
     if type == "evolution"
       @ext = "jpg"
@@ -23,7 +25,7 @@ class GraphvizHelper
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Graph, Snap and Diff'
+    puts '  Applying Graph, Snap and Diff'
     @time1 = Time.now
     
     if @type == "evolution"
@@ -45,28 +47,14 @@ class GraphvizHelper
     createCommunities()
     addRemoveNodesAndEdges()
     color()
-    buildOutput()
+    buildImageContent()
+    buildImage()
     
-    if @details == "Y"
-      type = 'dot'
-    else
-      type = 'sfdp'
-    end
-    
-    if @type == "evolution"
-      c = format('%04d', @i)
-      system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
-    
-      modularity = `cat #{@path}dump.dimacs | ./CommunityOutputOnlyModularity`
-      system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
-    else
-      system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o ' + @path + 'communityGraph.' + @ext
-    end
     @i += 1
   end
   
   def createCommunities()
-    puts "Creating Communities"
+    puts "  Creating Communities"
     @time1 = Time.now
     @graph.clearCommunities()
   
@@ -81,7 +69,7 @@ class GraphvizHelper
   end
   
   def addRemoveNodesAndEdges()
-    puts "Adding and Removing Nodes and Edges"
+    puts "  Adding and Removing Nodes and Edges"
     @time1 = Time.now
     
     # Populate Nodes and Edges
@@ -105,17 +93,17 @@ class GraphvizHelper
   end
   
   def color()
-    puts "Coloring Graph"
+    puts "  Coloring Graph"
     @time1 = Time.now
     @graph.color()
     printTime()
   end
   
-  def buildOutput()
-    puts "Building image"
+  def buildImageContent()
+    puts "  Building image content"
     @time1 = Time.now
     
-    File.open(@path + "communitySubGraphs.dot", "w") do |f|
+    File.open(@path + "communitySubGraphs_" + @i.to_s + ".dot", "w") do |f|
       f.write("graph communities { \n  edge[dir=none, color=black]; \n  node[shape=point, color=red];\n  overlap=false;\n")
       
       @graph.getSubgraphs.each do |key, value|
@@ -128,16 +116,45 @@ class GraphvizHelper
     printTime()
   end
   
-  def finish()
-    puts "Finalizing"
-    @i = 0
-    
-    if @type == "evolution"
-      buildGif()
-    else
-      system 'xdg-open ' + @path + 'communityGraph.' + @ext
+  def buildImage()
+    puts "  Building image on seperate thread"
+    system 'cp ' + @path + 'dump.dimacs ' + @path + 'dump' + @i.to_s + '.dimacs'
+    tmp = @i
+    @threads << Thread.new do
+      if @details == "Y"
+        type = 'dot'
+      else
+        type = 'sfdp'
+      end
+      
+      if @type == "evolution"
+        c = format('%04d', tmp)
+        system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+      
+        modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
+        system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+      else
+        system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o ' + @path + 'communityGraph.' + @ext
+      end
     end
-    system 'rm -rf ' + @path
+  end
+  
+  def finish()
+    puts "Finalizing - Waiting for threads to terminate first"
+    @threads.each(&:join)
+    
+    if @i < 30
+      if @type == "evolution"
+        buildGif()
+      else
+        system 'xdg-open ' + @path + 'communityGraph.' + @ext
+      end
+    else
+      puts "Go to EvolutionData/" + @dir_name + " to see the outputted images."
+    end
+    
+#    system 'rm -rf ' + @path
+    @i = 0
   end
   
   def buildGif()
@@ -159,7 +176,6 @@ class GraphvizHelper
   def printTime()
     time2 = Time.now
     puts "    Time = " + ((time2 - @time1)).to_s + "s"
-    @time1 = time2
   end
 
 end

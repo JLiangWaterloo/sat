@@ -7,6 +7,7 @@ load 'Helpers/edgePlotHelper.rb'
 class GraphConstructor
 
   def initialize(type, details, filename, output_type)
+    @init_time = Time.now
     dir_name = File.basename( filename, ".*" )
     @dump_path = 'output/' + dir_name + '/dump.dimacs'
     system 'rm -rf output/' + dir_name
@@ -29,16 +30,12 @@ class GraphConstructor
     @time1 = Time.now
     
     dump = File.open(@dump_path, "w")
-    File.open(file).each do |line|
-      if "#{line}"[0,1] == "$"
-        dump.close
-        @graph.work()
-        dump = File.open(@dump_path, "w")
-        dump.truncate(0)
+    File.open(file).each_slice(1000) do |lines|
+      if lines.include?("$\n")
+        dump = seperateLines(lines, dump)
         done = true
-        printTime()
       else
-        dump.write(line)
+        dump.write(lines.join)
         done = false
       end
     end
@@ -49,14 +46,43 @@ class GraphConstructor
     end
   end
   
-  def finish()
-    @graph.finish()
+  def seperateLines(lines, dump)
+    i = lines.index("$\n")
+    if i > 0
+      dump.write(lines[0,i].join)
+    end
+        
+    printTime("  Time = ", @time1)
+    
+    dump.close
+    @graph.work()
+    dump = File.open(@dump_path, "w")
+    dump.truncate(0)
+    
+    printTime("  Time for pass = ", @time1)
+    @time1 = Time.now
+    puts "Reading file"
+    
+    if i < (lines.length - 1)
+      lines = lines[i+1,lines.length]
+      if lines.include?("$\n")
+        dump = seperateLines(lines, dump)
+      else
+        dump.write(lines.join)
+      end
+    end
+    
+    return dump
   end
   
-  def printTime()
+  def finish()
+    @graph.finish()
+    printTime("Total Run Time = ", @init_time)
+  end
+  
+  def printTime(msg, time)
     time2 = Time.now
-    puts "Total Time = " + ((time2 - @time1)).to_s + "s"
-    @time1 = time2
+    puts msg + ((time2 - time)).to_s + "s"
   end
 
 end

@@ -11,7 +11,7 @@ class UbigraphHelper
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Graph, and Snap'
+    puts '  Applying Graph, and Snap'
     @time1 = Time.now
     
     if @type == "evolution"
@@ -38,7 +38,7 @@ class UbigraphHelper
   end
   
   def createCommunities()
-    puts "Creating Communities"
+    puts "  Creating Communities"
     @time1 = Time.now
     
     # Populate communities
@@ -52,7 +52,7 @@ class UbigraphHelper
   end
   
   def addRemoveNodesAndEdges() 
-    puts "Adding and Removing Nodes and Edges" 
+    puts "  Adding and Removing Nodes and Edges" 
     @time1 = Time.now
     
     # Populate Nodes and Edges
@@ -77,7 +77,7 @@ class UbigraphHelper
   end
   
   def color()
-    puts "Coloring Graph"
+    puts "  Coloring Graph"
     @time1 = Time.now
     @graph.color()
     printTime()
