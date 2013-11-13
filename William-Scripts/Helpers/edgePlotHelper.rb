@@ -12,10 +12,10 @@ class EdgePlotHelper
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Bcp, Graph, and Snap'
+    puts 'Applying Graph, and Snap'
     @time1 = Time.now
     
-    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
     system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
     
     if @i == 0

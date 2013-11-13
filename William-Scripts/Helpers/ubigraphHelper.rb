@@ -2,18 +2,23 @@
 
 class UbigraphHelper
 
-  def initialize(dir_name)
+  def initialize(dir_name, type)
     @graph = GraphBuilder.new("ubigraph")
     @i = 0
     @path = 'output/' + dir_name + '/'
+    @type = type
   end
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Bcp, Graph, and Snap'
+    puts 'Applying Graph, and Snap'
     @time1 = Time.now
     
-    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    if @type == "evolution"
+      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    else
+      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    end
     
     if @i == 0
       system 'diff /dev/null ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'

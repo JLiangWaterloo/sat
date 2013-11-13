@@ -6,16 +6,16 @@ load 'Helpers/edgePlotHelper.rb'
 
 class GraphConstructor
 
-  def initialize(type, details, filename, file_type)
+  def initialize(type, details, filename, output_type)
     dir_name = File.basename( filename, ".*" )
     @dump_path = 'output/' + dir_name + '/dump.dimacs'
     system 'rm -rf output/' + dir_name
     system 'mkdir -p output/' + dir_name
   
     if type == "graphviz"
-      @graph = GraphvizHelper.new(dir_name, file_type, details)
+      @graph = GraphvizHelper.new(dir_name, output_type, details)
     elsif type == "ubigraph"
-      @graph = UbigraphHelper.new(dir_name)
+      @graph = UbigraphHelper.new(dir_name, output_type)
     elsif type == "plot"
       @graph = EdgePlotHelper.new(dir_name)
     else

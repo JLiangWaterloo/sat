@@ -4,15 +4,15 @@ class GraphvizHelper
 
   GIF = "gif"
 
-  def initialize(dir_name, file_type, details)
+  def initialize(dir_name, type, details)
     @graph = GraphBuilder.new("graphviz")
     @i = 0
     @details = details
-    @file_type = file_type
+    @type = type
     @dir_name = dir_name
     @path = 'output/' + dir_name + '/'
     
-    if file_type == "gif"
+    if type == "evolution"
       @ext = "jpg"
       system 'rm -rf EvolutionData/' + @dir_name
       system 'mkdir -p EvolutionData/' + @dir_name
@@ -23,10 +23,14 @@ class GraphvizHelper
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts 'Applying Bcp, Graph, Snap and Diff'
+    puts 'Applying Graph, Snap and Diff'
     @time1 = Time.now
     
-    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    if @type == "evolution"
+      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    else
+      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    end
     system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
     
     
@@ -49,7 +53,7 @@ class GraphvizHelper
       type = 'sfdp'
     end
     
-    if @file_type == "gif"
+    if @type == "evolution"
       c = format('%04d', @i)
       system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
     
@@ -128,7 +132,7 @@ class GraphvizHelper
     puts "Finalizing"
     @i = 0
     
-    if @file_type == "gif"
+    if @type == "evolution"
       buildGif()
     else
       system 'xdg-open ' + @path + 'communityGraph.' + @ext
