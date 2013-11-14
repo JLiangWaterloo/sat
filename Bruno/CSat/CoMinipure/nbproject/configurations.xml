@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="89">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="CoMinipure">
+      <df name="code">
+        <df name="core">
+          <in>Dimacs.h</in>
+          <in>Solver.cc</in>
+          <in>Solver.h</in>
+          <in>SolverTypes.h</in>
+        </df>
+        <df name="mtl">
+          <in>Alg.h</in>
+          <in>Alloc.h</in>
+          <in>Heap.h</in>
+          <in>IntTypes.h</in>
+          <in>Map.h</in>
+          <in>Queue.h</in>
+          <in>Sort.h</in>
+          <in>Vec.h</in>
+          <in>XAlloc.h</in>
+        </df>
+        <df name="simp">
+          <in>Main.cc</in>
+          <in>Main.or</in>
+          <in>SimpSolver.cc</in>
+          <in>SimpSolver.h</in>
+        </df>
+        <df name="utils">
+          <in>Options.cc</in>
+          <in>Options.h</in>
+          <in>ParseUtils.h</in>
+          <in>System.cc</in>
+          <in>System.h</in>
+        </df>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>binary/minipure</executablePath>
+        </makeTool>
+      </makefileType>
+      <item path="code/core/Dimacs.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/core/Solver.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="code/core/Solver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/core/SolverTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Alg.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Alloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Heap.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/IntTypes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Map.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Queue.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Sort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/Vec.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/mtl/XAlloc.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/simp/Main.cc" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>code</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NDEBUG</Elem>
+            <Elem>__STDC_FORMAT_MACROS</Elem>
+            <Elem>__STDC_LIMIT_MACROS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="code/simp/Main.or" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="code/simp/SimpSolver.cc" ex="false" tool="1" flavor2="0">
+        <ccTool>
+          <incDir>
+            <pElem>code</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NDEBUG</Elem>
+            <Elem>__STDC_FORMAT_MACROS</Elem>
+            <Elem>__STDC_LIMIT_MACROS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </item>
+      <item path="code/simp/SimpSolver.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/utils/Options.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="code/utils/Options.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/utils/ParseUtils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="code/utils/System.cc" ex="false" tool="1" flavor2="4">
+        <ccTool>
+        </ccTool>
+      </item>
+      <item path="code/utils/System.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <folder path="CoMinipure/code/core">
+        <ccTool>
+          <incDir>
+            <pElem>code</pElem>
+            <pElem>code/simp</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NDEBUG</Elem>
+            <Elem>__STDC_FORMAT_MACROS</Elem>
+            <Elem>__STDC_LIMIT_MACROS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+      <folder path="CoMinipure/code/utils">
+        <ccTool>
+          <incDir>
+            <pElem>code</pElem>
+            <pElem>code/simp</pElem>
+          </incDir>
+          <preprocessorList>
+            <Elem>NDEBUG</Elem>
+            <Elem>__STDC_FORMAT_MACROS</Elem>
+            <Elem>__STDC_LIMIT_MACROS</Elem>
+          </preprocessorList>
+        </ccTool>
+      </folder>
+    </conf>
+  </confs>
+</configurationDescriptor>
