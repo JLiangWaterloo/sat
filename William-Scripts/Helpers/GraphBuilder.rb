@@ -15,7 +15,7 @@ class GraphBuilder
       @tools = GraphTools.new()
     elsif type == "ubigraph"
       @tools = UbigraphTools.new()
-    elsif type == "plot"
+    elsif type == "edgeplot"
       @tools = EdgePlotTools.new()
     end
 

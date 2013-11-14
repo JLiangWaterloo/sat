@@ -13,7 +13,7 @@ else
   dump="$2"
 fi
 if [ -z "$3" ]; then
-  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph or to Plot link informatin enter plot:"
+  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph or to Plot edge informatin enter edgeplot or to plot modularity evolution enter modularity:"
   read graph
 else
   graph="$3"

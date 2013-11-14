@@ -3,6 +3,7 @@ load 'Helpers/GraphBuilder.rb'
 load 'Helpers/graphvizHelper.rb'
 load 'Helpers/ubigraphHelper.rb'
 load 'Helpers/edgePlotHelper.rb'
+load 'Helpers/modularityPlotHelper.rb'
 
 class GraphConstructor
 
@@ -17,10 +18,12 @@ class GraphConstructor
       @graph = GraphvizHelper.new(dir_name, output_type, details)
     elsif type == "ubigraph"
       @graph = UbigraphHelper.new(dir_name, output_type)
-    elsif type == "plot"
+    elsif type == "edgeplot"
       @graph = EdgePlotHelper.new(dir_name)
+    elsif
+      @graph = ModularityPlotHelper.new(dir_name)
     else
-      puts "Wrong type was entered. Must be either graphviz, ubigraph, or plot."
+      puts "Wrong type was entered. Must be either graphviz, ubigraph, edgeplot, or modularity."
     end    
   end
   

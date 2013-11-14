@@ -4,15 +4,15 @@ class EdgePlotHelper
 
   def initialize(dir_name)
     @path = 'output/' + dir_name + '/'
-    @graph = GraphBuilder.new("plot")
-    system 'rm -f ' + @path + 'edgeTypeCountData.txt'
-    system 'rm -f ' + @path + 'removedEdgeTypeCountData.txt'
+    @graph = GraphBuilder.new("edgeplot")
+    system 'rm -f output/edgeTypeCountData.txt'
+    system 'rm -f output/removedEdgeTypeCountData.txt'
     @i = 0
   end
   
   def work()
     puts '--- Pass ' + @i.to_s + ' ---'
-    puts '  Applying Graph, and Snap'
+    puts '  Applying Graph, Snap, and '
     @time1 = Time.now
     
     system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
