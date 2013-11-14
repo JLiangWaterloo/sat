@@ -7,7 +7,12 @@ load 'Helpers/modularityPlotHelper.rb'
 
 class GraphConstructor
 
-  def initialize(type, details, output_type, filename)
+  def initialize(type, details, output_type, filename, output_format)
+    puts type
+    puts details
+    puts output_type
+    puts filename
+    puts output_format
     @init_time = Time.now
     dir_name = File.basename( filename, ".*" )
     @dump_path = 'output/' + dir_name + '/dump.dimacs'
@@ -15,7 +20,7 @@ class GraphConstructor
     system 'mkdir -p output/' + dir_name
   
     if type == "graphviz"
-      @graph = GraphvizHelper.new(dir_name, output_type, details)
+      @graph = GraphvizHelper.new(dir_name, output_type, details, output_format)
     elsif type == "ubigraph"
       @graph = UbigraphHelper.new(dir_name, output_type)
     elsif type == "edgeplot"

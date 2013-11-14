@@ -5,7 +5,7 @@ class GraphvizHelper
 
   GIF = "gif"
 
-  def initialize(dir_name, type, details)
+  def initialize(dir_name, type, details, output_format)
     @graph = GraphBuilder.new("graphviz")
     @i = 0
     @details = details
@@ -13,13 +13,11 @@ class GraphvizHelper
     @dir_name = dir_name
     @path = 'output/' + dir_name + '/'
     @threads = []
+    @ext = output_format
     
     if type == "evolution"
-      @ext = "jpg"
       system 'rm -rf EvolutionData/' + @dir_name
       system 'mkdir -p EvolutionData/' + @dir_name
-    else
-      @ext = "pdf"
     end
   end
   
@@ -129,13 +127,15 @@ class GraphvizHelper
       
       if @type == "evolution"
         c = format('%04d', tmp)
-        system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
-      
-        modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
-        system 'convert EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+        output_path = 'EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
       else
-        system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o ' + @path + 'communityGraph.' + @ext
+        output_path = @path + 'communityGraph.' + @ext
       end
+      
+      system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o ' + output_path
+      
+      modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
+      system 'convert ' + output_path + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" ' + output_path
     end
   end
   

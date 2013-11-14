@@ -44,7 +44,7 @@ Requires: GraphViz (http://www.graphviz.org/pub/graphviz/stable/ubuntu/ub13.04/x
 
 Input: A dimacs file (optional).
 
-Output: Two GraphViz graphs which show the mapping of variables and the mapping of either to their community respectively. If no file was given, the script will prompt to user to enter the desired number of variables, clauses, communities, and quality of communities. Will also have to choose to either build a detailed version of graph which uses a lot more time or not. Now has the option to use UbiGraph as well. To use UbiGraph, its server must be started first. To do that, run the following command from the 'sat' folder: UbiGraph-alpha-0.2.4-Linux64-Ubuntu-8.04/bin/ubigraph_server &.
+Output: Two GraphViz graphs which show the mapping of variables and the mapping of either to their community respectively. If no file was given, the script will prompt to user to enter the desired number of variables, clauses, communities, and quality of communities. Will also have to choose to either build a detailed version of graph which uses a lot more time or not. Can also choose the output file format. Now has the option to use UbiGraph as well. To use UbiGraph, its server must be started first. To do that, run the following command from the 'sat' folder: UbiGraph-alpha-0.2.4-Linux64-Ubuntu-8.04/bin/ubigraph_server &.
 
 Example: ./CommunityGraper ../Benchmarks/toybox.dimacs graphviz n
 
@@ -62,9 +62,9 @@ MUST BE EXECUTED FROM William-Scripts
 
 Requires: For GraphViz: GraphViz, Ruby, and ImageMagick. For UbiGraph: Ubigraph, Ruby, and ImageMagick. For Plot: GnuPlot and Ruby. Also requires Diffy (sudo gem install diffy)
 
-Input: A dimacs file of the SAT instance. Will be promted for dump-frequency (start with 1) and to either use graphviz or ubigraph or a plot.
+Input: A dimacs file of the SAT instance. Will be promted for dump-frequency (start with 1) and to either use graphviz or ubigraph or edgeplot or modularity.
 
-Output: If GraphViz was chosen, a GIF showing the evolution of the SAT instance with the modularity of each dump printed at the top of each frame. If UbiGrap was chosen, a dynamic 3D graph of the SAT instance which evolves. If Plot was chosen, a plot of how many intercommunity links and community links are in each step and are removed in each step.
+Output: If GraphViz was chosen, a GIF showing the evolution of the SAT instance with the modularity of each dump printed at the top of each frame. If UbiGrap was chosen, a dynamic 3D graph of the SAT instance which evolves. If edgeplot was chosen, a plot of how many intercommunity links and community links are in each step and are removed in each step. If modularity was chosen, a plot of the modularity vs dump will be generated.
 
 Example: ./CommunityEvolution ../Benchmarks/toybox.dimacs 1 graphviz
 

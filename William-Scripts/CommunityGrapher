@@ -39,6 +39,13 @@ if [ $graph == "graphviz" ]; then
   else
     detail="$3"
   fi
+  if [ -z "$3" ]; then
+    echo "Enter an output file format (ex: pdf(default), scg, jpg):"
+    read output_format
+  else
+    output_format="$4"
+  fi
+  
 fi
 
-./Helpers/graphHelper.rb $path $graph $detail grapher $path
+./Helpers/graphHelper.rb $path $graph $detail grapher $path $output_format
