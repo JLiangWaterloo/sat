@@ -138,6 +138,8 @@ class GraphvizHelper
         modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
         system 'convert ' + output_path + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" ' + output_path
       end
+      
+      Thread::exit()
     end
   end
   

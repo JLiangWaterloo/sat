@@ -1,8 +1,11 @@
+#!/usr/bin/env ruby
+
 #
 # Test CommunityOutputOnlyModularity
 #
 # Plan: Compare output of fiasco to original output using diff
 #
+output = `cat ../ks/fiasco.dimacs | ./CommunityOutputOnlyModularity`
 
 #
 # Test CommunityExt
