@@ -8,11 +8,6 @@ load 'Helpers/modularityPlotHelper.rb'
 class GraphConstructor
 
   def initialize(type, details, output_type, filename, output_format)
-    puts type
-    puts details
-    puts output_type
-    puts filename
-    puts output_format
     @init_time = Time.now
     dir_name = File.basename( filename, ".*" )
     @dump_path = 'output/' + dir_name + '/dump.dimacs'

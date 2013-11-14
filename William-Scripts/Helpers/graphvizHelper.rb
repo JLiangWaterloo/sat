@@ -134,8 +134,10 @@ class GraphvizHelper
       
       system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o ' + output_path
       
-      modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
-      system 'convert ' + output_path + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" ' + output_path
+      if @ext != "svg"
+        modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
+        system 'convert ' + output_path + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" ' + output_path
+      end
     end
   end
   
