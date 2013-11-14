@@ -153,7 +153,6 @@ class GraphvizHelper
       puts "Go to EvolutionData/" + @dir_name + " to see the outputted images."
     end
     
-    system 'rm -rf ' + @path
     @i = 0
   end
   
