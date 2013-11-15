@@ -1,0 +1,4655 @@
+>>>>File: ../Benchmarks/satcomp09-main-track-unselected/application/SAT09/APPLICATIONS/satComp09_BioInstances/rpoc_xits_15_SAT.cnf
+c CPU time              : 1.75611 s
+#Nodes: 2385
+#Modularity: 0.162432
+#Communities: 259
+#Largest Communities: 1007 (42%)
+#Stayed within community: 5082/7707 (65%)
+>>>>Without activity
+c CPU time              : 4991.72 s
+#Nodes: 2385
+#Modularity: 0.162432
+#Communities: 259
+#Largest Communities: 1007 (42%)
+#Stayed within community: 2756927/5357932 (51%)
+>>>>Variables and clauses shuffled
+c CPU time              : 7.09244 s
+#Nodes: 2385
+#Modularity: 0.179006
+#Communities: 245
+#Largest Communities: 1129 (47%)
+#Stayed within community: 31456/59248 (53%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.93 s
+#Nodes: 2385
+#Modularity: 0.179006
+#Communities: 245
+#Largest Communities: 1129 (47%)
+#Stayed within community: 6075383/11149276 (54%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_14.cnf
+c CPU time              : 521.817 s
+#Nodes: 105742
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 19183/20875 (91%)
+>>>>Without activity
+c CPU time              : 658.693 s
+#Nodes: 105742
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 29817/31051 (96%)
+>>>>Variables and clauses shuffled
+c CPU time              : 637.016 s
+#Nodes: 105742
+#Modularity: 0.779065
+#Communities: 14
+#Largest Communities: 27543 (26%)
+#Stayed within community: 19261/23192 (83%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4994.62 s
+#Nodes: 105742
+#Modularity: 0.779065
+#Communities: 14
+#Largest Communities: 27543 (26%)
+#Stayed within community: 8335967/13401776 (62%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_15.cnf
+c CPU time              : 1068.86 s
+#Nodes: 105743
+#Modularity: 0.739341
+#Communities: 33
+#Largest Communities: 27802 (26%)
+#Stayed within community: 42435/47149 (90%)
+>>>>Without activity
+c CPU time              : 1258.61 s
+#Nodes: 105743
+#Modularity: 0.739341
+#Communities: 33
+#Largest Communities: 27802 (26%)
+#Stayed within community: 37096/55138 (67%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1268.09 s
+#Nodes: 105743
+#Modularity: 0.770994
+#Communities: 17
+#Largest Communities: 27420 (25%)
+#Stayed within community: 28922/49536 (58%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.82 s
+#Nodes: 105743
+#Modularity: 0.770994
+#Communities: 17
+#Largest Communities: 27420 (25%)
+#Stayed within community: 9398730/17082999 (55%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_24.cnf
+c CPU time              : 4996.67 s
+#Nodes: 105752
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 325132/358999 (90%)
+>>>>Without activity
+c CPU time              : 4995.29 s
+#Nodes: 105752
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 208696/228753 (91%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4996.72 s
+#Nodes: 105752
+#Modularity: 0.769406
+#Communities: 9
+#Largest Communities: 27218 (25%)
+#Stayed within community: 151063/268651 (56%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.94 s
+#Nodes: 105752
+#Modularity: 0.769406
+#Communities: 9
+#Largest Communities: 27218 (25%)
+#Stayed within community: 7324200/13474354 (54%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_5_32.cnf
+c CPU time              : 4994.58 s
+#Nodes: 23148
+#Modularity: 0.740638
+#Communities: 17
+#Largest Communities: 5779 (24%)
+#Stayed within community: 1290365/2383049 (54%)
+>>>>Without activity
+c CPU time              : 4994.21 s
+#Nodes: 23148
+#Modularity: 0.740638
+#Communities: 17
+#Largest Communities: 5779 (24%)
+#Stayed within community: 1234415/1599074 (77%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4992.42 s
+#Nodes: 23148
+#Modularity: 0.771089
+#Communities: 10
+#Largest Communities: 5864 (25%)
+#Stayed within community: 953476/2106096 (45%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.9 s
+#Nodes: 23148
+#Modularity: 0.771089
+#Communities: 10
+#Largest Communities: 5864 (25%)
+#Stayed within community: 15683824/31835171 (49%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_56.cnf
+c CPU time              : 4995.67 s
+#Nodes: 105784
+#Modularity: 0.740749
+#Communities: 52
+#Largest Communities: 27622 (26%)
+#Stayed within community: 366105/540927 (67%)
+>>>>Without activity
+c CPU time              : 4993.52 s
+#Nodes: 105784
+#Modularity: 0.740749
+#Communities: 52
+#Largest Communities: 27622 (26%)
+#Stayed within community: 236002/247046 (95%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4993.18 s
+#Nodes: 105784
+#Modularity: 0.766936
+#Communities: 24
+#Largest Communities: 28683 (27%)
+#Stayed within community: 340952/606449 (56%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.82 s
+#Nodes: 105784
+#Modularity: 0.766936
+#Communities: 24
+#Largest Communities: 28683 (27%)
+#Stayed within community: 6048940/10509561 (57%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_40.cnf
+c CPU time              : 4996.39 s
+#Nodes: 105768
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 335863/410373 (81%)
+>>>>Without activity
+c CPU time              : 4995.74 s
+#Nodes: 105768
+#Modularity: 0.740773
+#Communities: 63
+#Largest Communities: 26996 (25%)
+#Stayed within community: 246101/255908 (96%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4995.99 s
+#Nodes: 105768
+#Modularity: 0.774703
+#Communities: 36
+#Largest Communities: 27036 (25%)
+#Stayed within community: 248007/407313 (60%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.32 s
+#Nodes: 105768
+#Modularity: 0.774703
+#Communities: 36
+#Largest Communities: 27036 (25%)
+#Stayed within community: 6762781/10915156 (61%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_9_unsat.cnf
+c CPU time              : 1110.89 s
+#Nodes: 17851
+#Modularity: 0.761984
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 4861191/5032658 (96%)
+>>>>Without activity
+c CPU time              : 4986.09 s
+#Nodes: 17851
+#Modularity: 0.761984
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 8506950/20632742 (41%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1495.03 s
+#Nodes: 17851
+#Modularity: 0.762524
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 4945416/5124155 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.5 s
+#Nodes: 17851
+#Modularity: 0.762524
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 4593057/15213563 (30%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_12_unsat_pre.cnf
+c CPU time              : 886.871 s
+#Nodes: 15233
+#Modularity: 0.507275
+#Communities: 1912
+#Largest Communities: 4403 (28%)
+#Stayed within community: 302373/2044795 (14%)
+>>>>Without activity
+c CPU time              : 4989.66 s
+#Nodes: 15233
+#Modularity: 0.507275
+#Communities: 1912
+#Largest Communities: 4403 (28%)
+#Stayed within community: 2743522/14165569 (19%)
+>>>>Variables and clauses shuffled
+c CPU time              : 935.634 s
+#Nodes: 15233
+#Modularity: 0.507275
+#Communities: 1912
+#Largest Communities: 4403 (28%)
+#Stayed within community: 197870/1289861 (15%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.53 s
+#Nodes: 15233
+#Modularity: 0.507275
+#Communities: 1912
+#Largest Communities: 4403 (28%)
+#Stayed within community: 2307235/9341497 (24%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_7_unsat.cnf
+c CPU time              : 1313.28 s
+#Nodes: 17851
+#Modularity: 0.767190
+#Communities: 11
+#Largest Communities: 3570 (19%)
+#Stayed within community: 5595708/5805658 (96%)
+>>>>Without activity
+c CPU time              : 4988.68 s
+#Nodes: 17851
+#Modularity: 0.767190
+#Communities: 11
+#Largest Communities: 3570 (19%)
+#Stayed within community: 10540631/24419970 (43%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1226.88 s
+#Nodes: 17851
+#Modularity: 0.762316
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 4658490/4824439 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.4 s
+#Nodes: 17851
+#Modularity: 0.762316
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 5214795/18228776 (28%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4201_555_unsat_pre.cnf
+c CPU time              : 2126.6 s
+#Nodes: 14757
+#Modularity: 0.762955
+#Communities: 10
+#Largest Communities: 2856 (19%)
+#Stayed within community: 8955078/9264607 (96%)
+>>>>Without activity
+c CPU time              : 4987.22 s
+#Nodes: 14757
+#Modularity: 0.762955
+#Communities: 10
+#Largest Communities: 2856 (19%)
+#Stayed within community: 16105346/35086259 (45%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2997.23 s
+#Nodes: 14757
+#Modularity: 0.767567
+#Communities: 10
+#Largest Communities: 2856 (19%)
+#Stayed within community: 10105053/10450573 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.86 s
+#Nodes: 14757
+#Modularity: 0.767567
+#Communities: 10
+#Largest Communities: 2856 (19%)
+#Stayed within community: 8305300/22744341 (36%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_11_unsat.cnf
+c CPU time              : 4993.45 s
+#Nodes: 17851
+#Modularity: 0.779864
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 19981110/20696224 (96%)
+>>>>Without activity
+c CPU time              : 4989.24 s
+#Nodes: 17851
+#Modularity: 0.779864
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 20378153/40982110 (49%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994 s
+#Nodes: 17851
+#Modularity: 0.779864
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 15298640/15846896 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.44 s
+#Nodes: 17851
+#Modularity: 0.779864
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 8676222/22891525 (37%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_2_unsat_pre.cnf
+c CPU time              : 4482.68 s
+#Nodes: 15233
+#Modularity: 0.777843
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 16646903/17218240 (96%)
+>>>>Without activity
+c CPU time              : 4987.18 s
+#Nodes: 15233
+#Modularity: 0.777843
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 11370601/24280783 (46%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4398.33 s
+#Nodes: 15233
+#Modularity: 0.782288
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 14028418/14508994 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.91 s
+#Nodes: 15233
+#Modularity: 0.782288
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 7390708/20307868 (36%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_10_unsat_pre.cnf
+c CPU time              : 1198.06 s
+#Nodes: 15233
+#Modularity: 0.774650
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 5434157/5625176 (96%)
+>>>>Without activity
+c CPU time              : 4989.15 s
+#Nodes: 15233
+#Modularity: 0.774650
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 11318179/25550691 (44%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2120.69 s
+#Nodes: 15233
+#Modularity: 0.780213
+#Communities: 11
+#Largest Communities: 2856 (18%)
+#Stayed within community: 6782419/7035012 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.53 s
+#Nodes: 15233
+#Modularity: 0.780213
+#Communities: 11
+#Largest Communities: 2856 (18%)
+#Stayed within community: 6680759/21758922 (30%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_10_unsat.cnf
+c CPU time              : 1379.47 s
+#Nodes: 17851
+#Modularity: 0.774584
+#Communities: 11
+#Largest Communities: 3570 (19%)
+#Stayed within community: 5558172/5748418 (96%)
+>>>>Without activity
+c CPU time              : 4985.14 s
+#Nodes: 17851
+#Modularity: 0.774584
+#Communities: 11
+#Largest Communities: 3570 (19%)
+#Stayed within community: 10957699/25262632 (43%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1518.56 s
+#Nodes: 17851
+#Modularity: 0.769186
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 5168719/5339102 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.01 s
+#Nodes: 17851
+#Modularity: 0.769186
+#Communities: 10
+#Largest Communities: 3570 (19%)
+#Stayed within community: 5676968/17443348 (32%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_8_unsat.cnf
+c CPU time              : 4993.31 s
+#Nodes: 17851
+#Modularity: 0.779460
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 17825956/18461726 (96%)
+>>>>Without activity
+c CPU time              : 4985.18 s
+#Nodes: 17851
+#Modularity: 0.779460
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 13637938/29307837 (46%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4993.25 s
+#Nodes: 17851
+#Modularity: 0.779460
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 15053193/15595828 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.45 s
+#Nodes: 17851
+#Modularity: 0.779460
+#Communities: 12
+#Largest Communities: 3570 (19%)
+#Stayed within community: 11212514/24887898 (45%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4201_555_unsat.cnf
+c CPU time              : 2027.81 s
+#Nodes: 17375
+#Modularity: 0.768840
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 8829086/9137836 (96%)
+>>>>Without activity
+c CPU time              : 4987.26 s
+#Nodes: 17375
+#Modularity: 0.768840
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 13373308/28357162 (47%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2778.34 s
+#Nodes: 17375
+#Modularity: 0.768840
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 9876796/10222663 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.52 s
+#Nodes: 17375
+#Modularity: 0.768840
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 6817471/20770846 (32%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_6_unsat.cnf
+c CPU time              : 4991.77 s
+#Nodes: 17851
+#Modularity: 0.782890
+#Communities: 12
+#Largest Communities: 3213 (17%)
+#Stayed within community: 21129910/21882504 (96%)
+>>>>Without activity
+c CPU time              : 4989.26 s
+#Nodes: 17851
+#Modularity: 0.782890
+#Communities: 12
+#Largest Communities: 3213 (17%)
+#Stayed within community: 25995288/39482948 (65%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4993.12 s
+#Nodes: 17851
+#Modularity: 0.778282
+#Communities: 12
+#Largest Communities: 4046 (22%)
+#Stayed within community: 17779618/18413727 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.21 s
+#Nodes: 17851
+#Modularity: 0.778282
+#Communities: 12
+#Largest Communities: 4046 (22%)
+#Stayed within community: 13800892/27550353 (50%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_3082_415_unsat_pre.cnf
+c CPU time              : 2351.18 s
+#Nodes: 9521
+#Modularity: 0.729768
+#Communities: 9
+#Largest Communities: 2142 (22%)
+#Stayed within community: 11939500/12364138 (96%)
+>>>>Without activity
+c CPU time              : 4984.92 s
+#Nodes: 9521
+#Modularity: 0.729768
+#Communities: 9
+#Largest Communities: 2142 (22%)
+#Stayed within community: 13670828/33056670 (41%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1917.06 s
+#Nodes: 9521
+#Modularity: 0.729768
+#Communities: 9
+#Largest Communities: 2142 (22%)
+#Stayed within community: 8237586/8523579 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.94 s
+#Nodes: 9521
+#Modularity: 0.729768
+#Communities: 9
+#Largest Communities: 2142 (22%)
+#Stayed within community: 9552641/29983567 (31%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_3082_415_unsat.cnf
+c CPU time              : 2371.54 s
+#Nodes: 12377
+#Modularity: 0.718494
+#Communities: 169
+#Largest Communities: 3094 (24%)
+#Stayed within community: 11775822/12178410 (96%)
+>>>>Without activity
+c CPU time              : 4985.5 s
+#Nodes: 12377
+#Modularity: 0.718494
+#Communities: 169
+#Largest Communities: 3094 (24%)
+#Stayed within community: 14149085/29097670 (48%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2631.73 s
+#Nodes: 12377
+#Modularity: 0.714631
+#Communities: 88
+#Largest Communities: 3098 (25%)
+#Stayed within community: 9676502/10118826 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.99 s
+#Nodes: 12377
+#Modularity: 0.714631
+#Communities: 88
+#Largest Communities: 3098 (25%)
+#Stayed within community: 8450735/25856683 (32%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/k_unsat.cnf
+c CPU time              : 4989.9 s
+#Nodes: 7022
+#Modularity: 0.444800
+#Communities: 4
+#Largest Communities: 2711 (38%)
+#Stayed within community: 10935191/19020150 (57%)
+>>>>Without activity
+c CPU time              : 4987.28 s
+#Nodes: 7022
+#Modularity: 0.444800
+#Communities: 4
+#Largest Communities: 2711 (38%)
+#Stayed within community: 13693397/21103632 (64%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.53 s
+#Nodes: 7022
+#Modularity: 0.444800
+#Communities: 4
+#Largest Communities: 2711 (38%)
+#Stayed within community: 11417334/19114197 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.67 s
+#Nodes: 7022
+#Modularity: 0.444800
+#Communities: 4
+#Largest Communities: 2711 (38%)
+#Stayed within community: 10877699/17607394 (61%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_2_unsat.cnf
+c CPU time              : 4041.97 s
+#Nodes: 17851
+#Modularity: 0.780909
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 15469216/16015839 (96%)
+>>>>Without activity
+c CPU time              : 4987.19 s
+#Nodes: 17851
+#Modularity: 0.780909
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 12010911/28098026 (42%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4097.5 s
+#Nodes: 17851
+#Modularity: 0.780909
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 12974753/13462899 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.86 s
+#Nodes: 17851
+#Modularity: 0.780909
+#Communities: 11
+#Largest Communities: 3094 (17%)
+#Stayed within community: 7496255/22171804 (33%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_8_unsat_pre.cnf
+c CPU time              : 4993.28 s
+#Nodes: 15233
+#Modularity: 0.777518
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 18883802/19550217 (96%)
+>>>>Without activity
+c CPU time              : 4989.12 s
+#Nodes: 15233
+#Modularity: 0.777518
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 20693147/33751780 (61%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4992.34 s
+#Nodes: 15233
+#Modularity: 0.777518
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 16913068/17498254 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.29 s
+#Nodes: 15233
+#Modularity: 0.777518
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 8272243/21465964 (38%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_5_unsat.cnf
+c CPU time              : 4992.51 s
+#Nodes: 17851
+#Modularity: 0.783357
+#Communities: 12
+#Largest Communities: 3213 (17%)
+#Stayed within community: 21315097/22075102 (96%)
+>>>>Without activity
+c CPU time              : 4989.76 s
+#Nodes: 17851
+#Modularity: 0.783357
+#Communities: 12
+#Largest Communities: 3213 (17%)
+#Stayed within community: 21891639/37613281 (58%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4992.83 s
+#Nodes: 17851
+#Modularity: 0.784144
+#Communities: 12
+#Largest Communities: 3094 (17%)
+#Stayed within community: 18647358/19315669 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.36 s
+#Nodes: 17851
+#Modularity: 0.784144
+#Communities: 12
+#Largest Communities: 3094 (17%)
+#Stayed within community: 11904563/25976770 (45%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_12_unsat.cnf
+c CPU time              : 912.721 s
+#Nodes: 17851
+#Modularity: 0.792597
+#Communities: 12
+#Largest Communities: 3094 (17%)
+#Stayed within community: 2073608/2314049 (89%)
+>>>>Without activity
+c CPU time              : 4988.06 s
+#Nodes: 17851
+#Modularity: 0.792597
+#Communities: 12
+#Largest Communities: 3094 (17%)
+#Stayed within community: 5418459/13733084 (39%)
+>>>>Variables and clauses shuffled
+c CPU time              : 841.869 s
+#Nodes: 17851
+#Modularity: 0.795695
+#Communities: 13
+#Largest Communities: 3094 (17%)
+#Stayed within community: 1596055/1745134 (91%)
+>>>>Variables and clauses shuffled and without activity.
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_7_unsat_pre.cnf
+c CPU time              : 926.262 s
+#Nodes: 15233
+#Modularity: 0.749157
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 4069545/4216445 (96%)
+>>>>Without activity
+c CPU time              : 4988.69 s
+#Nodes: 15233
+#Modularity: 0.749157
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 11123065/25511759 (43%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1127.07 s
+#Nodes: 15233
+#Modularity: 0.749157
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 3373102/3492171 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.33 s
+#Nodes: 15233
+#Modularity: 0.749157
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 5009684/17891721 (28%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_9_unsat_pre.cnf
+c CPU time              : 1163.61 s
+#Nodes: 15233
+#Modularity: 0.747538
+#Communities: 485
+#Largest Communities: 4046 (26%)
+#Stayed within community: 4600863/4762786 (96%)
+>>>>Without activity
+>>>>File: ../Benchmarks/SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_11_unsat_pre.cnf
+c CPU time              : 4992.16 s
+#Nodes: 15233
+#Modularity: 0.778018
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 19429741/20102318 (96%)
+>>>>Without activity
+c CPU time              : 4988.42 s
+#Nodes: 15233
+#Modularity: 0.778018
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 16750739/29556361 (56%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4984.52 s
+#Nodes: 15233
+#Modularity: 0.778018
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 16371547/16945715 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.82 s
+#Nodes: 15233
+#Modularity: 0.778018
+#Communities: 10
+#Largest Communities: 2856 (18%)
+#Stayed within community: 9970230/24502543 (40%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/nonopt/6s20.cnf
+c CPU time              : 4990.33 s
+#Nodes: 61556
+#Modularity: 0.748322
+#Communities: 18
+#Largest Communities: 15627 (25%)
+#Stayed within community: 18158652/27632677 (65%)
+>>>>Without activity
+c CPU time              : 4989.69 s
+#Nodes: 61556
+#Modularity: 0.748322
+#Communities: 18
+#Largest Communities: 15627 (25%)
+#Stayed within community: 8713829/15854199 (54%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.67 s
+#Nodes: 61556
+#Modularity: 0.754621
+#Communities: 15
+#Largest Communities: 15393 (25%)
+#Stayed within community: 12551964/20777298 (60%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.96 s
+#Nodes: 61556
+#Modularity: 0.754621
+#Communities: 15
+#Largest Communities: 15393 (25%)
+#Stayed within community: 10828507/18979516 (57%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/beempgsol2b1.cnf
+c CPU time              : 4988.88 s
+#Nodes: 21465
+#Modularity: 0.803195
+#Communities: 22
+#Largest Communities: 3603 (16%)
+#Stayed within community: 5288029/19361939 (27%)
+>>>>Without activity
+c CPU time              : 4988.74 s
+#Nodes: 21465
+#Modularity: 0.803195
+#Communities: 22
+#Largest Communities: 3603 (16%)
+#Stayed within community: 9505626/23615910 (40%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4988.97 s
+#Nodes: 21465
+#Modularity: 0.777040
+#Communities: 27
+#Largest Communities: 3409 (15%)
+#Stayed within community: 5591652/16146101 (34%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.56 s
+#Nodes: 21465
+#Modularity: 0.777040
+#Communities: 27
+#Largest Communities: 3409 (15%)
+#Stayed within community: 8484344/22092696 (38%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s19.cnf
+c CPU time              : 4986.66 s
+#Nodes: 31139
+#Modularity: 0.786182
+#Communities: 34
+#Largest Communities: 6068 (19%)
+#Stayed within community: 36043657/65747842 (54%)
+>>>>Without activity
+c CPU time              : 4990.06 s
+#Nodes: 31139
+#Modularity: 0.786182
+#Communities: 34
+#Largest Communities: 6068 (19%)
+#Stayed within community: 29522182/54444604 (54%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4991.05 s
+#Nodes: 31139
+#Modularity: 0.778604
+#Communities: 34
+#Largest Communities: 6883 (22%)
+#Stayed within community: 21214805/35687145 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.99 s
+#Nodes: 31139
+#Modularity: 0.778604
+#Communities: 34
+#Largest Communities: 6883 (22%)
+#Stayed within community: 20582976/45961704 (44%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s133.cnf
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/beempgsol5b1.cnf
+c CPU time              : 4989.62 s
+#Nodes: 21466
+#Modularity: 0.807537
+#Communities: 17
+#Largest Communities: 3401 (15%)
+#Stayed within community: 6486292/21161534 (30%)
+>>>>Without activity
+c CPU time              : 4987.68 s
+#Nodes: 21466
+#Modularity: 0.807537
+#Communities: 17
+#Largest Communities: 3401 (15%)
+#Stayed within community: 8176485/21481946 (38%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4988.14 s
+#Nodes: 21466
+#Modularity: 0.793457
+#Communities: 21
+#Largest Communities: 3343 (15%)
+#Stayed within community: 6621643/18040548 (36%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.53 s
+#Nodes: 21466
+#Modularity: 0.793457
+#Communities: 21
+#Largest Communities: 3343 (15%)
+#Stayed within community: 7366531/17866841 (41%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/bob12s02.cnf
+c CPU time              : 4987.72 s
+#Nodes: 26234
+#Modularity: 0.796370
+#Communities: 43
+#Largest Communities: 5345 (20%)
+#Stayed within community: 7557068/13870058 (54%)
+>>>>Without activity
+c CPU time              : 4992.06 s
+#Nodes: 26234
+#Modularity: 0.796370
+#Communities: 43
+#Largest Communities: 5345 (20%)
+#Stayed within community: 16675238/45404745 (36%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4987.38 s
+#Nodes: 26234
+#Modularity: 0.783063
+#Communities: 30
+#Largest Communities: 5821 (22%)
+#Stayed within community: 10808118/21294062 (50%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.75 s
+#Nodes: 26234
+#Modularity: 0.783063
+#Communities: 30
+#Largest Communities: 5821 (22%)
+#Stayed within community: 4866900/16582017 (29%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s20.cnf
+c CPU time              : 4990.19 s
+#Nodes: 58615
+#Modularity: 0.753189
+#Communities: 26
+#Largest Communities: 15888 (27%)
+#Stayed within community: 15097918/26717327 (56%)
+>>>>Without activity
+c CPU time              : 4986.23 s
+#Nodes: 58615
+#Modularity: 0.753189
+#Communities: 26
+#Largest Communities: 15888 (27%)
+#Stayed within community: 9296129/16831569 (55%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4986.96 s
+#Nodes: 58615
+#Modularity: 0.748012
+#Communities: 25
+#Largest Communities: 15408 (26%)
+#Stayed within community: 13082670/24091004 (54%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.76 s
+#Nodes: 58615
+#Modularity: 0.748012
+#Communities: 25
+#Largest Communities: 15408 (26%)
+#Stayed within community: 12496416/24899279 (50%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s165.cnf
+c CPU time              : 4993.91 s
+#Nodes: 3099
+#Modularity: 0.798183
+#Communities: 20
+#Largest Communities: 534 (17%)
+#Stayed within community: 27754466/98430617 (28%)
+>>>>Without activity
+c CPU time              : 4994.32 s
+#Nodes: 3099
+#Modularity: 0.798183
+#Communities: 20
+#Largest Communities: 534 (17%)
+#Stayed within community: 16370173/88582970 (18%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4993.92 s
+#Nodes: 3099
+#Modularity: 0.794577
+#Communities: 19
+#Largest Communities: 556 (17%)
+#Stayed within community: 26168269/95804496 (27%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.11 s
+#Nodes: 3099
+#Modularity: 0.794577
+#Communities: 19
+#Largest Communities: 556 (17%)
+#Stayed within community: 17411582/89312372 (19%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s9.cnf
+c CPU time              : 4988.46 s
+#Nodes: 33561
+#Modularity: 0.792110
+#Communities: 31
+#Largest Communities: 6597 (19%)
+#Stayed within community: 27775179/46268656 (60%)
+>>>>Without activity
+c CPU time              : 4989.88 s
+#Nodes: 33561
+#Modularity: 0.792110
+#Communities: 31
+#Largest Communities: 6597 (19%)
+#Stayed within community: 21534989/37123569 (58%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.18 s
+#Nodes: 33561
+#Modularity: 0.789907
+#Communities: 30
+#Largest Communities: 6537 (19%)
+#Stayed within community: 20113711/33466514 (60%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.87 s
+#Nodes: 33561
+#Modularity: 0.789907
+#Communities: 30
+#Largest Communities: 6537 (19%)
+#Stayed within community: 22156330/39786394 (55%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s166.cnf
+c CPU time              : 4993.84 s
+#Nodes: 5448
+#Modularity: 0.794360
+#Communities: 20
+#Largest Communities: 892 (16%)
+#Stayed within community: 17819899/59700990 (29%)
+>>>>Without activity
+c CPU time              : 4994.96 s
+#Nodes: 5448
+#Modularity: 0.794360
+#Communities: 20
+#Largest Communities: 892 (16%)
+#Stayed within community: 12147598/43276546 (28%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994.34 s
+#Nodes: 5448
+#Modularity: 0.797153
+#Communities: 22
+#Largest Communities: 897 (16%)
+#Stayed within community: 17760520/56562703 (31%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.8 s
+#Nodes: 5448
+#Modularity: 0.797153
+#Communities: 22
+#Largest Communities: 897 (16%)
+#Stayed within community: 7794935/45185507 (17%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/biere_heule_jarvisalo_manthey--hwmcc12miters/opt/6s153.cnf
+c CPU time              : 4987.86 s
+#Nodes: 58952
+#Modularity: 0.908431
+#Communities: 57
+#Largest Communities: 7162 (12%)
+#Stayed within community: 27466090/50091132 (54%)
+>>>>Without activity
+c CPU time              : 4987.05 s
+#Nodes: 58952
+#Modularity: 0.908431
+#Communities: 57
+#Largest Communities: 7162 (12%)
+#Stayed within community: 22849814/35664724 (64%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4985.75 s
+#Nodes: 58952
+#Modularity: 0.905662
+#Communities: 63
+#Largest Communities: 6666 (11%)
+#Stayed within community: 30669392/52276116 (58%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.18 s
+#Nodes: 58952
+#Modularity: 0.905662
+#Communities: 63
+#Largest Communities: 6666 (11%)
+#Stayed within community: 26471951/86170491 (30%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xdf7fa6426edec07-17.cnf
+c CPU time              : 3453.91 s
+#Nodes: 2227
+#Modularity: 0.628742
+#Communities: 47
+#Largest Communities: 318 (14%)
+#Stayed within community: 25840339/26971310 (95%)
+>>>>Without activity
+c CPU time              : 4987.78 s
+#Nodes: 2227
+#Modularity: 0.628742
+#Communities: 47
+#Largest Communities: 318 (14%)
+#Stayed within community: 3688694/27417560 (13%)
+>>>>Variables and clauses shuffled
+c CPU time              : 3033.09 s
+#Nodes: 2227
+#Modularity: 0.629207
+#Communities: 47
+#Largest Communities: 299 (13%)
+#Stayed within community: 21574850/22493445 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.14 s
+#Nodes: 2227
+#Modularity: 0.629207
+#Communities: 47
+#Largest Communities: 299 (13%)
+#Stayed within community: 2042548/27813070 (7%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xe6754daf48162bf-46.cnf
+c CPU time              : 3749.39 s
+#Nodes: 2229
+#Modularity: 0.628399
+#Communities: 45
+#Largest Communities: 325 (14%)
+#Stayed within community: 25232246/27866349 (90%)
+>>>>Without activity
+c CPU time              : 4993.95 s
+#Nodes: 2229
+#Modularity: 0.628399
+#Communities: 45
+#Largest Communities: 325 (14%)
+#Stayed within community: 4484976/24824035 (18%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4995.15 s
+#Nodes: 2229
+#Modularity: 0.628405
+#Communities: 45
+#Largest Communities: 325 (14%)
+#Stayed within community: 34522090/36657434 (94%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.39 s
+#Nodes: 2229
+#Modularity: 0.628405
+#Communities: 45
+#Largest Communities: 325 (14%)
+#Stayed within community: 2038738/24401620 (8%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xbc15b17d0353413-10.cnf
+c CPU time              : 3255.41 s
+#Nodes: 2240
+#Modularity: 0.628356
+#Communities: 46
+#Largest Communities: 315 (14%)
+#Stayed within community: 25808292/26713822 (96%)
+>>>>Without activity
+c CPU time              : 4995.33 s
+#Nodes: 2240
+#Modularity: 0.628356
+#Communities: 46
+#Largest Communities: 315 (14%)
+#Stayed within community: 3321691/25090041 (13%)
+>>>>Variables and clauses shuffled
+c CPU time              : 3008.5 s
+#Nodes: 2240
+#Modularity: 0.628201
+#Communities: 45
+#Largest Communities: 311 (13%)
+#Stayed within community: 23117776/23910558 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.5 s
+#Nodes: 2240
+#Modularity: 0.628201
+#Communities: 45
+#Largest Communities: 311 (13%)
+#Stayed within community: 1874960/25454927 (7%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0x2201a94920a2d2e-8.cnf
+c CPU time              : 4369.58 s
+#Nodes: 2184
+#Modularity: 0.635267
+#Communities: 50
+#Largest Communities: 339 (15%)
+#Stayed within community: 34321329/35755317 (95%)
+>>>>Without activity
+c CPU time              : 4994.74 s
+#Nodes: 2184
+#Modularity: 0.635267
+#Communities: 50
+#Largest Communities: 339 (15%)
+#Stayed within community: 3967751/25156422 (15%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994.68 s
+#Nodes: 2184
+#Modularity: 0.635404
+#Communities: 50
+#Largest Communities: 331 (15%)
+#Stayed within community: 37574218/39141750 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4994.94 s
+#Nodes: 2184
+#Modularity: 0.635404
+#Communities: 50
+#Largest Communities: 331 (15%)
+#Stayed within community: 1698509/27225853 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0x8edc44db7837bbf-65.cnf
+c CPU time              : 3050.43 s
+#Nodes: 2194
+#Modularity: 0.635200
+#Communities: 49
+#Largest Communities: 304 (13%)
+#Stayed within community: 24222504/25104359 (96%)
+>>>>Without activity
+c CPU time              : 4995.71 s
+#Nodes: 2194
+#Modularity: 0.635200
+#Communities: 49
+#Largest Communities: 304 (13%)
+#Stayed within community: 3228501/25965934 (12%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2969.67 s
+#Nodes: 2194
+#Modularity: 0.635533
+#Communities: 48
+#Largest Communities: 296 (13%)
+#Stayed within community: 23441520/24267839 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.74 s
+#Nodes: 2194
+#Modularity: 0.635533
+#Communities: 48
+#Largest Communities: 296 (13%)
+#Stayed within community: 2582647/29895583 (8%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xac23f1205f76343-96.cnf
+c CPU time              : 4994.8 s
+#Nodes: 2153
+#Modularity: 0.637356
+#Communities: 52
+#Largest Communities: 309 (14%)
+#Stayed within community: 31017278/32471606 (95%)
+>>>>Without activity
+c CPU time              : 4995.3 s
+#Nodes: 2153
+#Modularity: 0.637356
+#Communities: 52
+#Largest Communities: 309 (14%)
+#Stayed within community: 4663103/25688986 (18%)
+>>>>Variables and clauses shuffled
+c CPU time              : 3941.83 s
+#Nodes: 2153
+#Modularity: 0.637356
+#Communities: 52
+#Largest Communities: 309 (14%)
+#Stayed within community: 28759434/30241070 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4994.56 s
+#Nodes: 2153
+#Modularity: 0.637356
+#Communities: 52
+#Largest Communities: 309 (14%)
+#Stayed within community: 1784636/28458000 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xa360966c6eb75c4-62.cnf
+c CPU time              : 4274.54 s
+#Nodes: 2173
+#Modularity: 0.637377
+#Communities: 50
+#Largest Communities: 309 (14%)
+#Stayed within community: 31539083/33072898 (95%)
+>>>>Without activity
+c CPU time              : 4996.48 s
+#Nodes: 2173
+#Modularity: 0.637377
+#Communities: 50
+#Largest Communities: 309 (14%)
+#Stayed within community: 4567211/28392311 (16%)
+>>>>Variables and clauses shuffled
+c CPU time              : 3808.51 s
+#Nodes: 2173
+#Modularity: 0.637093
+#Communities: 49
+#Largest Communities: 309 (14%)
+#Stayed within community: 29280866/30442416 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.62 s
+#Nodes: 2173
+#Modularity: 0.637093
+#Communities: 49
+#Largest Communities: 309 (14%)
+#Stayed within community: 1804617/28630046 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xb7b72dfef34c17b-39.cnf
+c CPU time              : 3366.89 s
+#Nodes: 2259
+#Modularity: 0.631413
+#Communities: 46
+#Largest Communities: 334 (14%)
+#Stayed within community: 24520605/25734651 (95%)
+>>>>Without activity
+c CPU time              : 4995.75 s
+#Nodes: 2259
+#Modularity: 0.631413
+#Communities: 46
+#Largest Communities: 334 (14%)
+#Stayed within community: 3566832/27104957 (13%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2924.31 s
+#Nodes: 2259
+#Modularity: 0.631724
+#Communities: 46
+#Largest Communities: 306 (13%)
+#Stayed within community: 20496815/21557725 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.3 s
+#Nodes: 2259
+#Modularity: 0.631724
+#Communities: 46
+#Largest Communities: 306 (13%)
+#Stayed within community: 1995793/28858609 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xfee9637399d85a2-78.cnf
+c CPU time              : 3496.32 s
+#Nodes: 2206
+#Modularity: 0.632869
+#Communities: 46
+#Largest Communities: 309 (14%)
+#Stayed within community: 25049610/26069123 (96%)
+>>>>Without activity
+c CPU time              : 4995.65 s
+#Nodes: 2206
+#Modularity: 0.632869
+#Communities: 46
+#Largest Communities: 309 (14%)
+#Stayed within community: 3655990/27747756 (13%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2850.87 s
+#Nodes: 2206
+#Modularity: 0.632869
+#Communities: 47
+#Largest Communities: 296 (13%)
+#Stayed within community: 20784889/21658893 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.51 s
+#Nodes: 2206
+#Modularity: 0.632869
+#Communities: 47
+#Largest Communities: 296 (13%)
+#Stayed within community: 1636393/27469410 (5%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime1200/hitag2-10-60-0-0xa04d664a73eac4d-66.cnf
+c CPU time              : 4995.49 s
+#Nodes: 2177
+#Modularity: 0.654595
+#Communities: 52
+#Largest Communities: 390 (17%)
+#Stayed within community: 29118991/32452074 (89%)
+>>>>Without activity
+c CPU time              : 4995.23 s
+#Nodes: 2177
+#Modularity: 0.654595
+#Communities: 52
+#Largest Communities: 390 (17%)
+#Stayed within community: 10310312/26125521 (39%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4233.02 s
+#Nodes: 2177
+#Modularity: 0.654186
+#Communities: 49
+#Largest Communities: 380 (17%)
+#Stayed within community: 30554275/31730382 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.43 s
+#Nodes: 2177
+#Modularity: 0.654186
+#Communities: 49
+#Largest Communities: 380 (17%)
+#Stayed within community: 1803114/27363373 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0xdcdbc8bf368ee73-37.cnf
+c CPU time              : 3720.97 s
+#Nodes: 2215
+#Modularity: 0.629400
+#Communities: 47
+#Largest Communities: 315 (14%)
+#Stayed within community: 25881735/27610690 (93%)
+>>>>Without activity
+c CPU time              : 4995.23 s
+#Nodes: 2215
+#Modularity: 0.629400
+#Communities: 47
+#Largest Communities: 315 (14%)
+#Stayed within community: 3390706/26082943 (12%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4013.89 s
+#Nodes: 2215
+#Modularity: 0.629277
+#Communities: 48
+#Largest Communities: 317 (14%)
+#Stayed within community: 28004126/29873303 (93%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995 s
+#Nodes: 2215
+#Modularity: 0.629277
+#Communities: 48
+#Largest Communities: 317 (14%)
+#Stayed within community: 1554578/24764578 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0xb2021557d918860-94.cnf
+c CPU time              : 3916.35 s
+#Nodes: 2196
+#Modularity: 0.633959
+#Communities: 50
+#Largest Communities: 288 (13%)
+#Stayed within community: 25479391/26570468 (95%)
+>>>>Without activity
+c CPU time              : 4995.49 s
+#Nodes: 2196
+#Modularity: 0.633959
+#Communities: 50
+#Largest Communities: 288 (13%)
+#Stayed within community: 4169612/24905633 (16%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4396.72 s
+#Nodes: 2196
+#Modularity: 0.633917
+#Communities: 50
+#Largest Communities: 288 (13%)
+#Stayed within community: 28908577/30058214 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.53 s
+#Nodes: 2196
+#Modularity: 0.633917
+#Communities: 50
+#Largest Communities: 288 (13%)
+#Stayed within community: 1743508/28464555 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0xa3b8497b8aad6d7-42.cnf
+c CPU time              : 4935.2 s
+#Nodes: 2253
+#Modularity: 0.631360
+#Communities: 48
+#Largest Communities: 329 (14%)
+#Stayed within community: 29169014/30710630 (94%)
+>>>>Without activity
+c CPU time              : 4995.73 s
+#Nodes: 2253
+#Modularity: 0.631360
+#Communities: 48
+#Largest Communities: 329 (14%)
+#Stayed within community: 3347084/26163197 (12%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4397.43 s
+#Nodes: 2253
+#Modularity: 0.631507
+#Communities: 47
+#Largest Communities: 314 (13%)
+#Stayed within community: 26781235/28070699 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.52 s
+#Nodes: 2253
+#Modularity: 0.631507
+#Communities: 47
+#Largest Communities: 314 (13%)
+#Stayed within community: 1639712/27442276 (5%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0x880693399044612-25-SAT.cnf
+c CPU time              : 4995.88 s
+#Nodes: 2244
+#Modularity: 0.632689
+#Communities: 48
+#Largest Communities: 303 (13%)
+#Stayed within community: 30580932/31963479 (95%)
+>>>>Without activity
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0xfba1a41b5dfd7f7-52.cnf
+c CPU time              : 4833.25 s
+#Nodes: 2252
+#Modularity: 0.626980
+#Communities: 47
+#Largest Communities: 319 (14%)
+#Stayed within community: 27830617/29647151 (93%)
+>>>>Without activity
+c CPU time              : 4993.55 s
+#Nodes: 2252
+#Modularity: 0.626980
+#Communities: 47
+#Largest Communities: 319 (14%)
+#Stayed within community: 3278625/26041529 (12%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4995.41 s
+#Nodes: 2252
+#Modularity: 0.627291
+#Communities: 45
+#Largest Communities: 301 (13%)
+#Stayed within community: 33597520/36050202 (93%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.47 s
+#Nodes: 2252
+#Modularity: 0.627291
+#Communities: 45
+#Largest Communities: 301 (13%)
+#Stayed within community: 1516024/26207958 (5%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime9600/hitag2-7-60-0-0xe97b5f1bee04d70-47.cnf
+c CPU time              : 4253.04 s
+#Nodes: 2196
+#Modularity: 0.632034
+#Communities: 49
+#Largest Communities: 317 (14%)
+#Stayed within community: 26783645/27926583 (95%)
+>>>>Without activity
+c CPU time              : 4994.73 s
+#Nodes: 2196
+#Modularity: 0.632034
+#Communities: 49
+#Largest Communities: 317 (14%)
+#Stayed within community: 4250206/26138529 (16%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994.78 s
+#Nodes: 2196
+#Modularity: 0.630594
+#Communities: 46
+#Largest Communities: 317 (14%)
+#Stayed within community: 30338421/31605605 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4994.84 s
+#Nodes: 2196
+#Modularity: 0.630594
+#Communities: 46
+#Largest Communities: 317 (14%)
+#Stayed within community: 1710611/26810271 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime9600/hitag2-7-60-0-0xe8fa35372ed37e2-80.cnf
+c CPU time              : 4996.04 s
+#Nodes: 2188
+#Modularity: 0.635413
+#Communities: 51
+#Largest Communities: 317 (14%)
+#Stayed within community: 27744416/28971631 (95%)
+>>>>Without activity
+c CPU time              : 4995.7 s
+#Nodes: 2188
+#Modularity: 0.635413
+#Communities: 51
+#Largest Communities: 317 (14%)
+#Stayed within community: 3333842/26312915 (12%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4778.3 s
+#Nodes: 2188
+#Modularity: 0.635120
+#Communities: 51
+#Largest Communities: 326 (14%)
+#Stayed within community: 27604137/28758671 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.23 s
+#Nodes: 2188
+#Modularity: 0.635120
+#Communities: 51
+#Largest Communities: 326 (14%)
+#Stayed within community: 2026403/27908212 (7%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime9600/hitag2-7-60-0-0x5f8ec0ffa4b15c6-25.cnf
+c CPU time              : 4996.04 s
+#Nodes: 2185
+#Modularity: 0.620522
+#Communities: 47
+#Largest Communities: 291 (13%)
+#Stayed within community: 29340564/30381009 (96%)
+>>>>Without activity
+c CPU time              : 4992.9 s
+#Nodes: 2185
+#Modularity: 0.620522
+#Communities: 47
+#Largest Communities: 291 (13%)
+#Stayed within community: 3199620/25389988 (12%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4104.57 s
+#Nodes: 2185
+#Modularity: 0.620908
+#Communities: 47
+#Largest Communities: 265 (12%)
+#Stayed within community: 23846317/24718589 (96%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.58 s
+#Nodes: 2185
+#Modularity: 0.620908
+#Communities: 47
+#Largest Communities: 265 (12%)
+#Stayed within community: 1417019/26898950 (5%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/hitag2-exptime9600/hitag2-7-60-0-0x39ff85d4ef127de-52.cnf
+c CPU time              : 4235.21 s
+#Nodes: 2199
+#Modularity: 0.632806
+#Communities: 50
+#Largest Communities: 326 (14%)
+#Stayed within community: 28821596/30177492 (95%)
+>>>>Without activity
+c CPU time              : 4995.23 s
+#Nodes: 2199
+#Modularity: 0.632806
+#Communities: 50
+#Largest Communities: 326 (14%)
+#Stayed within community: 3994188/27476595 (14%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4993.76 s
+#Nodes: 2199
+#Modularity: 0.632424
+#Communities: 51
+#Largest Communities: 326 (14%)
+#Stayed within community: 31882274/33352637 (95%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.14 s
+#Nodes: 2199
+#Modularity: 0.632424
+#Communities: 51
+#Largest Communities: 326 (14%)
+#Stayed within community: 1811902/28062613 (6%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime12800/bivium-39-200-0s0-0x28df9231b320bd56dfb68bfc7c3f0ca20dbae6b0eba535ad91-98.cnf
+c CPU time              : 1309.35 s
+#Nodes: 600
+#Modularity: 0.383678
+#Communities: 6
+#Largest Communities: 233 (38%)
+#Stayed within community: 12409370/25634616 (48%)
+>>>>Without activity
+c CPU time              : 4994.56 s
+#Nodes: 600
+#Modularity: 0.383678
+#Communities: 6
+#Largest Communities: 233 (38%)
+#Stayed within community: 59104290/116030090 (50%)
+>>>>Variables and clauses shuffled
+c CPU time              : 951.643 s
+#Nodes: 600
+#Modularity: 0.390507
+#Communities: 7
+#Largest Communities: 205 (34%)
+#Stayed within community: 7513039/18600709 (40%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.49 s
+#Nodes: 600
+#Modularity: 0.390507
+#Communities: 7
+#Largest Communities: 205 (34%)
+#Stayed within community: 44606863/127375230 (35%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime12800/bivium-39-200-0s0-0x1b770901581bbb2863c83835583d7ce4e1fafd907076320542-34.cnf
+c CPU time              : 2113.96 s
+#Nodes: 596
+#Modularity: 0.459328
+#Communities: 6
+#Largest Communities: 203 (34%)
+#Stayed within community: 15785959/38135682 (41%)
+>>>>Without activity
+c CPU time              : 4993.42 s
+#Nodes: 596
+#Modularity: 0.459328
+#Communities: 6
+#Largest Communities: 203 (34%)
+#Stayed within community: 38572551/118409172 (32%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2035.27 s
+#Nodes: 596
+#Modularity: 0.465728
+#Communities: 5
+#Largest Communities: 199 (33%)
+#Stayed within community: 16214868/36750355 (44%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.89 s
+#Nodes: 596
+#Modularity: 0.465728
+#Communities: 5
+#Largest Communities: 199 (33%)
+#Stayed within community: 51103473/148245805 (34%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime12800/bivium-39-200-0s0-0x163b785faa4bfb1b3b894a9206768a6c3d5d6f038b3797c4c2-99.cnf
+c CPU time              : 3845.86 s
+#Nodes: 598
+#Modularity: 0.414360
+#Communities: 5
+#Largest Communities: 219 (36%)
+#Stayed within community: 33700940/65383750 (51%)
+>>>>Without activity
+c CPU time              : 4994.42 s
+#Nodes: 598
+#Modularity: 0.414360
+#Communities: 5
+#Largest Communities: 219 (36%)
+#Stayed within community: 52614401/122313681 (43%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4086.56 s
+#Nodes: 598
+#Modularity: 0.414692
+#Communities: 5
+#Largest Communities: 218 (36%)
+#Stayed within community: 28273797/61608751 (45%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.1 s
+#Nodes: 598
+#Modularity: 0.414692
+#Communities: 5
+#Largest Communities: 218 (36%)
+#Stayed within community: 44736107/127245438 (35%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime12800/bivium-39-200-0s0-0xdcfb6ab71951500b8e460045bd45afee15c87e08b0072eb174-43.cnf
+c CPU time              : 4348.31 s
+#Nodes: 599
+#Modularity: 0.446575
+#Communities: 5
+#Largest Communities: 196 (32%)
+#Stayed within community: 29422395/75146751 (39%)
+>>>>Without activity
+c CPU time              : 4993.2 s
+#Nodes: 599
+#Modularity: 0.446575
+#Communities: 5
+#Largest Communities: 196 (32%)
+#Stayed within community: 44449103/145716325 (30%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2306.18 s
+#Nodes: 599
+#Modularity: 0.441766
+#Communities: 5
+#Largest Communities: 193 (32%)
+#Stayed within community: 18767329/44867878 (41%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.94 s
+#Nodes: 599
+#Modularity: 0.441766
+#Communities: 5
+#Largest Communities: 193 (32%)
+#Stayed within community: 31314030/116388077 (26%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime12800/bivium-39-200-0s0-0x5fa955de2b4f64d00226837d226c955de4566ce95f660180d7-30.cnf
+c CPU time              : 2219.34 s
+#Nodes: 602
+#Modularity: 0.472315
+#Communities: 5
+#Largest Communities: 199 (33%)
+#Stayed within community: 16432153/38862351 (42%)
+>>>>Without activity
+c CPU time              : 4995.81 s
+#Nodes: 602
+#Modularity: 0.472315
+#Communities: 5
+#Largest Communities: 199 (33%)
+#Stayed within community: 37466587/112382464 (33%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1887.03 s
+#Nodes: 602
+#Modularity: 0.472315
+#Communities: 5
+#Largest Communities: 199 (33%)
+#Stayed within community: 14167495/33530026 (42%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.82 s
+#Nodes: 602
+#Modularity: 0.472315
+#Communities: 5
+#Largest Communities: 199 (33%)
+#Stayed within community: 41482255/115783298 (35%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime12800/bivium-39-200-0s0-0x53e7622aad02b083b53dcd6a4a76f54a150ceb996ea1dfa300-63.cnf
+c CPU time              : 1393 s
+#Nodes: 595
+#Modularity: 0.427718
+#Communities: 4
+#Largest Communities: 210 (35%)
+#Stayed within community: 12407232/26740306 (46%)
+>>>>Without activity
+c CPU time              : 4995.89 s
+#Nodes: 595
+#Modularity: 0.427718
+#Communities: 4
+#Largest Communities: 210 (35%)
+#Stayed within community: 43049953/109197059 (39%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1853.06 s
+#Nodes: 595
+#Modularity: 0.444402
+#Communities: 5
+#Largest Communities: 212 (35%)
+#Stayed within community: 15564633/34186954 (45%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4995.14 s
+#Nodes: 595
+#Modularity: 0.444402
+#Communities: 5
+#Largest Communities: 212 (35%)
+#Stayed within community: 50686740/135715412 (37%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime6400/bivium-40-200-0s0-0x66b619d7b8e447710bf43b794ded6cfaf1e75bb8a947e14c78-50.cnf
+c CPU time              : 1148.38 s
+#Nodes: 593
+#Modularity: 0.400120
+#Communities: 7
+#Largest Communities: 209 (35%)
+#Stayed within community: 13565838/23960235 (56%)
+>>>>Without activity
+c CPU time              : 4993.9 s
+#Nodes: 593
+#Modularity: 0.400120
+#Communities: 7
+#Largest Communities: 209 (35%)
+#Stayed within community: 36843402/132549490 (27%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1139.54 s
+#Nodes: 593
+#Modularity: 0.402024
+#Communities: 6
+#Largest Communities: 206 (34%)
+#Stayed within community: 14510676/23131393 (62%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.48 s
+#Nodes: 593
+#Modularity: 0.402024
+#Communities: 6
+#Largest Communities: 206 (34%)
+#Stayed within community: 50694642/153863546 (32%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime6400/bivium-40-200-0s0-0x92fc13b11169afbb2ef11a684d9fe9a19e743cd6aa5ce23fb5-19.cnf
+c CPU time              : 737.734 s
+#Nodes: 593
+#Modularity: 0.406189
+#Communities: 7
+#Largest Communities: 220 (37%)
+#Stayed within community: 7796165/15335099 (50%)
+>>>>Without activity
+c CPU time              : 4993.98 s
+#Nodes: 593
+#Modularity: 0.406189
+#Communities: 7
+#Largest Communities: 220 (37%)
+#Stayed within community: 46064000/134629187 (34%)
+>>>>Variables and clauses shuffled
+c CPU time              : 824.488 s
+#Nodes: 593
+#Modularity: 0.430127
+#Communities: 5
+#Largest Communities: 181 (30%)
+#Stayed within community: 6591071/16829459 (39%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.79 s
+#Nodes: 593
+#Modularity: 0.430127
+#Communities: 5
+#Largest Communities: 181 (30%)
+#Stayed within community: 35840984/129972032 (27%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/soos--grainofsalt/bivium-exptime6400/bivium-40-200-0s0-0xd447c33176b6b675fd5f8dc3a5deda46569dc34eedf37da020-6.cnf
+c CPU time              : 1493.86 s
+#Nodes: 592
+#Modularity: 0.441665
+#Communities: 5
+#Largest Communities: 211 (35%)
+#Stayed within community: 12281254/30246315 (40%)
+>>>>Without activity
+c CPU time              : 4993.33 s
+#Nodes: 592
+#Modularity: 0.441665
+#Communities: 5
+#Largest Communities: 211 (35%)
+#Stayed within community: 43261944/145790260 (29%)
+>>>>Variables and clauses shuffled
+c CPU time              : 490.939 s
+#Nodes: 592
+#Modularity: 0.435741
+#Communities: 7
+#Largest Communities: 196 (33%)
+#Stayed within community: 5239855/11722036 (44%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.5 s
+#Nodes: 592
+#Modularity: 0.435741
+#Communities: 7
+#Largest Communities: 196 (33%)
+#Stayed within community: 32231194/135245857 (23%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/23-80/001.cnf
+c CPU time              : 4980.98 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 13052571/19306524 (67%)
+>>>>Without activity
+c CPU time              : 4984.04 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 9010117/14722751 (61%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4978.98 s
+#Nodes: 4225
+#Modularity: 0.448552
+#Communities: 7
+#Largest Communities: 1756 (41%)
+#Stayed within community: 13460531/18624532 (72%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.45 s
+#Nodes: 4225
+#Modularity: 0.448552
+#Communities: 7
+#Largest Communities: 1756 (41%)
+#Stayed within community: 7253713/15433515 (46%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/23-96/003.cnf
+c CPU time              : 4981.45 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 14372167/20403820 (70%)
+>>>>Without activity
+c CPU time              : 4984.41 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 9086560/15226845 (59%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4981.4 s
+#Nodes: 4225
+#Modularity: 0.476466
+#Communities: 11
+#Largest Communities: 1480 (35%)
+#Stayed within community: 11119214/21468066 (51%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.05 s
+#Nodes: 4225
+#Modularity: 0.476466
+#Communities: 11
+#Largest Communities: 1480 (35%)
+#Stayed within community: 6065076/16789349 (36%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/23-96/007.cnf
+c CPU time              : 4981.96 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 12136140/17642036 (68%)
+>>>>Without activity
+c CPU time              : 4982.3 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 7479708/13968497 (53%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4982.1 s
+#Nodes: 4225
+#Modularity: 0.473875
+#Communities: 6
+#Largest Communities: 1734 (41%)
+#Stayed within community: 12659869/17071576 (74%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.45 s
+#Nodes: 4225
+#Modularity: 0.473875
+#Communities: 6
+#Largest Communities: 1734 (41%)
+#Stayed within community: 8660684/13516065 (64%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-160/009.cnf
+c CPU time              : 713.269 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 4081561/5718280 (71%)
+>>>>Without activity
+c CPU time              : 4983.9 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9528065/16098930 (59%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4982.18 s
+#Nodes: 4065
+#Modularity: 0.455278
+#Communities: 8
+#Largest Communities: 1758 (43%)
+#Stayed within community: 14378339/17085934 (84%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.17 s
+#Nodes: 4065
+#Modularity: 0.455278
+#Communities: 8
+#Largest Communities: 1758 (43%)
+#Stayed within community: 12800932/20698698 (61%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-160/003.cnf
+c CPU time              : 1753.05 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 6812670/9578829 (71%)
+>>>>Without activity
+c CPU time              : 4984.73 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 8174046/17073995 (47%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4981.01 s
+#Nodes: 4065
+#Modularity: 0.450917
+#Communities: 6
+#Largest Communities: 1674 (41%)
+#Stayed within community: 14408000/18977547 (75%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4980.5 s
+#Nodes: 4065
+#Modularity: 0.450917
+#Communities: 6
+#Largest Communities: 1674 (41%)
+#Stayed within community: 8911737/14176182 (62%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-160/001.cnf
+c CPU time              : 4979.01 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 13385103/18049366 (74%)
+>>>>Without activity
+c CPU time              : 4982.79 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 11656861/18380431 (63%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4980.59 s
+#Nodes: 4065
+#Modularity: 0.474520
+#Communities: 6
+#Largest Communities: 1542 (37%)
+#Stayed within community: 13589527/18062478 (75%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.26 s
+#Nodes: 4065
+#Modularity: 0.474520
+#Communities: 6
+#Largest Communities: 1542 (37%)
+#Stayed within community: 10572342/15586622 (67%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-160/008.cnf
+c CPU time              : 4980.89 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 12114572/17387292 (69%)
+>>>>Without activity
+c CPU time              : 4984.24 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9113761/17658838 (51%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4980.69 s
+#Nodes: 4065
+#Modularity: 0.470876
+#Communities: 6
+#Largest Communities: 1532 (37%)
+#Stayed within community: 15093572/19022875 (79%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.54 s
+#Nodes: 4065
+#Modularity: 0.470876
+#Communities: 6
+#Largest Communities: 1532 (37%)
+#Stayed within community: 14927000/20848257 (71%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/23-64/003.cnf
+c CPU time              : 4980.12 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 14095799/19491261 (72%)
+>>>>Without activity
+c CPU time              : 4985.12 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 6138440/12650506 (48%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2327.71 s
+#Nodes: 4225
+#Modularity: 0.474477
+#Communities: 11
+#Largest Communities: 1483 (35%)
+#Stayed within community: 5381050/10686812 (50%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4978.1 s
+#Nodes: 4225
+#Modularity: 0.474477
+#Communities: 11
+#Largest Communities: 1483 (35%)
+#Stayed within community: 8453084/19222642 (43%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/23-64/004.cnf
+c CPU time              : 233.091 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 2912354/4104265 (70%)
+>>>>Without activity
+c CPU time              : 4985.2 s
+#Nodes: 4225
+#Modularity: 0.475094
+#Communities: 6
+#Largest Communities: 1581 (37%)
+#Stayed within community: 5932471/11683135 (50%)
+>>>>Variables and clauses shuffled
+c CPU time              : 555.823 s
+#Nodes: 4225
+#Modularity: 0.480459
+#Communities: 8
+#Largest Communities: 1590 (37%)
+#Stayed within community: 5171949/8184734 (63%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.7 s
+#Nodes: 4225
+#Modularity: 0.480459
+#Communities: 8
+#Largest Communities: 1590 (37%)
+#Stayed within community: 9113663/17991833 (50%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-144/009.cnf
+c CPU time              : 4980.07 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 12134361/19556224 (62%)
+>>>>Without activity
+c CPU time              : 4983.56 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 10320343/15639417 (65%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4982.06 s
+#Nodes: 4065
+#Modularity: 0.457014
+#Communities: 6
+#Largest Communities: 1627 (40%)
+#Stayed within community: 13427106/17643902 (76%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.3 s
+#Nodes: 4065
+#Modularity: 0.457014
+#Communities: 6
+#Largest Communities: 1627 (40%)
+#Stayed within community: 11264871/16889285 (66%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-144/003.cnf
+c CPU time              : 4980.15 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 13854278/20128679 (68%)
+>>>>Without activity
+c CPU time              : 4982.38 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9584490/18325569 (52%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4981.67 s
+#Nodes: 4065
+#Modularity: 0.446613
+#Communities: 7
+#Largest Communities: 1800 (44%)
+#Stayed within community: 15601738/19976057 (78%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.54 s
+#Nodes: 4065
+#Modularity: 0.446613
+#Communities: 7
+#Largest Communities: 1800 (44%)
+#Stayed within community: 13380852/16746971 (79%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-144/002.cnf
+c CPU time              : 3432.17 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 10414503/13791539 (75%)
+>>>>Without activity
+c CPU time              : 4984.85 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 8197380/15048310 (54%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4981.06 s
+#Nodes: 4065
+#Modularity: 0.477407
+#Communities: 8
+#Largest Communities: 1421 (34%)
+#Stayed within community: 10907572/18346073 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.18 s
+#Nodes: 4065
+#Modularity: 0.477407
+#Communities: 8
+#Largest Communities: 1421 (34%)
+#Stayed within community: 9131220/16479028 (55%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-144/005.cnf
+c CPU time              : 4979.56 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 15575348/21122805 (73%)
+>>>>Without activity
+c CPU time              : 4983.72 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9516572/15720568 (60%)
+>>>>Variables and clauses shuffled
+c CPU time              : 42.4427 s
+#Nodes: 4065
+#Modularity: 0.438251
+#Communities: 6
+#Largest Communities: 1909 (46%)
+#Stayed within community: 1302622/1885194 (69%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.34 s
+#Nodes: 4065
+#Modularity: 0.438251
+#Communities: 6
+#Largest Communities: 1909 (46%)
+#Stayed within community: 10294982/15861830 (64%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-144/008.cnf
+c CPU time              : 3886.99 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 11808423/16808733 (70%)
+>>>>Without activity
+c CPU time              : 4983.75 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 10361463/19335341 (53%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2273.54 s
+#Nodes: 4065
+#Modularity: 0.461145
+#Communities: 10
+#Largest Communities: 1582 (38%)
+#Stayed within community: 8198901/11332963 (72%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.04 s
+#Nodes: 4065
+#Modularity: 0.461145
+#Communities: 10
+#Largest Communities: 1582 (38%)
+#Stayed within community: 10570629/18465433 (57%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-144/007.cnf
+c CPU time              : 4979.73 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 15284230/20568586 (74%)
+>>>>Without activity
+c CPU time              : 4984.34 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 10693306/16192512 (66%)
+>>>>Variables and clauses shuffled
+c CPU time              : 716.517 s
+#Nodes: 4065
+#Modularity: 0.453195
+#Communities: 7
+#Largest Communities: 1799 (44%)
+#Stayed within community: 4962278/7169781 (69%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.48 s
+#Nodes: 4065
+#Modularity: 0.453195
+#Communities: 7
+#Largest Communities: 1799 (44%)
+#Stayed within community: 8551886/15144515 (56%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/009.cnf
+c CPU time              : 4980.36 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 13238077/19526616 (67%)
+>>>>Without activity
+c CPU time              : 4984.47 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 7910388/15405201 (51%)
+>>>>Variables and clauses shuffled
+c CPU time              : 48.391 s
+#Nodes: 4065
+#Modularity: 0.469723
+#Communities: 7
+#Largest Communities: 1530 (37%)
+#Stayed within community: 1571762/2113668 (74%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.22 s
+#Nodes: 4065
+#Modularity: 0.469723
+#Communities: 7
+#Largest Communities: 1530 (37%)
+#Stayed within community: 10661018/17707854 (60%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/003.cnf
+c CPU time              : 4981.1 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 12796216/17517903 (73%)
+>>>>Without activity
+c CPU time              : 4983.6 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9389092/15582391 (60%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2135.51 s
+#Nodes: 4065
+#Modularity: 0.448568
+#Communities: 5
+#Largest Communities: 1868 (45%)
+#Stayed within community: 8586543/11245379 (76%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.4 s
+#Nodes: 4065
+#Modularity: 0.448568
+#Communities: 5
+#Largest Communities: 1868 (45%)
+#Stayed within community: 10271394/15256082 (67%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/004.cnf
+c CPU time              : 4980.9 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 12360305/19037390 (64%)
+>>>>Without activity
+c CPU time              : 4983.24 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 8319216/15460650 (53%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4978.11 s
+#Nodes: 4065
+#Modularity: 0.478871
+#Communities: 7
+#Largest Communities: 1464 (36%)
+#Stayed within community: 12957099/17942525 (72%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4980.73 s
+#Nodes: 4065
+#Modularity: 0.478871
+#Communities: 7
+#Largest Communities: 1464 (36%)
+#Stayed within community: 8260144/14795425 (55%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/010.cnf
+c CPU time              : 935.998 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 5774476/8640024 (66%)
+>>>>Without activity
+c CPU time              : 4983.89 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9054141/15831494 (57%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4980.53 s
+#Nodes: 4065
+#Modularity: 0.471919
+#Communities: 11
+#Largest Communities: 1487 (36%)
+#Stayed within community: 11860722/17729392 (66%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4981.22 s
+#Nodes: 4065
+#Modularity: 0.471919
+#Communities: 11
+#Largest Communities: 1487 (36%)
+#Stayed within community: 9926440/14355927 (69%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/001.cnf
+c CPU time              : 249.46 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 3491480/4838554 (72%)
+>>>>Without activity
+c CPU time              : 4983.49 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 8395943/14543883 (57%)
+>>>>Variables and clauses shuffled
+c CPU time              : 322.924 s
+#Nodes: 4065
+#Modularity: 0.456940
+#Communities: 14
+#Largest Communities: 1496 (36%)
+#Stayed within community: 2819578/4497134 (62%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4980.43 s
+#Nodes: 4065
+#Modularity: 0.456940
+#Communities: 14
+#Largest Communities: 1496 (36%)
+#Stayed within community: 8949193/16199264 (55%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/006.cnf
+c CPU time              : 83.1172 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 1457515/2096291 (69%)
+>>>>Without activity
+c CPU time              : 4985.16 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 9627579/15972388 (60%)
+>>>>Variables and clauses shuffled
+c CPU time              : 934.286 s
+#Nodes: 4065
+#Modularity: 0.440284
+#Communities: 8
+#Largest Communities: 1855 (45%)
+#Stayed within community: 5776227/7749744 (74%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.88 s
+#Nodes: 4065
+#Modularity: 0.440284
+#Communities: 8
+#Largest Communities: 1855 (45%)
+#Stayed within community: 8498004/14069780 (60%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/002.cnf
+c CPU time              : 4980.99 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 16334513/22413457 (72%)
+>>>>Without activity
+c CPU time              : 4982.6 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 8355844/15749731 (53%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4839.47 s
+#Nodes: 4065
+#Modularity: 0.433988
+#Communities: 8
+#Largest Communities: 1797 (44%)
+#Stayed within community: 14268563/19767938 (72%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.9 s
+#Nodes: 4065
+#Modularity: 0.433988
+#Communities: 8
+#Largest Communities: 1797 (44%)
+#Stayed within community: 6448956/14372256 (44%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/005.cnf
+c CPU time              : 994.598 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 5559358/7992788 (69%)
+>>>>Without activity
+c CPU time              : 4984.46 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 7419453/15882555 (46%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4483.66 s
+#Nodes: 4065
+#Modularity: 0.447180
+#Communities: 14
+#Largest Communities: 1532 (37%)
+#Stayed within community: 10685952/18691278 (57%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4980.25 s
+#Nodes: 4065
+#Modularity: 0.447180
+#Communities: 14
+#Largest Communities: 1532 (37%)
+#Stayed within community: 12018602/20253245 (59%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/008.cnf
+c CPU time              : 4980.65 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 13709554/19669931 (69%)
+>>>>Without activity
+c CPU time              : 4974.28 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 12293251/16691093 (73%)
+>>>>Variables and clauses shuffled
+c CPU time              : 37.4623 s
+#Nodes: 4065
+#Modularity: 0.466963
+#Communities: 7
+#Largest Communities: 1723 (42%)
+#Stayed within community: 1249267/1669676 (74%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.3 s
+#Nodes: 4065
+#Modularity: 0.466963
+#Communities: 7
+#Largest Communities: 1723 (42%)
+#Stayed within community: 13081882/19200896 (68%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/nossum--sha1/22-128/007.cnf
+c CPU time              : 1318.75 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 6117497/9048872 (67%)
+>>>>Without activity
+c CPU time              : 4982.37 s
+#Nodes: 4065
+#Modularity: 0.465254
+#Communities: 10
+#Largest Communities: 1517 (37%)
+#Stayed within community: 8700850/16531142 (52%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4981.18 s
+#Nodes: 4065
+#Modularity: 0.478772
+#Communities: 8
+#Largest Communities: 1562 (38%)
+#Stayed within community: 12737934/18492314 (68%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4980.75 s
+#Nodes: 4065
+#Modularity: 0.478772
+#Communities: 8
+#Largest Communities: 1562 (38%)
+#Stayed within community: 12270505/18030659 (68%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/mayer-eichberger--carseq/pb_200_05_lb_00.cnf
+c CPU time              : 4991.6 s
+#Nodes: 72357
+#Modularity: 0.683820
+#Communities: 17
+#Largest Communities: 17903 (24%)
+#Stayed within community: 2115021/5437154 (38%)
+>>>>Without activity
+c CPU time              : 4987.56 s
+#Nodes: 72357
+#Modularity: 0.683820
+#Communities: 17
+#Largest Communities: 17903 (24%)
+#Stayed within community: 1097706/3706726 (29%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.92 s
+#Nodes: 72357
+#Modularity: 0.726730
+#Communities: 21
+#Largest Communities: 8758 (12%)
+#Stayed within community: 2056300/5085811 (40%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.36 s
+#Nodes: 72357
+#Modularity: 0.726730
+#Communities: 21
+#Largest Communities: 8758 (12%)
+#Stayed within community: 871691/4743929 (18%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/mayer-eichberger--carseq/pb_200_03_lb_02.cnf
+c CPU time              : 4992.13 s
+#Nodes: 76316
+#Modularity: 0.700570
+#Communities: 22
+#Largest Communities: 7175 (9%)
+#Stayed within community: 2010166/8434668 (23%)
+>>>>Without activity
+c CPU time              : 4989.63 s
+#Nodes: 76316
+#Modularity: 0.700570
+#Communities: 22
+#Largest Communities: 7175 (9%)
+#Stayed within community: 1512259/3300658 (45%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4985.6 s
+#Nodes: 76316
+#Modularity: 0.702696
+#Communities: 23
+#Largest Communities: 8089 (10%)
+#Stayed within community: 1805732/7812334 (23%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.4 s
+#Nodes: 76316
+#Modularity: 0.702696
+#Communities: 23
+#Largest Communities: 8089 (10%)
+#Stayed within community: 1257010/6729178 (18%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/mayer-eichberger--carseq/pb_200_03_lb_01.cnf
+c CPU time              : 2030.07 s
+#Nodes: 75342
+#Modularity: 0.700410
+#Communities: 21
+#Largest Communities: 7933 (10%)
+#Stayed within community: 615310/2791746 (22%)
+>>>>Without activity
+c CPU time              : 4989.43 s
+#Nodes: 75342
+#Modularity: 0.700410
+#Communities: 21
+#Largest Communities: 7933 (10%)
+#Stayed within community: 951463/4071072 (23%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2784.9 s
+#Nodes: 75342
+#Modularity: 0.697035
+#Communities: 23
+#Largest Communities: 12893 (17%)
+#Stayed within community: 1456308/3796826 (38%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.22 s
+#Nodes: 75342
+#Modularity: 0.697035
+#Communities: 23
+#Largest Communities: 12893 (17%)
+#Stayed within community: 1560599/7018510 (22%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/mayer-eichberger--carseq/pb_200_03_lb_03.cnf
+c CPU time              : 4987.97 s
+#Nodes: 77290
+#Modularity: 0.702186
+#Communities: 23
+#Largest Communities: 7410 (9%)
+#Stayed within community: 1222001/5387151 (22%)
+>>>>Without activity
+c CPU time              : 4989.97 s
+#Nodes: 77290
+#Modularity: 0.702186
+#Communities: 23
+#Largest Communities: 7410 (9%)
+#Stayed within community: 829796/3138592 (26%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4988.01 s
+#Nodes: 77290
+#Modularity: 0.703590
+#Communities: 23
+#Largest Communities: 9285 (12%)
+#Stayed within community: 1330568/4521721 (29%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.2 s
+#Nodes: 77290
+#Modularity: 0.703590
+#Communities: 23
+#Largest Communities: 9285 (12%)
+#Stayed within community: 1141048/5953872 (19%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/SC13_submissions/mayer-eichberger--carseq/p01_lb_05.cnf
+c CPU time              : 4987.17 s
+#Nodes: 30448
+#Modularity: 0.662775
+#Communities: 11
+#Largest Communities: 8111 (26%)
+#Stayed within community: 6191127/14838174 (41%)
+>>>>Without activity
+c CPU time              : 4986.76 s
+#Nodes: 30448
+#Modularity: 0.662775
+#Communities: 11
+#Largest Communities: 8111 (26%)
+#Stayed within community: 4228138/7745211 (54%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4988.86 s
+#Nodes: 30448
+#Modularity: 0.646980
+#Communities: 17
+#Largest Communities: 7599 (24%)
+#Stayed within community: 6548357/15014524 (43%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.58 s
+#Nodes: 30448
+#Modularity: 0.646980
+#Communities: 17
+#Largest Communities: 7599 (24%)
+#Stayed within community: 3318212/14792077 (22%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satcomp11-main-track-selected/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top25.cnf
+./MapDecision: line 69: 19552 Done                    cat "$dimacs"
+     19553                       | ../Haskell/Graph variable
+     19554 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: ../Benchmarks/satcomp11-main-track-selected/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top25.cnf.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+
+>>>>Without activity
+./MapDecision: line 69: 19767 Done                    cat "$dimacs"
+     19768                       | ../Haskell/Graph variable
+     19769 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: ../Benchmarks/satcomp11-main-track-selected/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top25.cnf.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+>>>>Variables and clauses shuffled
+>>>>File: ../Benchmarks/satcomp11-main-track-selected/SAT11/application/kullmann/AES/Benchmarks/64/aes_64_1_keyfind_1.cnf
+c CPU time              : 882.263 s
+#Nodes: 597
+#Modularity: 0.671035
+#Communities: 6
+#Largest Communities: 148 (24%)
+#Stayed within community: 16220923/31852879 (50%)
+>>>>Without activity
+c CPU time              : 2661.29 s
+#Nodes: 597
+#Modularity: 0.671035
+#Communities: 6
+#Largest Communities: 148 (24%)
+#Stayed within community: 56517113/124785264 (45%)
+>>>>Variables and clauses shuffled
+c CPU time              : 836.092 s
+#Nodes: 597
+#Modularity: 0.671525
+#Communities: 5
+#Largest Communities: 152 (25%)
+#Stayed within community: 16704974/31653604 (52%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.89 s
+#Nodes: 597
+#Modularity: 0.671525
+#Communities: 5
+#Largest Communities: 152 (25%)
+#Stayed within community: 69773794/184474512 (37%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satcomp11-main-track-selected/SAT05/industrial/grieu05/vmpc/vmpc_36.renamed-as.sat05-1922.cnf
+c CPU time              : 4992 s
+#Nodes: 1297
+#Modularity: 0.076685
+#Communities: 815
+#Largest Communities: 483 (37%)
+#Stayed within community: 2003361/5889807 (34%)
+>>>>Without activity
+c CPU time              : 4989.08 s
+#Nodes: 1297
+#Modularity: 0.076685
+#Communities: 815
+#Largest Communities: 483 (37%)
+#Stayed within community: 3818391/22289401 (17%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.4 s
+#Nodes: 1297
+#Modularity: 0.154043
+#Communities: 19
+#Largest Communities: 798 (61%)
+#Stayed within community: 3653639/6296225 (58%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.67 s
+#Nodes: 1297
+#Modularity: 0.154043
+#Communities: 19
+#Largest Communities: 798 (61%)
+#Stayed within community: 3860063/6530931 (59%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satcomp11-main-track-selected/SAT05/industrial/grieu05/vmpc/vmpc_35.renamed-as.sat05-1921.cnf
+c CPU time              : 4991.62 s
+#Nodes: 1226
+#Modularity: 0.072751
+#Communities: 754
+#Largest Communities: 473 (38%)
+#Stayed within community: 870325/6527076 (13%)
+>>>>Without activity
+c CPU time              : 4988.7 s
+#Nodes: 1226
+#Modularity: 0.072751
+#Communities: 754
+#Largest Communities: 473 (38%)
+#Stayed within community: 3802576/27135796 (14%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4990.5 s
+#Nodes: 1226
+#Modularity: 0.154406
+#Communities: 3
+#Largest Communities: 757 (61%)
+#Stayed within community: 4388935/7342780 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.58 s
+#Nodes: 1226
+#Modularity: 0.154406
+#Communities: 3
+#Largest Communities: 757 (61%)
+#Stayed within community: 5863913/9772788 (60%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-25-s100.cnf
+c CPU time              : 4996.14 s
+#Nodes: 31932
+#Modularity: 0.919354
+#Communities: 68
+#Largest Communities: 4682 (14%)
+#Stayed within community: 523738/1848499 (28%)
+>>>>Without activity
+c CPU time              : 4993.7 s
+#Nodes: 31932
+#Modularity: 0.919354
+#Communities: 68
+#Largest Communities: 4682 (14%)
+#Stayed within community: 528052/5101246 (10%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4996.1 s
+#Nodes: 31932
+#Modularity: 0.919865
+#Communities: 67
+#Largest Communities: 4675 (14%)
+#Stayed within community: 455775/1506676 (30%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.89 s
+#Nodes: 31932
+#Modularity: 0.919865
+#Communities: 67
+#Largest Communities: 4675 (14%)
+#Stayed within community: 1155074/5414447 (21%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-submitted/application/SAT2012_AES/Benchmarks/24/aes_24_4_keyfind_4.cnf
+c CPU time              : 1762.31 s
+#Nodes: 521
+#Modularity: 0.757177
+#Communities: 11
+#Largest Communities: 96 (18%)
+#Stayed within community: 19628165/42192631 (46%)
+>>>>Without activity
+c CPU time              : 4994.16 s
+#Nodes: 521
+#Modularity: 0.757177
+#Communities: 11
+#Largest Communities: 96 (18%)
+#Stayed within community: 30094751/116213055 (25%)
+>>>>Variables and clauses shuffled
+c CPU time              : 3675.68 s
+#Nodes: 521
+#Modularity: 0.716924
+#Communities: 12
+#Largest Communities: 97 (18%)
+#Stayed within community: 28256551/65655474 (43%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 2613.56 s
+#Nodes: 521
+#Modularity: 0.716924
+#Communities: 12
+#Largest Communities: 97 (18%)
+#Stayed within community: 15221099/65030628 (23%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/cryptography/mizh/md5_48_3.cnf
+c CPU time              : 325.052 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 1915276/4295912 (44%)
+>>>>Without activity
+c CPU time              : 4987.97 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 3724966/7618358 (48%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1639.85 s
+#Nodes: 66893
+#Modularity: 0.693769
+#Communities: 67
+#Largest Communities: 12935 (19%)
+#Stayed within community: 2591660/6133058 (42%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.72 s
+#Nodes: 66893
+#Modularity: 0.693769
+#Communities: 67
+#Largest Communities: 12935 (19%)
+#Stayed within community: 7400427/23818112 (31%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/cryptography/mizh/md5_48_1.cnf
+c CPU time              : 491.703 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 2005691/4617814 (43%)
+>>>>Without activity
+c CPU time              : 4989.13 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 3808038/7916949 (48%)
+>>>>Variables and clauses shuffled
+c CPU time              : 185.468 s
+#Nodes: 66893
+#Modularity: 0.720385
+#Communities: 58
+#Largest Communities: 11346 (16%)
+#Stayed within community: 1020355/2504422 (40%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.98 s
+#Nodes: 66893
+#Modularity: 0.720385
+#Communities: 58
+#Largest Communities: 11346 (16%)
+#Stayed within community: 19804604/28186661 (70%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/cryptography/mizh/md5_47_4.cnf
+c CPU time              : 266.725 s
+#Nodes: 65605
+#Modularity: 0.687415
+#Communities: 72
+#Largest Communities: 13270 (20%)
+#Stayed within community: 1635318/3805896 (42%)
+>>>>Without activity
+c CPU time              : 4986.47 s
+#Nodes: 65605
+#Modularity: 0.687415
+#Communities: 72
+#Largest Communities: 13270 (20%)
+#Stayed within community: 5047949/13859581 (36%)
+>>>>Variables and clauses shuffled
+c CPU time              : 413.01 s
+#Nodes: 65605
+#Modularity: 0.712152
+#Communities: 38
+#Largest Communities: 13062 (19%)
+#Stayed within community: 1517474/3200944 (47%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.46 s
+#Nodes: 65605
+#Modularity: 0.712152
+#Communities: 38
+#Largest Communities: 13062 (19%)
+#Stayed within community: 10873119/35749792 (30%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/cryptography/desgen/gss-19-s100.cnf
+c CPU time              : 1968.42 s
+#Nodes: 31436
+#Modularity: 0.917741
+#Communities: 53
+#Largest Communities: 4486 (14%)
+#Stayed within community: 284161/740260 (38%)
+>>>>Without activity
+c CPU time              : 2705.87 s
+#Nodes: 31436
+#Modularity: 0.917741
+#Communities: 53
+#Largest Communities: 4486 (14%)
+#Stayed within community: 1087915/5356005 (20%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2190.25 s
+#Nodes: 31436
+#Modularity: 0.929272
+#Communities: 60
+#Largest Communities: 4271 (13%)
+#Stayed within community: 237507/670084 (35%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4436.64 s
+#Nodes: 31436
+#Modularity: 0.929272
+#Communities: 60
+#Largest Communities: 4271 (13%)
+#Stayed within community: 1178593/7720784 (15%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/software-verification/fuhs/AProVE07-27.cnf
+c CPU time              : 1356.57 s
+#Nodes: 7730
+#Modularity: 0.660128
+#Communities: 105
+#Largest Communities: 2048 (26%)
+#Stayed within community: 7812945/10056120 (77%)
+>>>>Without activity
+c CPU time              : 4993.56 s
+#Nodes: 7730
+#Modularity: 0.660128
+#Communities: 105
+#Largest Communities: 2048 (26%)
+#Stayed within community: 33785199/59949041 (56%)
+>>>>Variables and clauses shuffled
+c CPU time              : 704.54 s
+#Nodes: 7730
+#Modularity: 0.610409
+#Communities: 103
+#Largest Communities: 2203 (28%)
+#Stayed within community: 3819209/4920940 (77%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.22 s
+#Nodes: 7730
+#Modularity: 0.610409
+#Communities: 103
+#Largest Communities: 2203 (28%)
+#Stayed within community: 18974463/53689619 (35%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/software-verification/bitverif/minxorminand128.cnf
+c CPU time              : 4989.62 s
+#Nodes: 153834
+#Modularity: 0.753675
+#Communities: 9
+#Largest Communities: 38254 (24%)
+#Stayed within community: 2577525/4534211 (56%)
+>>>>Without activity
+c CPU time              : 4986.62 s
+#Nodes: 153834
+#Modularity: 0.753675
+#Communities: 9
+#Largest Communities: 38254 (24%)
+#Stayed within community: 6681373/12592846 (53%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4988.85 s
+#Nodes: 153834
+#Modularity: 0.749129
+#Communities: 10
+#Largest Communities: 38237 (24%)
+#Stayed within community: 4164869/7050086 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.18 s
+#Nodes: 153834
+#Modularity: 0.749129
+#Communities: 10
+#Largest Communities: 38237 (24%)
+#Stayed within community: 9730073/18298671 (53%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/satComp09_BioInstances/rbcl_xits_14_SAT.cnf
+c CPU time              : 9.71261 s
+#Nodes: 2221
+#Modularity: 0.193387
+#Communities: 35
+#Largest Communities: 814 (36%)
+#Stayed within community: 55135/86985 (63%)
+>>>>Without activity
+c CPU time              : 4990.43 s
+#Nodes: 2221
+#Modularity: 0.193387
+#Communities: 35
+#Largest Communities: 814 (36%)
+#Stayed within community: 4528820/8335980 (54%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994.51 s
+#Nodes: 2221
+#Modularity: 0.194693
+#Communities: 46
+#Largest Communities: 710 (31%)
+#Stayed within community: 2495491/2786184 (89%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.83 s
+#Nodes: 2221
+#Modularity: 0.194693
+#Communities: 46
+#Largest Communities: 710 (31%)
+#Stayed within community: 4993951/10116878 (49%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/satComp09_BioInstances/ndhf_xits_21_SAT.cnf
+c CPU time              : 402.333 s
+#Nodes: 4467
+#Modularity: 0.243406
+#Communities: 57
+#Largest Communities: 1639 (36%)
+#Stayed within community: 329594/537085 (61%)
+>>>>Without activity
+c CPU time              : 4991.26 s
+#Nodes: 4467
+#Modularity: 0.243406
+#Communities: 57
+#Largest Communities: 1639 (36%)
+#Stayed within community: 1692481/3315785 (51%)
+>>>>Variables and clauses shuffled
+c CPU time              : 43.0587 s
+#Nodes: 4467
+#Modularity: 0.206521
+#Communities: 520
+#Largest Communities: 1584 (35%)
+#Stayed within community: 72689/114893 (63%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.99 s
+#Nodes: 4467
+#Modularity: 0.206521
+#Communities: 520
+#Largest Communities: 1584 (35%)
+#Stayed within community: 3350137/6480581 (51%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/bitverif/countbitssrl/countbitssrl032.cnf
+c CPU time              : 4994.36 s
+#Nodes: 18607
+#Modularity: 0.845312
+#Communities: 10
+#Largest Communities: 2831 (15%)
+#Stayed within community: 5964485/15056381 (39%)
+>>>>Without activity
+c CPU time              : 4994.64 s
+#Nodes: 18607
+#Modularity: 0.845312
+#Communities: 10
+#Largest Communities: 2831 (15%)
+#Stayed within community: 5963120/14732833 (40%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994.71 s
+#Nodes: 18607
+#Modularity: 0.803390
+#Communities: 16
+#Largest Communities: 3585 (19%)
+#Stayed within community: 4873064/13812799 (35%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4994.34 s
+#Nodes: 18607
+#Modularity: 0.803390
+#Communities: 16
+#Largest Communities: 3585 (19%)
+#Stayed within community: 5137638/18400984 (27%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/bitverif/minxor/minxor128.cnf
+c CPU time              : 4979.34 s
+#Nodes: 54258
+#Modularity: 0.737502
+#Communities: 8
+#Largest Communities: 15257 (28%)
+#Stayed within community: 13500878/22993542 (58%)
+>>>>Without activity
+c CPU time              : 4978.47 s
+#Nodes: 54258
+#Modularity: 0.737502
+#Communities: 8
+#Largest Communities: 15257 (28%)
+#Stayed within community: 16145456/37060079 (43%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4980.12 s
+#Nodes: 54258
+#Modularity: 0.782891
+#Communities: 11
+#Largest Communities: 13653 (25%)
+#Stayed within community: 20719363/34827741 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.06 s
+#Nodes: 54258
+#Modularity: 0.782891
+#Communities: 11
+#Largest Communities: 13653 (25%)
+#Stayed within community: 34842162/83994176 (41%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/aprove09/AProVE09-06.cnf
+c CPU time              : 6.97644 s
+#Nodes: 77263
+#Modularity: 0.842331
+#Communities: 215
+#Largest Communities: 10974 (14%)
+#Stayed within community: 17747/32400 (54%)
+>>>>Without activity
+c CPU time              : 4983.34 s
+#Nodes: 77263
+#Modularity: 0.842331
+#Communities: 215
+#Largest Communities: 10974 (14%)
+#Stayed within community: 5853863/14246897 (41%)
+>>>>Variables and clauses shuffled
+c CPU time              : 46.8869 s
+#Nodes: 77263
+#Modularity: 0.842516
+#Communities: 210
+#Largest Communities: 10987 (14%)
+#Stayed within community: 49546/89413 (55%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.22 s
+#Nodes: 77263
+#Modularity: 0.842516
+#Communities: 210
+#Largest Communities: 10987 (14%)
+#Stayed within community: 3295188/9492485 (34%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/crypto/desgen/gss-24-s100.cnf
+c CPU time              : 4994.42 s
+#Nodes: 31822
+#Modularity: 0.913075
+#Communities: 58
+#Largest Communities: 5111 (16%)
+#Stayed within community: 660132/1853137 (35%)
+>>>>Without activity
+c CPU time              : 4991.6 s
+#Nodes: 31822
+#Modularity: 0.913075
+#Communities: 58
+#Largest Communities: 5111 (16%)
+#Stayed within community: 1964030/6261549 (31%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4994.57 s
+#Nodes: 31822
+#Modularity: 0.917449
+#Communities: 63
+#Largest Communities: 5111 (16%)
+#Stayed within community: 539869/1530560 (35%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.36 s
+#Nodes: 31822
+#Modularity: 0.917449
+#Communities: 63
+#Largest Communities: 5111 (16%)
+#Stayed within community: 2450284/9881249 (24%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/crypto/desgen/gss-17-s100.cnf
+c CPU time              : 239.663 s
+#Nodes: 31319
+#Modularity: 0.913403
+#Communities: 37
+#Largest Communities: 4629 (14%)
+#Stayed within community: 34556/107679 (32%)
+>>>>Without activity
+c CPU time              : 4993.22 s
+#Nodes: 31319
+#Modularity: 0.913403
+#Communities: 37
+#Largest Communities: 4629 (14%)
+#Stayed within community: 2617074/13692019 (19%)
+>>>>Variables and clauses shuffled
+c CPU time              : 214.681 s
+#Nodes: 31319
+#Modularity: 0.925825
+#Communities: 45
+#Largest Communities: 4552 (14%)
+#Stayed within community: 20066/76368 (26%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 2753.36 s
+#Nodes: 31319
+#Modularity: 0.925825
+#Communities: 45
+#Largest Communities: 4552 (14%)
+#Stayed within community: 1323780/5566941 (23%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2009/application/SAT09/APPLICATIONS/crypto/desgen/gss-23-s100.cnf
+c CPU time              : 599.373 s
+#Nodes: 31712
+#Modularity: 0.916823
+#Communities: 60
+#Largest Communities: 4545 (14%)
+#Stayed within community: 98664/242792 (40%)
+>>>>Without activity
+c CPU time              : 4990.09 s
+#Nodes: 31712
+#Modularity: 0.916823
+#Communities: 60
+#Largest Communities: 4545 (14%)
+#Stayed within community: 1578249/6236098 (25%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4996.12 s
+#Nodes: 31712
+#Modularity: 0.915608
+#Communities: 61
+#Largest Communities: 5198 (16%)
+#Stayed within community: 482090/1484674 (32%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.9 s
+#Nodes: 31712
+#Modularity: 0.915608
+#Communities: 61
+#Largest Communities: 5198 (16%)
+#Stayed within community: 1203181/6913399 (17%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SAT_Race_2008/grieu-vmpc-31.cnf
+c CPU time              : 4989.85 s
+#Nodes: 962
+#Modularity: 0.154560
+#Communities: 15
+#Largest Communities: 563 (58%)
+#Stayed within community: 7636530/12690055 (60%)
+>>>>Without activity
+c CPU time              : 4987.19 s
+#Nodes: 962
+#Modularity: 0.154560
+#Communities: 15
+#Largest Communities: 563 (58%)
+#Stayed within community: 23161953/37436900 (61%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4988.25 s
+#Nodes: 962
+#Modularity: 0.146060
+#Communities: 3
+#Largest Communities: 578 (60%)
+#Stayed within community: 7854232/12608299 (62%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.86 s
+#Nodes: 962
+#Modularity: 0.146060
+#Communities: 3
+#Largest Communities: 578 (60%)
+#Stayed within community: 11580402/18987719 (60%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-bottom13.cnf
+c CPU time              : 606.182 s
+#Nodes: 19996
+#Modularity: 0.212378
+#Communities: 703
+#Largest Communities: 12811 (64%)
+#Stayed within community: 2768998/3834446 (72%)
+>>>>Without activity
+c CPU time              : 4990.7 s
+#Nodes: 19996
+#Modularity: 0.212378
+#Communities: 703
+#Largest Communities: 12811 (64%)
+#Stayed within community: 19410886/19633298 (98%)
+>>>>Variables and clauses shuffled
+c CPU time              : 437.471 s
+#Nodes: 19996
+#Modularity: 0.353475
+#Communities: 84
+#Largest Communities: 12768 (63%)
+#Stayed within community: 2069134/2793374 (74%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.54 s
+#Nodes: 19996
+#Modularity: 0.353475
+#Communities: 84
+#Largest Communities: 12768 (63%)
+#Stayed within community: 6672261/19617159 (34%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top26.cnf
+./MapDecision: line 69:  6126 Done                    cat "$dimacs"
+      6127                       | ../Haskell/Graph variable
+      6128 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top26.cnf.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+
+>>>>Without activity
+./MapDecision: line 69:  6355 Done                    cat "$dimacs"
+      6356                       | ../Haskell/Graph variable
+      6357 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top26.cnf.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+>>>>Variables and clauses shuffled
+./MapDecision: line 69:  6891 Done                    cat "$dimacs"
+      6892                       | ../Haskell/Graph variable
+      6893 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: /tmp/tmp.7i6iAm0kN5.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+
+>>>>Variables and clauses shuffled and without activity.
+./MapDecision: line 69: 10159 Done                    cat "$dimacs"
+     10160                       | ../Haskell/Graph variable
+     10161 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: /tmp/tmp.7i6iAm0kN5.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-bottom14.cnf
+c CPU time              : 4989.48 s
+#Nodes: 22887
+#Modularity: 0.197913
+#Communities: 788
+#Largest Communities: 14708 (64%)
+#Stayed within community: 17703528/23996638 (73%)
+>>>>Without activity
+c CPU time              : 4990.21 s
+#Nodes: 22887
+#Modularity: 0.197913
+#Communities: 788
+#Largest Communities: 14708 (64%)
+#Stayed within community: 21977587/22200395 (98%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4992.48 s
+#Nodes: 22887
+#Modularity: 0.335401
+#Communities: 97
+#Largest Communities: 14696 (64%)
+#Stayed within community: 16541035/20964041 (78%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.5 s
+#Nodes: 22887
+#Modularity: 0.335401
+#Communities: 97
+#Largest Communities: 14696 (64%)
+#Stayed within community: 7053671/16096337 (43%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/AAAI2010-SATPlanning/aaai10-planning-ipc5-pathways-17-step21.cnf
+c CPU time              : 1562.51 s
+#Nodes: 53920
+#Modularity: 0.905854
+#Communities: 234
+#Largest Communities: 13568 (25%)
+#Stayed within community: 1724526/2706562 (63%)
+>>>>Without activity
+c CPU time              : 4988.4 s
+#Nodes: 53920
+#Modularity: 0.905854
+#Communities: 234
+#Largest Communities: 13568 (25%)
+#Stayed within community: 20384852/34070909 (59%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.37 s
+#Nodes: 53920
+#Modularity: 0.905032
+#Communities: 231
+#Largest Communities: 13604 (25%)
+#Stayed within community: 2721956/6552156 (41%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4988.33 s
+#Nodes: 53920
+#Modularity: 0.905032
+#Communities: 231
+#Largest Communities: 13604 (25%)
+#Stayed within community: 14932569/34229985 (43%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/AAAI2010-SATPlanning/aaai10-planning-ipc5-pathways-17-step20.cnf
+c CPU time              : 2723.36 s
+#Nodes: 50278
+#Modularity: 0.903288
+#Communities: 229
+#Largest Communities: 12667 (25%)
+#Stayed within community: 1592837/3239867 (49%)
+>>>>Without activity
+c CPU time              : 4989.26 s
+#Nodes: 50278
+#Modularity: 0.903288
+#Communities: 229
+#Largest Communities: 12667 (25%)
+#Stayed within community: 13666863/26431602 (51%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1812.77 s
+#Nodes: 50278
+#Modularity: 0.903730
+#Communities: 224
+#Largest Communities: 12147 (24%)
+#Stayed within community: 721281/2436935 (29%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.6 s
+#Nodes: 50278
+#Modularity: 0.903730
+#Communities: 224
+#Largest Communities: 12147 (24%)
+#Stayed within community: 13739711/33492274 (41%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/HWMCC10-combination-timeframe-expansion/hwmcc10-timeframe-expansion-k45-pdtvissoap1-tseitin.cnf
+c CPU time              : 4990.02 s
+#Nodes: 156058
+#Modularity: 0.925855
+#Communities: 39
+#Largest Communities: 13992 (8%)
+#Stayed within community: 1309023/4067528 (32%)
+>>>>Without activity
+c CPU time              : 4989.46 s
+#Nodes: 156058
+#Modularity: 0.925855
+#Communities: 39
+#Largest Communities: 13992 (8%)
+#Stayed within community: 5747386/14965117 (38%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.42 s
+#Nodes: 156058
+#Modularity: 0.904737
+#Communities: 39
+#Largest Communities: 13342 (8%)
+#Stayed within community: 1337128/4145874 (32%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.27 s
+#Nodes: 156058
+#Modularity: 0.904737
+#Communities: 39
+#Largest Communities: 13342 (8%)
+#Stayed within community: 2014186/7798263 (25%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/HWMCC10-combination-timeframe-expansion/hwmcc10-timeframe-expansion-k50-pdtpmsns2-tseitin.cnf
+c CPU time              : 4989.21 s
+#Nodes: 88352
+#Modularity: 0.885815
+#Communities: 19
+#Largest Communities: 16238 (18%)
+#Stayed within community: 3380037/11128648 (30%)
+>>>>Without activity
+c CPU time              : 4987.8 s
+#Nodes: 88352
+#Modularity: 0.885815
+#Communities: 19
+#Largest Communities: 16238 (18%)
+#Stayed within community: 11127095/22171077 (50%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.33 s
+#Nodes: 88352
+#Modularity: 0.857611
+#Communities: 13
+#Largest Communities: 16131 (18%)
+#Stayed within community: 4783928/10351374 (46%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.42 s
+#Nodes: 88352
+#Modularity: 0.857611
+#Communities: 13
+#Largest Communities: 16131 (18%)
+#Stayed within community: 6717597/16710852 (40%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/HWMCC10-combination-timeframe-expansion/hwmcc10-timeframe-expansion-k45-pdtpmsgoodbakery-tseitin.cnf
+c CPU time              : 4990.93 s
+#Nodes: 98935
+#Modularity: 0.941670
+#Communities: 37
+#Largest Communities: 14268 (14%)
+#Stayed within community: 1542755/7733419 (19%)
+>>>>Without activity
+c CPU time              : 4990.04 s
+#Nodes: 98935
+#Modularity: 0.941670
+#Communities: 37
+#Largest Communities: 14268 (14%)
+#Stayed within community: 4030083/10080257 (39%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4990.98 s
+#Nodes: 98935
+#Modularity: 0.885858
+#Communities: 13
+#Largest Communities: 14570 (14%)
+#Stayed within community: 2557966/5664954 (45%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.61 s
+#Nodes: 98935
+#Modularity: 0.885858
+#Communities: 13
+#Largest Communities: 14570 (14%)
+#Stayed within community: 4822872/14076743 (34%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/smtqfbv-aigs/smtlib-qfbv-aigs-ext_con_032_008_0256-tseitin.cnf
+c CPU time              : 4983.18 s
+#Nodes: 27224
+#Modularity: 0.865530
+#Communities: 22
+#Largest Communities: 3033 (11%)
+#Stayed within community: 374692557/880763371 (42%)
+>>>>Without activity
+c CPU time              : 58.3316 s
+#Nodes: 27224
+#Modularity: 0.865530
+#Communities: 22
+#Largest Communities: 3033 (11%)
+#Stayed within community: 1948262/8450978 (23%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4983.17 s
+#Nodes: 27224
+#Modularity: 0.899536
+#Communities: 17
+#Largest Communities: 1907 (7%)
+#Stayed within community: 248704422/734341062 (33%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 330.061 s
+#Nodes: 27224
+#Modularity: 0.899536
+#Communities: 17
+#Largest Communities: 1907 (7%)
+#Stayed within community: 12845774/102906814 (12%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT05/industrial/grieu05/vmpc/vmpc_32.renamed-as.sat05-1919.cnf
+c CPU time              : 2446.96 s
+#Nodes: 1025
+#Modularity: 0.154855
+#Communities: 3
+#Largest Communities: 632 (61%)
+#Stayed within community: 3271143/5383158 (60%)
+>>>>Without activity
+c CPU time              : 4986.78 s
+#Nodes: 1025
+#Modularity: 0.154855
+#Communities: 3
+#Largest Communities: 632 (61%)
+#Stayed within community: 21396674/32840273 (65%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4990.36 s
+#Nodes: 1025
+#Modularity: 0.145743
+#Communities: 13
+#Largest Communities: 606 (59%)
+#Stayed within community: 7052440/11919695 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.01 s
+#Nodes: 1025
+#Modularity: 0.145743
+#Communities: 13
+#Largest Communities: 606 (59%)
+#Stayed within community: 9695460/16046768 (60%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/bitverif/maxxor/maxxor064.cnf
+c CPU time              : 4982.34 s
+#Nodes: 51064
+#Modularity: 0.722706
+#Communities: 43
+#Largest Communities: 12256 (24%)
+#Stayed within community: 12240366/18293305 (66%)
+>>>>Without activity
+c CPU time              : 4985.79 s
+#Nodes: 51064
+#Modularity: 0.722706
+#Communities: 43
+#Largest Communities: 12256 (24%)
+#Stayed within community: 7623558/21568520 (35%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4984.72 s
+#Nodes: 51064
+#Modularity: 0.722848
+#Communities: 33
+#Largest Communities: 12494 (24%)
+#Stayed within community: 15828157/30605208 (51%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.68 s
+#Nodes: 51064
+#Modularity: 0.722848
+#Communities: 33
+#Largest Communities: 12494 (24%)
+#Stayed within community: 5150865/14726419 (34%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/bitverif/maxxor/maxxor032.cnf
+c CPU time              : 4990.2 s
+#Nodes: 13240
+#Modularity: 0.754444
+#Communities: 10
+#Largest Communities: 2433 (18%)
+#Stayed within community: 15962247/46458964 (34%)
+>>>>Without activity
+c CPU time              : 4984.98 s
+#Nodes: 13240
+#Modularity: 0.754444
+#Communities: 10
+#Largest Communities: 2433 (18%)
+#Stayed within community: 9078246/30049043 (30%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4991.08 s
+#Nodes: 13240
+#Modularity: 0.759591
+#Communities: 13
+#Largest Communities: 3112 (23%)
+#Stayed within community: 13936586/38363835 (36%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4983.48 s
+#Nodes: 13240
+#Modularity: 0.759591
+#Communities: 13
+#Largest Communities: 3112 (23%)
+#Stayed within community: 10564202/31544516 (33%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
+c CPU time              : 303.463 s
+#Nodes: 31614
+#Modularity: 0.915476
+#Communities: 57
+#Largest Communities: 5250 (16%)
+#Stayed within community: 78932/158032 (49%)
+>>>>Without activity
+c CPU time              : 4994.7 s
+#Nodes: 31614
+#Modularity: 0.915476
+#Communities: 57
+#Largest Communities: 5250 (16%)
+#Stayed within community: 1648819/6488473 (25%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4990.76 s
+#Nodes: 31614
+#Modularity: 0.925336
+#Communities: 59
+#Largest Communities: 4154 (13%)
+#Stayed within community: 708233/1714022 (41%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.84 s
+#Nodes: 31614
+#Modularity: 0.925336
+#Communities: 59
+#Largest Communities: 4154 (13%)
+#Stayed within community: 1337711/8419415 (15%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT07/industrial/fuhs/hard/AProVE07-03.cnf
+c CPU time              : 397.557 s
+#Nodes: 3115
+#Modularity: 0.659181
+#Communities: 14
+#Largest Communities: 1057 (33%)
+#Stayed within community: 2739091/6486626 (42%)
+>>>>Without activity
+c CPU time              : 4993.54 s
+#Nodes: 3115
+#Modularity: 0.659181
+#Communities: 14
+#Largest Communities: 1057 (33%)
+#Stayed within community: 31989550/78334816 (40%)
+>>>>Variables and clauses shuffled
+c CPU time              : 442.296 s
+#Nodes: 3115
+#Modularity: 0.656361
+#Communities: 16
+#Largest Communities: 1072 (34%)
+#Stayed within community: 3151468/7162199 (44%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 3176.74 s
+#Nodes: 3115
+#Modularity: 0.656361
+#Communities: 16
+#Largest Communities: 1072 (34%)
+#Stayed within community: 19262347/53879295 (35%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/fuhs/medium/AProVE07-02.cnf
+c CPU time              : 212.505 s
+#Nodes: 6197
+#Modularity: 0.208206
+#Communities: 16
+#Largest Communities: 5128 (82%)
+#Stayed within community: 1238986/1673592 (74%)
+>>>>Without activity
+c CPU time              : 798.022 s
+#Nodes: 6197
+#Modularity: 0.208206
+#Communities: 16
+#Largest Communities: 5128 (82%)
+#Stayed within community: 10055337/10662580 (94%)
+>>>>Variables and clauses shuffled
+c CPU time              : 247.699 s
+#Nodes: 6197
+#Modularity: 0.216714
+#Communities: 12
+#Largest Communities: 5401 (87%)
+#Stayed within community: 1814540/1814541 (99%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 624.983 s
+#Nodes: 6197
+#Modularity: 0.216714
+#Communities: 12
+#Largest Communities: 5401 (87%)
+#Stayed within community: 6612225/6612226 (99%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/babic/xinetd/itox_vc1033.cnf
+c CPU time              : 4.94031 s
+#Nodes: 112404
+#Modularity: 0.840524
+#Communities: 184
+#Largest Communities: 21646 (19%)
+#Stayed within community: 115627/153825 (75%)
+>>>>Without activity
+c CPU time              : 4990.8 s
+#Nodes: 112404
+#Modularity: 0.840524
+#Communities: 184
+#Largest Communities: 21646 (19%)
+#Stayed within community: 10979088/22302827 (49%)
+>>>>Variables and clauses shuffled
+c CPU time              : 5.16432 s
+#Nodes: 112404
+#Modularity: 0.838335
+#Communities: 187
+#Largest Communities: 21555 (19%)
+#Stayed within community: 64126/100886 (63%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991.72 s
+#Nodes: 112404
+#Modularity: 0.838335
+#Communities: 187
+#Largest Communities: 21555 (19%)
+#Stayed within community: 4922645/9419889 (52%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/babic/xinetd/itox_vc1130.cnf
+c CPU time              : 9.88862 s
+#Nodes: 143919
+#Modularity: 0.853017
+#Communities: 226
+#Largest Communities: 25344 (17%)
+#Stayed within community: 188870/246092 (76%)
+>>>>Without activity
+c CPU time              : 5.93237 s
+#Nodes: 143919
+#Modularity: 0.853017
+#Communities: 226
+#Largest Communities: 25344 (17%)
+#Stayed within community: 335172/409760 (81%)
+>>>>Variables and clauses shuffled
+c CPU time              : 8.72054 s
+#Nodes: 143919
+#Modularity: 0.849997
+#Communities: 238
+#Largest Communities: 25216 (17%)
+#Stayed within community: 125920/179714 (70%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4993.42 s
+#Nodes: 143919
+#Modularity: 0.849997
+#Communities: 238
+#Largest Communities: 25216 (17%)
+#Stayed within community: 4660745/5157799 (90%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/grieu/vmpc_33.cnf
+c CPU time              : 3938.08 s
+#Nodes: 1090
+#Modularity: 0.142941
+#Communities: 156
+#Largest Communities: 563 (51%)
+#Stayed within community: 4713332/8467407 (55%)
+>>>>Without activity
+c CPU time              : 4987.98 s
+#Nodes: 1090
+#Modularity: 0.142941
+#Communities: 156
+#Largest Communities: 563 (51%)
+#Stayed within community: 14094008/29721578 (47%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4990.19 s
+#Nodes: 1090
+#Modularity: 0.153071
+#Communities: 3
+#Largest Communities: 616 (56%)
+#Stayed within community: 6233517/8694576 (71%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.6 s
+#Nodes: 1090
+#Modularity: 0.153071
+#Communities: 3
+#Largest Communities: 616 (56%)
+#Stayed within community: 8373603/14509065 (57%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/grieu/vmpc_29.cnf
+c CPU time              : 4990.27 s
+#Nodes: 842
+#Modularity: 0.079582
+#Communities: 518
+#Largest Communities: 325 (38%)
+#Stayed within community: 6762966/14660019 (46%)
+>>>>Without activity
+c CPU time              : 4987 s
+#Nodes: 842
+#Modularity: 0.079582
+#Communities: 518
+#Largest Communities: 325 (38%)
+#Stayed within community: 6228856/37287781 (16%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1927.7 s
+#Nodes: 842
+#Modularity: 0.172876
+#Communities: 4
+#Largest Communities: 327 (38%)
+#Stayed within community: 2885545/7170162 (40%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.61 s
+#Nodes: 842
+#Modularity: 0.172876
+#Communities: 4
+#Largest Communities: 327 (38%)
+#Stayed within community: 10774012/25006495 (43%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/grieu/vmpc_30.cnf
+c CPU time              : 1647.34 s
+#Nodes: 901
+#Modularity: 0.146900
+#Communities: 42
+#Largest Communities: 545 (60%)
+#Stayed within community: 2750546/4665716 (58%)
+>>>>Without activity
+c CPU time              : 4987.24 s
+#Nodes: 901
+#Modularity: 0.146900
+#Communities: 42
+#Largest Communities: 545 (60%)
+#Stayed within community: 21947270/37618241 (58%)
+>>>>Variables and clauses shuffled
+c CPU time              : 104.823 s
+#Nodes: 901
+#Modularity: 0.151685
+#Communities: 3
+#Largest Communities: 502 (55%)
+#Stayed within community: 170315/284916 (59%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4986.8 s
+#Nodes: 901
+#Modularity: 0.151685
+#Communities: 3
+#Largest Communities: 502 (55%)
+#Stayed within community: 14436315/24931667 (57%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATCompetition2007/industrial/grieu/vmpc_34.cnf
+c CPU time              : 4991.25 s
+#Nodes: 1157
+#Modularity: 0.131177
+#Communities: 302
+#Largest Communities: 447 (38%)
+#Stayed within community: 2647624/8286036 (31%)
+>>>>Without activity
+c CPU time              : 4980.68 s
+#Nodes: 1157
+#Modularity: 0.131177
+#Communities: 302
+#Largest Communities: 447 (38%)
+#Stayed within community: 14666642/29708334 (49%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4989.39 s
+#Nodes: 1157
+#Modularity: 0.178503
+#Communities: 4
+#Largest Communities: 435 (37%)
+#Stayed within community: 4533060/9774409 (46%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.47 s
+#Nodes: 1157
+#Modularity: 0.178503
+#Communities: 4
+#Largest Communities: 435 (37%)
+#Stayed within community: 4394149/9895558 (44%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2009_unselected/application/SAT09/APPLICATIONS/bitverif/maxor/maxor064.cnf
+c CPU time              : 4984.15 s
+#Nodes: 50996
+#Modularity: 0.764215
+#Communities: 10
+#Largest Communities: 8566 (16%)
+#Stayed within community: 8251103/18699687 (44%)
+>>>>Without activity
+c CPU time              : 4986.64 s
+#Nodes: 50996
+#Modularity: 0.764215
+#Communities: 10
+#Largest Communities: 8566 (16%)
+#Stayed within community: 9440491/19910612 (47%)
+>>>>Variables and clauses shuffled
+c CPU time              : 4987.96 s
+#Nodes: 50996
+#Modularity: 0.780517
+#Communities: 30
+#Largest Communities: 10305 (20%)
+#Stayed within community: 6401040/13699687 (46%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4982.1 s
+#Nodes: 50996
+#Modularity: 0.780517
+#Communities: 30
+#Largest Communities: 10305 (20%)
+#Stayed within community: 4189064/11425677 (36%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2009_unselected/application/SAT09/APPLICATIONS/crypto/md5gen/gus-md5-08.cnf
+c CPU time              : 143.093 s
+#Nodes: 69398
+#Modularity: 0.815105
+#Communities: 16
+#Largest Communities: 13237 (19%)
+#Stayed within community: 21426/34774 (61%)
+>>>>Without activity
+c CPU time              : 567.863 s
+#Nodes: 69398
+#Modularity: 0.815105
+#Communities: 16
+#Largest Communities: 13237 (19%)
+#Stayed within community: 355564/467883 (75%)
+>>>>Variables and clauses shuffled
+c CPU time              : 231.482 s
+#Nodes: 69398
+#Modularity: 0.812371
+#Communities: 14
+#Largest Communities: 12648 (18%)
+#Stayed within community: 31892/48856 (65%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 538.762 s
+#Nodes: 69398
+#Modularity: 0.812371
+#Communities: 14
+#Largest Communities: 12648 (18%)
+#Stayed within community: 286883/761973 (37%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2009_unselected/application/SAT09/APPLICATIONS/crypto/desgen/gss-18-s100.cnf
+c CPU time              : 873.019 s
+#Nodes: 31365
+#Modularity: 0.936805
+#Communities: 51
+#Largest Communities: 2964 (9%)
+#Stayed within community: 114623/409131 (28%)
+>>>>Without activity
+c CPU time              : 4993.58 s
+#Nodes: 31365
+#Modularity: 0.936805
+#Communities: 51
+#Largest Communities: 2964 (9%)
+#Stayed within community: 2059099/11273554 (18%)
+>>>>Variables and clauses shuffled
+c CPU time              : 1282.39 s
+#Nodes: 31365
+#Modularity: 0.915559
+#Communities: 47
+#Largest Communities: 4567 (14%)
+#Stayed within community: 124616/444264 (28%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 3363.77 s
+#Nodes: 31365
+#Modularity: 0.915559
+#Communities: 47
+#Largest Communities: 4567 (14%)
+#Stayed within community: 2121801/5298795 (40%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Race_unselected/mironov-zhang/md5_47_1.cnf
+c CPU time              : 142.977 s
+#Nodes: 65605
+#Modularity: 0.687415
+#Communities: 72
+#Largest Communities: 13270 (20%)
+#Stayed within community: 1521319/3490545 (43%)
+>>>>Without activity
+c CPU time              : 4973.41 s
+#Nodes: 65605
+#Modularity: 0.687415
+#Communities: 72
+#Largest Communities: 13270 (20%)
+#Stayed within community: 4457423/11717395 (38%)
+>>>>Variables and clauses shuffled
+c CPU time              : 92.5978 s
+#Nodes: 65605
+#Modularity: 0.706375
+#Communities: 69
+#Largest Communities: 12943 (19%)
+#Stayed within community: 642654/1629109 (39%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4987.68 s
+#Nodes: 65605
+#Modularity: 0.706375
+#Communities: 69
+#Largest Communities: 12943 (19%)
+#Stayed within community: 8258436/39664373 (20%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Race_unselected/mironov-zhang/md5_48_4.cnf
+c CPU time              : 1195.81 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 3118747/6794560 (45%)
+>>>>Without activity
+c CPU time              : 4988.03 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 3489116/7152350 (48%)
+>>>>Variables and clauses shuffled
+c CPU time              : 298.951 s
+#Nodes: 66893
+#Modularity: 0.702791
+#Communities: 83
+#Largest Communities: 13112 (19%)
+#Stayed within community: 908789/2328516 (39%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4991 s
+#Nodes: 66893
+#Modularity: 0.702791
+#Communities: 83
+#Largest Communities: 13112 (19%)
+#Stayed within community: 10663360/35021351 (30%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Race_unselected/mironov-zhang/md5_48_2.cnf
+c CPU time              : 46.3309 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 1111083/2446622 (45%)
+>>>>Without activity
+c CPU time              : 4985.53 s
+#Nodes: 66893
+#Modularity: 0.698984
+#Communities: 59
+#Largest Communities: 12892 (19%)
+#Stayed within community: 3604149/7435456 (48%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2026.41 s
+#Nodes: 66893
+#Modularity: 0.723287
+#Communities: 59
+#Largest Communities: 11688 (17%)
+#Stayed within community: 3136327/7975888 (39%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4989.96 s
+#Nodes: 66893
+#Modularity: 0.723287
+#Communities: 59
+#Largest Communities: 11688 (17%)
+#Stayed within community: 12509702/43994093 (28%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Race_unselected/mironov-zhang/md5_47_3.cnf
+c CPU time              : 209.029 s
+#Nodes: 65605
+#Modularity: 0.687415
+#Communities: 72
+#Largest Communities: 13270 (20%)
+#Stayed within community: 1529463/3554338 (43%)
+>>>>Without activity
+c CPU time              : 4986.7 s
+#Nodes: 65605
+#Modularity: 0.687415
+#Communities: 72
+#Largest Communities: 13270 (20%)
+#Stayed within community: 4020528/10797939 (37%)
+>>>>Variables and clauses shuffled
+c CPU time              : 279.333 s
+#Nodes: 65605
+#Modularity: 0.709228
+#Communities: 78
+#Largest Communities: 12914 (19%)
+#Stayed within community: 985135/2380134 (41%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4990.48 s
+#Nodes: 65605
+#Modularity: 0.709228
+#Communities: 78
+#Largest Communities: 12914 (19%)
+#Stayed within community: 11665647/40349248 (28%)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2011_unselected/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top27.cnf
+./MapDecision: line 69:  6835 Done                    cat "$dimacs"
+      6836                       | ../Haskell/Graph variable
+      6837 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2011_unselected/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top27.cnf.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+
+>>>>Without activity
+./MapDecision: line 69:  6978 Done                    cat "$dimacs"
+      6979                       | ../Haskell/Graph variable
+      6980 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2011_unselected/SAT11/application/fuhs/slp-synthesis-AES/slp-synthesis-aes-top27.cnf.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+>>>>Variables and clauses shuffled
+./MapDecision: line 69:  7145 Done                    cat "$dimacs"
+      7146                       | ../Haskell/Graph variable
+      7147 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: /tmp/tmp.Iv6rTZhA5u.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+
+>>>>Variables and clauses shuffled and without activity.
+./MapDecision: line 69:  7400 Done                    cat "$dimacs"
+      7401                       | ../Haskell/Graph variable
+      7402 Segmentation fault      (core dumped) | ../Bin/community -i:"/dev/stdin" -o:"$cmtyfile"
+Exception in thread "main" java.io.FileNotFoundException: /tmp/tmp.Iv6rTZhA5u.cmty (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at java.io.FileReader.<init>(FileReader.java:72)
+	at Mapped.main(Mapped.java:27)
+=====DONE=====timeout=5000
+
+
+
+>>>>File: ../Benchmarks/satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2011_unselected/SAT11/application/kullmann/AES/Benchmarks/32/aes_32_3_keyfind_2.cnf
+c CPU time              : 960.44 s
+#Nodes: 709
+#Modularity: 0.730289
+#Communities: 11
+#Largest Communities: 138 (19%)
+#Stayed within community: 11588856/36168955 (32%)
+>>>>Without activity
+c CPU time              : 4993.13 s
+#Nodes: 709
+#Modularity: 0.730289
+#Communities: 11
+#Largest Communities: 138 (19%)
+#Stayed within community: 44888927/147772064 (30%)
+>>>>Variables and clauses shuffled
+c CPU time              : 2317.27 s
+#Nodes: 709
+#Modularity: 0.717139
+#Communities: 13
+#Largest Communities: 94 (13%)
+#Stayed within community: 18097500/66426329 (27%)
+>>>>Variables and clauses shuffled and without activity.
+c CPU time              : 4992.7 s
+#Nodes: 709
+#Modularity: 0.717139
+#Communities: 13
+#Largest Communities: 94 (13%)
+#Stayed within community: 32794452/174819320 (18%)
+=====DONE=====timeout=5000
+
+
+
