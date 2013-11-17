@@ -99,6 +99,7 @@ Solver::Solver() :
     //
   , solves(0), starts(0), decisions(0), rnd_decisions(0), propagations(0), conflicts(0)
   , dec_vars(0), clauses_literals(0), learnts_literals(0), max_literals(0), tot_literals(0)
+  , learnt_clauses(0), learnt_asserting(0)
 
   , ok                 (true)
   , cla_inc            (1)
@@ -736,8 +737,12 @@ CRef Solver::propagate(bool ini=false)
                 // Copy the remaining watches:
                 while (i < end)
                     *j++ = *i++;
-            }else
+            }else{
                 uncheckedEnqueue(first, cr);
+                
+                Clause & c = ca[cr];
+                if(c.learnt()) learnt_asserting++;
+            }
 
         NextClause:;
         }
@@ -1060,6 +1065,7 @@ lbool Solver::search(int nof_conflicts)
                 if (!dis_learn) {
                     learnts.push(cr);
                     attachClause(cr);
+                    learnt_clauses++;
                 }
                 claBumpActivity(ca[cr]);
                 uncheckedEnqueue(learnt_clause[0], cr);
