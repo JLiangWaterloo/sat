@@ -194,7 +194,7 @@ int main(int argc, char** argv)
         }
         
         // TODO
-        S.counting = true;
+        S.counting = false;
         
         
         double parsed_time = cpuTime();

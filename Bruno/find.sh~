@@ -1,0 +1,3 @@
+#!/bin/bash          
+
+echo $(ls -s $(find . -name $1))

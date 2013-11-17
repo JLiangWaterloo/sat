@@ -1,0 +1,32 @@
+# - Application - SAT
+# -- timeout
+SC13_submissions/nossum--sha1/22-160/001.cnf
+satchal12-submitted/application/SAT2012_AES/Benchmarks/16/aes_16_10_keyfind_3.cnf
+satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-25-s100.cnf
+SC13_submissions/mayer-eichberger--carseq/pb_300_09_lb_07.cnf
+# time >~ 1400
+SC13_submissions/nossum--sha1/22-144/001.cnf
+satchal12-submitted/application/SAT2012_AES/Benchmarks/24/aes_24_4_keyfind_4.cnf
+satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
+SC13_submissions/mayer-eichberger--carseq/pb_300_10_lb_12.cnf
+# time <~ 600
+SC13_submissions/nossum--sha1/23-80/001.cnf
+satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/kullmann/AES/Benchmarks/32/aes_32_3_keyfind_1.cnf
+satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-19-s100.cnf
+SC13_submissions/mayer-eichberger--carseq/pb_300_06_lb_02.cnf
+# - UNSAT
+# -- timeout
+SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_5_32.cnf
+SC13_submissions/kummling_grosmann--pesp/ctl_3791_556_unsat.cnf
+SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0xfba1a41b5dfd7f7-52.cnf
+satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/smtqfbv-aigs/smtlib-qfbv-aigs-ext_con_032_008_0256-tseitin.cnf
+# time >~ 1400
+SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_16.cnf
+SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_1_unsat.cnf
+SC13_submissions/soos--grainofsalt/hitag2-exptime4800/hitag2-8-60-0-0xa3b8497b8aad6d7-42.cnf
+satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/md5gen/gus-md5-11.cnf
+# time <~ 600
+SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_6_14.cnf
+SC13_submissions/kummling_grosmann--pesp/ctl_4291_567_12_unsat.cnf
+satchal12-selected/Application_SAT+UNSAT/SATChallenge2012_Application/SAT_Competition_2009_unselected/application/SAT09/APPLICATIONS/crypto/md5gen/gus-md5-08.cnf
+satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/jarvisalo/smtqfbv-aigs/smtlib-qfbv-aigs-lfsr_004_127_112-tseitin.cnf
