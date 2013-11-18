@@ -29,11 +29,13 @@ class GraphConstructor
   
   def work(file)
     done = false
-    puts "Reading file"
+    @i = 0
+    puts '--- Pass ' + @i.to_s + ' ---'
+    puts "  Reading file"
     @time1 = Time.now
     
     dump = File.open(@dump_path, "w")
-    File.open(file).each_slice(1000) do |lines|
+    File.open(file).each_slice(10) do |lines|
       if lines.include?("$\n")
         dump = seperateLines(lines, dump)
         done = true
@@ -55,7 +57,7 @@ class GraphConstructor
       dump.write(lines[0,i].join)
     end
         
-    printTime("  Time = ", @time1)
+    printTime("    Time = ", @time1)
     
     dump.close
     @graph.work()
@@ -63,8 +65,10 @@ class GraphConstructor
     dump.truncate(0)
     
     printTime("  Time for pass = ", @time1)
+    @i += 1
     @time1 = Time.now
-    puts "Reading file"
+    puts '--- Pass ' + @i.to_s + ' ---'
+    puts "  Reading file"
     
     if i < (lines.length - 1)
       lines = lines[i+1,lines.length]
