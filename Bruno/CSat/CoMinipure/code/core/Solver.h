@@ -195,13 +195,17 @@ public:
         const vec<double>&  activity;
         const vec<int>& community;
         bool operator () (Var x, Var y) const {
-            return activity[x] > activity[y];
+            // return activity[x] > activity[y];
         
             // CoMinipure
             //
-            // if (activity[x] > activity[y]) return true;
-            // if (activity[x] == activity[y] && community[x] < community[y]) return true;
-            // return false;
+            //if (activity[x] > activity[y]) return true;
+            //if (activity[x] == activity[y] && community[x] < community[y]) return true;
+            //return false;
+            
+            if (community[x] < community[y]) return true;
+            if (community[x] == community[y] && activity[x] > activity[y]) return true;
+            return false;
             
         }
         VarOrderLt(const vec<double>&  act, const vec<int>& co) : activity(act), community(co) { }
