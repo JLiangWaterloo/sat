@@ -33,7 +33,7 @@ class GraphConstructor
     @time1 = Time.now
     
     dump = File.open(@dump_path, "w")
-    File.open(file).each_slice(1000) do |lines|
+    File.open(file).each_slice(10) do |lines|
       if lines.include?("$\n")
         dump = seperateLines(lines, dump)
         done = true
