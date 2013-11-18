@@ -7,12 +7,12 @@ SC13_submissions/mayer-eichberger--carseq/pb_300_09_lb_07.cnf
 # time >~ 1400
 SC13_submissions/nossum--sha1/22-144/001.cnf
 satchal12-submitted/application/SAT2012_AES/Benchmarks/24/aes_24_4_keyfind_4.cnf
-satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
+satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
 SC13_submissions/mayer-eichberger--carseq/pb_300_10_lb_12.cnf
 # time <~ 600
 SC13_submissions/nossum--sha1/23-80/001.cnf
 satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT11/application/kullmann/AES/Benchmarks/32/aes_32_3_keyfind_1.cnf
-satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-19-s100.cnf
+satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/cryptography/desgen/gss-19-s100.cnf
 SC13_submissions/mayer-eichberger--carseq/pb_300_06_lb_02.cnf
 # - Application UNSAT
 # -- timeout
