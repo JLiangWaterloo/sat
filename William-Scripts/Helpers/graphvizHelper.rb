@@ -22,7 +22,6 @@ class GraphvizHelper
   end
   
   def work()
-    puts '--- Pass ' + @i.to_s + ' ---'
     puts '  Applying Graph, Snap and Diff'
     @time1 = Time.now
     

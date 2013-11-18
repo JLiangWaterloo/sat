@@ -10,7 +10,6 @@ class UbigraphHelper
   end
   
   def work()
-    puts '--- Pass ' + @i.to_s + ' ---'
     puts '  Applying Graph, and Snap'
     @time1 = Time.now
     
