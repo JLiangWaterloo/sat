@@ -194,7 +194,7 @@ int main(int argc, char** argv)
         }
         
         // TODO
-        S.counting = false;
+        S.counting = true;
         
         
         double parsed_time = cpuTime();
@@ -274,7 +274,7 @@ int main(int argc, char** argv)
         //
         if (S.counting) {
             for (int i = 0; i < COUNT_LIMIT; ++i) {
-                printf("a %d %lu %lu\n", i, S.count_learnt[i], S.count_asserting[i]); 
+                printf("a %d %f %f\n", i, ((double) S.count_learnt[i]) / ((double) S.total_learnt), ((double) S.count_asserting[i]) / ((double) S.total_asserting)); 
             }
         }
         

@@ -129,6 +129,8 @@ Solver::Solver() :
     
     // CoMinipure
     //
+    total_asserting = 0;
+    total_learnt = 0;
     for(int i = 0; i < COUNT_LIMIT; ++i) {
         count_asserting[i] = 0;
         count_learnt[i] = 0;
@@ -754,6 +756,7 @@ CRef Solver::propagate(bool ini=false)
                 if(counting) {
                     Clause& clause = ca[cr];
                     if(clause.learnt()) {
+                        total_asserting++;
                         vec<int> communities;
                         for(int i = 0; i < clause.size(); ++i) {
                             int co = community[var(clause[i])];
@@ -1085,28 +1088,28 @@ lbool Solver::search(int nof_conflicts)
             analyze(confl, learnt_clause, backtrack_level);
 			//printf("after analyze\n");
             cancelUntil(backtrack_level);
-            
-            
-            // CoMinipure
-            //
-            if(counting) {
-                vec<int> communities;
-                for(int i = 0; i < learnt_clause.size(); ++i) {
-                    int co = community[var(learnt_clause[i])];
-                    if (! communities.contains(co)) {
-                        communities.push(co);
-                    }
-                }
-                int count = communities.size();
-                if (count < COUNT_LIMIT) {
-                    ++count_learnt[count];
-                }
-            }
-            
 
             if (learnt_clause.size() == 1){
                 uncheckedEnqueue(learnt_clause[0]);
             }else{
+                
+                // CoMinipure
+                //
+                if(counting) {
+                    total_learnt++;
+                    vec<int> communities;
+                    for(int i = 0; i < learnt_clause.size(); ++i) {
+                        int co = community[var(learnt_clause[i])];
+                        if (! communities.contains(co)) {
+                            communities.push(co);
+                        }
+                    }
+                    int count = communities.size();
+                    if (count < COUNT_LIMIT) {
+                        ++count_learnt[count];
+                    }
+                }
+
                 CRef cr = ca.alloc(learnt_clause, true);
                 if (!dis_learn) {
                     learnts.push(cr);
