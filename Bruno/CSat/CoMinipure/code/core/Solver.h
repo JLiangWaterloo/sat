@@ -113,13 +113,9 @@ public:
     
     // CoMinipure
     //
-    vec<int> community;                         // Maps each variable to its community, or -1 if has none
     void setCommunity(Var var, int co);
-    bool counting;
-    unsigned long count_asserting[COUNT_LIMIT];
-    unsigned long total_asserting;
-    unsigned long count_learnt[COUNT_LIMIT];
-    unsigned long total_learnt;
+    vec<int> community;
+    FILE * removed_statistics;
 
     FILE*               output;
     // Extra results: (read-only member variable)
@@ -282,6 +278,10 @@ public:
     vec<Lit>            analyze_stack;
     vec<Lit>            analyze_toclear;
     vec<Lit>            add_tmp;
+    
+    //CoMinipure
+    //
+    vec<int>            co_tmp;
 
     double              max_learnts;
     double              learntsize_adjust_confl;

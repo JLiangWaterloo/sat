@@ -94,7 +94,7 @@ public:
     
     // CoMinipure
     //
-    bool contains(T el) const { for(int i = 0; i < sz; ++i) if(data[i] == el) return true; return false; }
+    bool contains(T elem) const { for(int i = 0; i < sz; ++i) if(data[i] == elem) return true; return false; }
     
 };
 

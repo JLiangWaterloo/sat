@@ -126,15 +126,6 @@ Solver::Solver() :
   , begin_solve(false)
   
 {
-    
-    // CoMinipure
-    //
-    total_asserting = 0;
-    total_learnt = 0;
-    for(int i = 0; i < COUNT_LIMIT; ++i) {
-        count_asserting[i] = 0;
-        count_learnt[i] = 0;
-    }
    
 }
 
@@ -753,22 +744,9 @@ CRef Solver::propagate(bool ini=false)
                 
                 // CoMinipure
                 //
-                if(counting) {
-                    Clause& clause = ca[cr];
-                    if(clause.learnt()) {
-                        total_asserting++;
-                        vec<int> communities;
-                        for(int i = 0; i < clause.size(); ++i) {
-                            int co = community[var(clause[i])];
-                            if (! communities.contains(co)) {
-                                communities.push(co);
-                            }
-                        }
-                        int count = communities.size();
-                        if (count < COUNT_LIMIT) {
-                            ++count_asserting[count];
-                        }
-                    }
+                Clause& clause = ca[cr];
+                if(clause.learnt()) {
+                    clause.usage++;
                 }
                 
                 uncheckedEnqueue(first, cr);
@@ -803,7 +781,8 @@ struct reduceDB_lt {
     ClauseAllocator& ca;
     reduceDB_lt(ClauseAllocator& ca_) : ca(ca_) {}
     bool operator () (CRef x, CRef y) { 
-        return ca[x].size() > 2 && (ca[y].size() == 2 || ca[x].activity() < ca[y].activity()); } 
+        return ca[x].size() > 2 && (ca[y].size() == 2 || ca[x].activity() < ca[y].activity());
+    } 
 };
 void Solver::reduceDB()
 {
@@ -816,9 +795,17 @@ void Solver::reduceDB()
     // and clauses with activity smaller than 'extra_lim':
     for (i = j = 0; i < learnts.size(); i++){
         Clause& c = ca[learnts[i]];
-        if (c.size() > 2 && !locked(c) && (i < learnts.size() / 2 || c.activity() < extra_lim))
+        if (c.size() > 2 && !locked(c) && (i < learnts.size() / 2 || c.activity() < extra_lim)) {
+            
+            // CoMinipure
+            //
+            if(removed_statistics != NULL) {
+                Clause& clause = ca[learnts[i]];
+                fprintf(removed_statistics, "%u %u %f\n", clause.communities, clause.usage, ((double) clause.usage) / ((double) (decisions - clause.decision)));
+            }
+            
             removeClause(learnts[i]);
-        else
+        }else
             learnts[j++] = learnts[i];
     }
     learnts.shrink(i - j);
@@ -1095,22 +1082,24 @@ lbool Solver::search(int nof_conflicts)
                 
                 // CoMinipure
                 //
-                if(counting) {
-                    total_learnt++;
-                    vec<int> communities;
-                    for(int i = 0; i < learnt_clause.size(); ++i) {
-                        int co = community[var(learnt_clause[i])];
-                        if (! communities.contains(co)) {
-                            communities.push(co);
-                        }
-                    }
-                    int count = communities.size();
-                    if (count < COUNT_LIMIT) {
-                        ++count_learnt[count];
+                co_tmp.clear();
+                for(int i = 0; i < learnt_clause.size(); ++i) {
+                    int co = community[var(learnt_clause[i])];
+                    if (! co_tmp.contains(co)) {
+                        co_tmp.push(co);
                     }
                 }
+                int count = co_tmp.size();
 
                 CRef cr = ca.alloc(learnt_clause, true);
+                
+                // CoMinipure
+                //
+                Clause& clause = ca[cr];
+                clause.decision = decisions;
+                clause.usage = 1;
+                clause.communities = count;
+                
                 if (!dis_learn) {
                     learnts.push(cr);
                     attachClause(cr);
@@ -1735,6 +1724,6 @@ void Solver::garbageCollect()
 /*--- CoMinipure ---*/
 
 void Solver::setCommunity(Var var, int co) {
-    assert(0 <= var && var < community.size());
+    assert(0 <= var && var < nVars());
     community[var] = co;
 }
