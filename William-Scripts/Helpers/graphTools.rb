@@ -24,11 +24,11 @@ class GraphTools
   end
   
   def newCommunityEdge(edge, color, community)
-    @subgraphs[community] = @subgraphs[community] + "    " + edge + ";\n"
+    @subgraphs[community] << "    " + edge + ";\n"
   end
   
   def newIntercommunityEdge(edge)
-    @nonSubGraphNodes = @nonSubGraphNodes + "\n  " + edge + ";"
+    @nonSubGraphNodes << "\n  " + edge + ";"
   end
   
   def removeNode(node)

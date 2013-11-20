@@ -91,9 +91,11 @@ class GraphBuilder
     end
     @edge_objects.each do |key, value|
       info = key.split(" -- ")
+      com0 = @communities[info[0]]
+      com1 = @communities[info[1]]
       
-      if !@communities[info[0]].nil? && !@communities[info[1]].nil? && @communities[info[0]] == @communities[info[1]]
-        @tools.newCommunityEdge(value, @community_color[@communities[info[0]]], @communities[info[0]])
+      if !com0.nil? && !com1.nil? && com0 == com1
+        @tools.newCommunityEdge(value, @community_color[com0], com0)
         @communityEdgeCount += 1
       else
         @tools.newIntercommunityEdge(key)
