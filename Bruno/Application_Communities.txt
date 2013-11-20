@@ -23,6 +23,13 @@ File: satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen
 # Communities: 67
 # NId	CommunityId
 File: SC13_submissions/mayer-eichberger--carseq/pb_300_09_lb_07.cnf
+# Input: /dev/stdin
+# Nodes: 145943
+# Edges: 710975
+# Algoritm: Cluset-Newman-Moore
+# Modularity: 0.791051
+# Communities: 23
+# NId	CommunityId
 File: SC13_submissions/nossum--sha1/22-144/001.cnf
 # Input: /dev/stdin
 # Nodes: 4064
@@ -39,13 +46,13 @@ File: satchal12-submitted/application/SAT2012_AES/Benchmarks/24/aes_24_4_keyfind
 # Modularity: 0.757177
 # Communities: 10
 # NId	CommunityId
-File: satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
+File: satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SAT09/APPLICATIONS/crypto/desgen/gss-21-s100.cnf
 # Input: /dev/stdin
-# Nodes: 0
-# Edges: 0
+# Nodes: 31613
+# Edges: 92921
 # Algoritm: Cluset-Newman-Moore
-# Modularity: 0.000000
-# Communities: 0
+# Modularity: 0.915476
+# Communities: 56
 # NId	CommunityId
 File: SC13_submissions/mayer-eichberger--carseq/pb_300_10_lb_12.cnf
 File: SC13_submissions/nossum--sha1/23-80/001.cnf
@@ -64,13 +71,13 @@ File: satchal12-selected/Application_SAT+UNSAT/SATCompetition2011/application/SA
 # Modularity: 0.730289
 # Communities: 10
 # NId	CommunityId
-File: satcomp09-main-track-selected/application/SAT09/APPLICATIONS/crypto/desgen/gss-19-s100.cnf
+File: satchal12-selected/Application_SAT+UNSAT/SAT_Race_2010/cryptography/desgen/gss-19-s100.cnf
 # Input: /dev/stdin
-# Nodes: 0
-# Edges: 0
+# Nodes: 31435
+# Edges: 92423
 # Algoritm: Cluset-Newman-Moore
-# Modularity: 0.000000
-# Communities: 0
+# Modularity: 0.917741
+# Communities: 52
 # NId	CommunityId
 File: SC13_submissions/mayer-eichberger--carseq/pb_300_06_lb_02.cnf
 File: SC13_submissions/heule_weaver--arc4/arcfour_initialPermutation_5_32.cnf

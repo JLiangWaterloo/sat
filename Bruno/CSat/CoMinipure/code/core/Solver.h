@@ -29,7 +29,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 // CoMinipure
 //
-#define COUNT_LIMIT 20
+#define COUNT_LIMIT 15
 
 
 namespace Minisat {
@@ -117,7 +117,9 @@ public:
     void setCommunity(Var var, int co);
     bool counting;
     unsigned long count_asserting[COUNT_LIMIT];
+    unsigned long total_asserting;
     unsigned long count_learnt[COUNT_LIMIT];
+    unsigned long total_learnt;
 
     FILE*               output;
     // Extra results: (read-only member variable)
@@ -195,7 +197,7 @@ public:
         const vec<double>&  activity;
         const vec<int>& community;
         bool operator () (Var x, Var y) const {
-            // return activity[x] > activity[y];
+            return activity[x] > activity[y];
         
             // CoMinipure
             //
@@ -203,9 +205,9 @@ public:
             //if (activity[x] == activity[y] && community[x] < community[y]) return true;
             //return false;
             
-            if (community[x] < community[y]) return true;
-            if (community[x] == community[y] && activity[x] > activity[y]) return true;
-            return false;
+            //if (community[x] < community[y]) return true;
+            //if (community[x] == community[y] && activity[x] > activity[y]) return true;
+            //return false;
             
         }
         VarOrderLt(const vec<double>&  act, const vec<int>& co) : activity(act), community(co) { }
