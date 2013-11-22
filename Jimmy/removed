@@ -1,0 +1,17 @@
+Feature Model          Clauses   Variables      After Simplificiation
+                                                Clauses Remaining(%)    Variables Remaining(%)
+2.6.28.6-icse11.dimacs 343944    6847           0.089622                0.545933
+2.6.32-2var.dimacs     268223    60060          0.500576                0.319664
+2.6.33.3-2var.dimacs   273799    62470          0.508198                0.319513
+axTLS.dimacs           2155      684            0.233875                0.192982
+buildroot.dimacs       45603     14898          0.437669                0.355350
+busybox-1.18.0.dimacs  17836     6796           0.206941                0.198352
+coreboot.dimacs        47091     12268          0.647767                0.511738
+ecos-icse11.dimacs     3146      1244           0.076923                0.094855
+embtoolkit.dimacs      180511    23515          0.212713                0.447884
+fiasco.dimacs          5228      1632           0.333206                0.251225
+freebsd-icse11.dimacs  62183     1346           0.004374                0.043834
+freetz.dimacs          102705    31012          0.432228                0.370566
+toybox.dimacs          1020      544            0.124510                0.108456
+uClinux-config.dimacs  31637     11254          0.243702                0.200551
+uClinux.dimacs         2468      1850           0.000000                0.000000
