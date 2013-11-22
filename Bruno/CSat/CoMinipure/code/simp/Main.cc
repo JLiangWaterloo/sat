@@ -192,9 +192,9 @@ int main(int argc, char** argv)
             }
             gzclose(community_file);
         }
-        
-        // TODO
-        S.counting = true;
+        if (argc > 4) {
+            S.removed_statistics = fopen(argv[4], "w");
+        }
         
         
         double parsed_time = cpuTime();
@@ -269,12 +269,15 @@ int main(int argc, char** argv)
             printf(" 0\n");
         }
         
-        
         // CoMinipure
         //
-        if (S.counting) {
-            for (int i = 0; i < COUNT_LIMIT; ++i) {
-                printf("a %d %f %f\n", i, ((double) S.count_learnt[i]) / ((double) S.total_learnt), ((double) S.count_asserting[i]) / ((double) S.total_asserting)); 
+        if (argc > 3) {
+            // Dumping usage statistics
+            //
+            FILE * statistics_file = fopen(argv[3], "w");
+            for(int i = 0; i < S.learnts.size(); ++i) {
+                Clause& clause = S.ca[S.learnts[i]];
+                fprintf(statistics_file, "%u %u %f %f\n", clause.communities, clause.usage, ((double) clause.usage) / ((double) (S.decisions - clause.decision)), clause.activity());
             }
         }
         

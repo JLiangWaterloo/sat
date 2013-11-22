@@ -121,6 +121,16 @@ class Clause;
 typedef RegionAllocator<uint32_t>::Ref CRef;
 
 class Clause {
+    
+public:
+    // CoMinipure
+    //
+    unsigned int decision;
+    unsigned int communities ;
+    unsigned int usage;
+    
+private:
+    
     struct {
         unsigned mark      : 2;
         unsigned learnt    : 1;
@@ -151,6 +161,7 @@ class Clause {
     }
 
 public:
+    
     void calcAbstraction() {
         assert(header.has_extra);
         uint32_t abstraction = 0;
@@ -183,6 +194,7 @@ public:
 
     Lit          subsumes    (const Clause& other) const;
     void         strengthen  (Lit p);
+    
 };
 
 //=================================================================================================
@@ -238,13 +250,23 @@ class ClauseAllocator : public RegionAllocator<uint32_t>
         if (c.reloced()) { cr = c.relocation(); return; }
         
         cr = to.alloc(c, c.learnt());
+        
         c.relocate(cr);
+        
+        // CoMinipure
+        //
+        if(c.learnt()) {
+            to[cr].decision = c.decision;
+            to[cr].communities = c.communities;
+            to[cr].usage = c.usage;
+        }
         
         // Copy extra data-fields: 
         // (This could be cleaned-up. Generalize Clause-constructor to be applicable here instead?)
         to[cr].mark(c.mark());
         if (to[cr].learnt())         to[cr].activity() = c.activity();
         else if (to[cr].has_extra()) to[cr].calcAbstraction();
+        
     }
 };
 
