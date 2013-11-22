@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-load 'Helpers/rubigraph-mine.rb'
+DIR_NAME_UBIGRAPH_TOOLS = File.expand_path File.dirname(__FILE__)
+
+load DIR_NAME_UBIGRAPH_TOOLS + '/rubigraph-mine.rb'
 
 class UbigraphTools
 

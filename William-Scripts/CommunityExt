@@ -1,9 +1,11 @@
 #!/bin/bash
 mkdir -p output
+dir_name=$(dirname $0)
+dir_name=${dir_name#"./"}
 
-cat $1 | ../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout" > output/communityExt.txt
-modularity=$(grep "Modularity" "output/communityExt.txt")
-communities=$(grep "Communities" "output/communityExt.txt")
+cat $1 | "$dir_name"/../Haskell/Bcp | "$dir_name"/../Haskell/Graph variable | "$dir_name"/../Bin/community -i:"/dev/stdin" -o:"/dev/stdout" > "$dir_name"/output/communityExt.txt
+modularity=$(grep "Modularity" "$dir_name/output/communityExt.txt")
+communities=$(grep "Communities" "$dir_name/output/communityExt.txt")
 
 information=$(sed -n -e '/^p cnf/p' $1)
 IFS=' ' read -ra INFO <<< "$information"

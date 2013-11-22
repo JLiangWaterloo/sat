@@ -1,18 +1,20 @@
 #!/usr/bin/env ruby
-load 'Helpers/GraphBuilder.rb'
-load 'Helpers/graphvizHelper.rb'
-load 'Helpers/ubigraphHelper.rb'
-load 'Helpers/edgePlotHelper.rb'
-load 'Helpers/modularityPlotHelper.rb'
+DIR_NAME_GRAPH_CONSTRUCTOR = File.expand_path File.dirname(__FILE__)
+
+load DIR_NAME_GRAPH_CONSTRUCTOR + '/GraphBuilder.rb'
+load DIR_NAME_GRAPH_CONSTRUCTOR + '/graphvizHelper.rb'
+load DIR_NAME_GRAPH_CONSTRUCTOR + '/ubigraphHelper.rb'
+load DIR_NAME_GRAPH_CONSTRUCTOR + '/edgePlotHelper.rb'
+load DIR_NAME_GRAPH_CONSTRUCTOR + '/modularityPlotHelper.rb'
 
 class GraphConstructor
 
   def initialize(type, details, output_type, filename, output_format)
     @init_time = Time.now
     dir_name = File.basename( filename, ".*" )
-    @dump_path = 'output/' + dir_name + '/dump.dimacs'
-    system 'rm -rf output/' + dir_name
-    system 'mkdir -p output/' + dir_name
+    @dump_path = DIR_NAME_GRAPH_CONSTRUCTOR + '/../output/' + dir_name + '/dump.dimacs'
+    system 'rm -rf ' + DIR_NAME_GRAPH_CONSTRUCTOR + '/../output/' + dir_name
+    system 'mkdir -p ' + DIR_NAME_GRAPH_CONSTRUCTOR + '/../output/' + dir_name
   
     if type == "graphviz"
       @graph = GraphvizHelper.new(dir_name, output_type, details, output_format)

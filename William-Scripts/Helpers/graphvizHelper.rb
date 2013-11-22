@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'thread'
+DIR_NAME_GRAPHVIZ = File.expand_path File.dirname(__FILE__)
 
 class GraphvizHelper
 
@@ -11,13 +12,13 @@ class GraphvizHelper
     @details = details
     @type = type
     @dir_name = dir_name
-    @path = 'output/' + dir_name + '/'
+    @path = DIR_NAME_GRAPHVIZ + '/../output/' + dir_name + '/'
     @threads = []
     @ext = output_format
     
     if type == "evolution"
-      system 'rm -rf EvolutionData/' + @dir_name
-      system 'mkdir -p EvolutionData/' + @dir_name
+      system 'rm -rf ' + DIR_NAME_GRAPHVIZ + '/../EvolutionData/' + @dir_name
+      system 'mkdir -p ' + DIR_NAME_GRAPHVIZ + '/../EvolutionData/' + @dir_name
     end
   end
   
@@ -26,18 +27,18 @@ class GraphvizHelper
     @time1 = Time.now
     
     if @type == "evolution"
-      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+      system 'cat ' + @path + 'dump.dimacs | ' + DIR_NAME_GRAPHVIZ + '/../../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
     else
-      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+      system 'cat ' + @path + 'dump.dimacs | ' + DIR_NAME_GRAPHVIZ + '/../../Haskell/Bcp | ' + DIR_NAME_GRAPHVIZ + '/../../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
     end
-    system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
+    system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ' + DIR_NAME_GRAPHVIZ + '/../../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
     
     
     if @i == 0
       system 'diff /dev/null ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
     else
       system 'diff ' + @path + 'graph' + (@i - 1).to_s + '.dot ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
-      system 'rm -f ' + @path + 'graph' + (@i - 1).to_s + '.dot'
+#      system 'rm -f ' + @path + 'graph' + (@i - 1).to_s + '.dot'
     end
     printTime()
     
@@ -126,7 +127,7 @@ class GraphvizHelper
       
       if @type == "evolution"
         c = format('%04d', tmp)
-        output_path = 'EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
+        output_path = DIR_NAME_GRAPHVIZ + '/../EvolutionData/' + @dir_name + '/' + c.to_s + '.' + @ext
       else
         output_path = @path + 'communityGraph.' + @ext
       end
@@ -134,7 +135,7 @@ class GraphvizHelper
       system type + ' -T' + @ext + ' ' + @path + 'communitySubGraphs_' + tmp.to_s + '.dot -o ' + output_path
       
       if @ext != "svg"
-        modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | ./CommunityOutputOnlyModularity`
+        modularity = `cat #{@path}dump#{tmp.to_s}.dimacs | #{DIR_NAME_GRAPHVIZ}/../CommunityOutputOnlyModularity`
         system 'convert ' + output_path + ' -gravity north -stroke none -fill black -annotate 0 "Modularity = ' + modularity.to_s + '" ' + output_path
       end
       
@@ -153,7 +154,7 @@ class GraphvizHelper
         system 'xdg-open ' + @path + 'communityGraph.' + @ext
       end
     else
-      puts "Go to EvolutionData/" + @dir_name + " to see the outputted images."
+      puts "Go to " + DIR_NAME_GRAPHVIZ + "/../EvolutionData/" + @dir_name + " to see the outputted images."
     end
     
     @i = 0
@@ -163,7 +164,7 @@ class GraphvizHelper
     biggestWidth = 0
     size = "500x500"
     
-    Dir['EvolutionData/' + @dir_name + '/*.jpg'].each do |item|
+    Dir[DIR_NAME_GRAPHVIZ + '/../EvolutionData/' + @dir_name + '/*.jpg'].each do |item|
       filename = item.to_s
       width = `identify -format "%w" #{filename}`
       if width.to_i > biggestWidth
@@ -172,7 +173,7 @@ class GraphvizHelper
       end
     end
 
-    system './Helpers/imagemagickHelper ' + @dir_name + ' ' + size
+    system DIR_NAME_GRAPHVIZ + '/imagemagickHelper ' + @dir_name + ' ' + size
   end
   
   def printTime()

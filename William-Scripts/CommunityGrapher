@@ -3,6 +3,8 @@
 ###########################
 
 echo "------ Community Grapher ------"
+dir_name=$(dirname $0)
+dir_name=${dir_name#"./"}
 path="$1"
 mkdir -p output
 
@@ -20,7 +22,7 @@ if [ -z "$path" ]; then
 	progress_bar &
 	pid=$!
 	
-	../Haskell/Cmty $vars $clauses $cmtys $q > output/community.dimacs
+	"$dir_name"/../Haskell/Cmty $vars $clauses $cmtys $q > "$dir_name"/output/community.dimacs
 	path="output/community.dimacs"
 	
 	stop_progress $pid
@@ -48,4 +50,4 @@ if [ $graph == "graphviz" ]; then
   
 fi
 
-./Helpers/graphHelper.rb $path $graph $detail grapher $path $output_format
+./"$dir_name"/Helpers/graphHelper.rb $path $graph $detail grapher $path $output_format

@@ -1,8 +1,9 @@
 #!/bin/bash
-
+dir_name=$(dirname $0)
+dir_name=${dir_name#"./"}
 set -e
 
-out=$(../Haskell/Bcp | ../Haskell/Graph variable | ../Bin/community -i:"/dev/stdin" -o:"/dev/stdout")
-modularity=$(echo "$out" | grep "Modularity" | cut -d: -f2 | ../Bash/Trim)
+out=$("$dir_name"/../Haskell/Bcp | "$dir_name"/../Haskell/Graph variable | "$dir_name"/../Bin/community -i:"/dev/stdin" -o:"/dev/stdout")
+modularity=$(echo "$out" | grep "Modularity" | cut -d: -f2 | "$dir_name"/../Bash/Trim)
 
 echo -n "$modularity"
