@@ -3,51 +3,44 @@
 ###########################
 
 echo "------ Community Grapher ------"
+
+# Create necessary directories and variables
 dir_name=$(dirname $0)
 dir_name=${dir_name#"./"}
 path="$1"
+graph="$2"
+output_format="$3"
+detail="$4"
 mkdir -p output
 
-if [ -z "$path" ]; then
-	echo "Please enter number of variables:"
-	read vars
-	echo "Please enter number of clauses:"
-	read clauses
-	echo "Please enter number of communities:"
-	read cmtys
-	echo "Please enter quality of communities:"
-	read q
-
-	echo -n "Generating dimacs file"
-	progress_bar &
-	pid=$!
-	
-	"$dir_name"/../Haskell/Cmty $vars $clauses $cmtys $q > "$dir_name"/output/community.dimacs
-	path="output/community.dimacs"
-	
-	stop_progress $pid
-fi
-
-if [ -z "$2" ]; then
-  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph:"
-  read graph
+if [ -z "$path" ] || [ -z "$graph" ]; then
+   echo "Command should be of the following format: ./CommunityGrapher <file path> <graphviz or ubigraph> <optional: output_format (svg, pdf (default), ...)> <optional: Y for higher detail, n for low detail (less time and default)>"
 else
-  graph="$2"
-fi
-if [ $graph == "graphviz" ]; then
-  if [ -z "$3" ]; then
-    echo "Do you want to generate the graph slowly but with more detail? (Y/n)"
-    read detail
-  else
-    detail="$3"
-  fi
-  if [ -z "$4" ]; then
-    echo "Enter an output file format (ex: pdf(default), scg, jpg):"
-    read output_format
-  else
-    output_format="$4"
-  fi
-  
-fi
+  # Build random if desired
+  if [ "$path" -eq "random" ]; then
+    echo "Please enter number of variables:"
+	  read vars
+	  echo "Please enter number of clauses:"
+	  read clauses
+	  echo "Please enter number of communities:"
+	  read cmtys
+	  echo "Please enter quality of communities:"
+	  read q
 
-./"$dir_name"/Helpers/graphHelper.rb $path $graph $detail grapher $path $output_format
+	  echo "Generating dimacs file"
+	  "$dir_name"/../Haskell/Cmty $vars $clauses $cmtys $q > "$dir_name"/output/community.dimacs
+	  path="$dir_name/output/community.dimacs"
+  else
+    # Set default value for detail
+    if [ -z "$detail" ]; then
+      detail="n"
+    fi
+    # Set default value for output format
+    if [ -z "$output_format" ]; then
+      output_format="pdf"
+    fi
+    
+    # Start grapher
+    ./"$dir_name"/Helpers/graphHelper.rb $path $graph $detail grapher $path $output_format
+  fi
+fi

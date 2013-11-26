@@ -1,12 +1,16 @@
 #!/bin/bash
+
+# Construct necessary directories
 mkdir -p output
 dir_name=$(dirname $0)
 dir_name=${dir_name#"./"}
 
+# Run Bcp, Graph and Snap on the instance
 cat $1 | "$dir_name"/../Haskell/Bcp | "$dir_name"/../Haskell/Graph variable | "$dir_name"/../Bin/community -i:"/dev/stdin" -o:"/dev/stdout" > "$dir_name"/output/communityExt.txt
+
+# Retrieve data from the instance
 modularity=$(grep "Modularity" "$dir_name/output/communityExt.txt")
 communities=$(grep "Communities" "$dir_name/output/communityExt.txt")
-
 information=$(sed -n -e '/^p cnf/p' $1)
 IFS=' ' read -ra INFO <<< "$information"
 nodes="${INFO[2]}"
@@ -17,4 +21,3 @@ echo "$nodes"
 echo "$clauses"
 echo "$communities"
 echo "$modularity"
-#echo "$hairiness"
