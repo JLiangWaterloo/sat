@@ -803,8 +803,8 @@ void Solver::reduceDB()
     
     // CoMinipure
     //
-    //sort(learnts, community_lt(ca));
-    sort(learnts, reduceDB_lt(ca));
+    sort(learnts, community_lt(ca));
+    //sort(learnts, reduceDB_lt(ca));
     
     
     // Don't delete binary or locked clauses. From the rest, delete clauses from the first half
