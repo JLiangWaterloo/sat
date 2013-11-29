@@ -1,6 +1,8 @@
 ############################
 ##   ImageMagick Helper   ##
 ############################
+dir_name=$(dirname $0)
+dir_name=${dir_name#"./"}
 
-convert -delay 150 -loop 0 -gravity center -background white -extent $2 -fill white EvolutionData/$1/*.jpg output/anim.gif
-xdg-open output/anim.gif
+convert -delay 150 -loop 0 -gravity center -background white -extent $2 -fill white $dir_name/../EvolutionData/$1/*.jpg $dir_name/../output/anim.gif
+xdg-open $dir_name/../output/anim.gif

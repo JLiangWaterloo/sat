@@ -176,7 +176,7 @@ bool Solver::addClause_(vec<Lit>& ps)
 
     // Check if clause is satisfied and remove false/duplicate literals:
     sort(ps);
-	
+    
    vec<Lit>    oc;
     oc.clear();
 
@@ -218,15 +218,15 @@ if (flag && (output != NULL)) {
         uncheckedEnqueue(ps[0]);
         return ok = (propagate(true) == CRef_Undef);
     }
-	else{
+    else{
          CRef cr = ca.alloc(ps, false);
-		//ClaData cd=ClaData(cr,ps.size());
-		
+        //ClaData cd=ClaData(cr,ps.size());
+        
         clauses.push(cr);
         attachClause(cr);
-		
-		
-		//cla_dec.push(false);
+        
+        
+        //cla_dec.push(false);
     }
 
     return true;
@@ -258,8 +258,8 @@ void Solver::detachClause(CRef cr, bool strict) {
 
     if (c.learnt()) learnts_literals -= c.size();
     else            clauses_literals -= c.size(); 
-	//printf("after detachCla\n");
-	}
+    //printf("after detachCla\n");
+    }
 
 
 void Solver::removeClause(CRef cr) {
@@ -280,10 +280,10 @@ void Solver::removeClause(CRef cr) {
     detachClause(cr);
     // Don't leave pointers to free'd memory!
     if (locked(c)) vardata[var(c[0])].reason = CRef_Undef;
-	
+    
     c.mark(1); 
     ca.free(cr);
-	//printf("after remove cla\n");
+    //printf("after remove cla\n");
 }
 
 
@@ -291,12 +291,12 @@ bool Solver::satisfied(const Clause& c) const {
     //printf("in satisfied\n");
     //printf("c-size:%d\n",c.size());
     for (int i = 0; i < c.size(); i++)
-       { 	//printf("var:c[i]=%d\n",var(c[i]));
-	 //  printf("var[i]=%d\n ",var(c[i]));
-	   if (value(c[i]) == l_True)
+       {     //printf("var:c[i]=%d\n",var(c[i]));
+     //  printf("var[i]=%d\n ",var(c[i]));
+       if (value(c[i]) == l_True)
            { //printf("out of  sat\n");
-		   return true;}}
-		   //printf("out of sat\n");
+           return true;}}
+           //printf("out of sat\n");
     return false; }
 
 
@@ -304,35 +304,35 @@ bool Solver::satisfied(const Clause& c) const {
 //
 void Solver::cancelUntil(int level) {
     if (decisionLevel() > level){
-	//printf("in canceluntil\n");
+    //printf("in canceluntil\n");
         for (int c = trail.size()-1; c >= trail_lim[level]; c--){
             Var      x  = var(trail[c]);
             assigns [x] = l_Undef; 
-			//if( vardata[x].reason==CRef_Pure)    
+            //if( vardata[x].reason==CRef_Pure)    
             vardata[x].reason=CRef_Undef  ;
             if (phase_saving > 1 || (phase_saving == 1) && c > trail_lim.last())
                 polarity[x] = sign(trail[c]);
             insertVarOrder(x); 
-			}
-			
-		//Var y= var(trail[trail_lim[level]]);
-		//polarity[y]= !sign(trail[trail_lim[level]]);
-		
+            }
+            
+        //Var y= var(trail[trail_lim[level]]);
+        //polarity[y]= !sign(trail[trail_lim[level]]);
+        
         qhead = trail_lim[level];
         trail.shrink(trail.size() - trail_lim[level]);
         trail_lim.shrink(trail_lim.size() - level);
-		
-		//printf("before cancel until for\n");
-		for(int m=clause_trail_sz-1;m>=clause_trail_lim[level];m--)
-		{
-		    ClaData& cl= clauses_data[clause_trail[m]];
-		    cl.is_sat=false;
-			
-		}
-		//printf("after cancel until for\n");
-		clause_trail_sz=clause_trail_lim[level];
-		
-		//printf("after cancle until\n");
+        
+        //printf("before cancel until for\n");
+        for(int m=clause_trail_sz-1;m>=clause_trail_lim[level];m--)
+        {
+            ClaData& cl= clauses_data[clause_trail[m]];
+            cl.is_sat=false;
+            
+        }
+        //printf("after cancel until for\n");
+        clause_trail_sz=clause_trail_lim[level];
+        
+        //printf("after cancle until\n");
     } }
 
 
@@ -359,15 +359,15 @@ Lit Solver::pickBranchLit()
         }else
             next = order_heap.removeMin();
     
-	bool bb;
-	if(next!=var_Undef)
-	{
-	bb=rnd_pol ? drand(random_seed) < 0.5 : polarity[next];
-	vec<int> * t=(bb)?lit_cla1[next]:lit_cla0[next];
-	if(t->size()==0){bb=!bb; polarity[next]=bb;}
-	return mkLit(next, bb);
-	}
-	else {return lit_Undef;}
+    bool bb;
+    if(next!=var_Undef)
+    {
+    bb=rnd_pol ? drand(random_seed) < 0.5 : polarity[next];
+    vec<int> * t=(bb)?lit_cla1[next]:lit_cla0[next];
+    if(t->size()==0){bb=!bb; polarity[next]=bb;}
+    return mkLit(next, bb);
+    }
+    else {return lit_Undef;}
    // return next == var_Undef ? lit_Undef : mkLit(next, bb);
   // printf("after pick branch\n");
 }
@@ -409,75 +409,75 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 
     do{
         //assert(confl != CRef_Undef); // (otherwise should be UIP)
-		
-		if(confl==CRef_Pure)
-		{  
-		     vec<int> *t=sign(p)?lit_cla0[var(p)]:lit_cla1[var(p)];
-			 //printf("var(p)=%d\n",var(p));
-			 if(t->size()>0)
-			 {
-				 for (int j = 0 ; j < t->size(); j++){
-				   // printf("t.size():%d\n",t->size());
-					Lit q = clauses_data[(*t)[j]].dec_lit;
-					//printf("var(q)=%d\n",var(q));
-					//printf("after bum act, size= %d \n", c.size()) ;
-				   // printf("var q before :%d, j= %d\n", var(q), j);
-					if (!seen[var(q)] && level(var(q)) > 0){
-					 //   printf("before var bump\n");
-						varBumpActivity(var(q));
-					//	printf("after var bump\n");
-						seen[var(q)] = 1;
-					//	printf("var(q)=%d \n", var(q) );
-						if (level(var(q)) >= decisionLevel())
-							pathC++;
-						else
-							out_learnt.push(q);
-					}
-					//printf("after for loop\n");
-				}
-			}
-		}
-		else
-		{
-			Clause& c = ca[confl];
+        
+        if(confl==CRef_Pure)
+        {  
+             vec<int> *t=sign(p)?lit_cla0[var(p)]:lit_cla1[var(p)];
+             //printf("var(p)=%d\n",var(p));
+             if(t->size()>0)
+             {
+                 for (int j = 0 ; j < t->size(); j++){
+                   // printf("t.size():%d\n",t->size());
+                    Lit q = clauses_data[(*t)[j]].dec_lit;
+                    //printf("var(q)=%d\n",var(q));
+                    //printf("after bum act, size= %d \n", c.size()) ;
+                   // printf("var q before :%d, j= %d\n", var(q), j);
+                    if (!seen[var(q)] && level(var(q)) > 0){
+                     //   printf("before var bump\n");
+                        varBumpActivity(var(q));
+                    //    printf("after var bump\n");
+                        seen[var(q)] = 1;
+                    //    printf("var(q)=%d \n", var(q) );
+                        if (level(var(q)) >= decisionLevel())
+                            pathC++;
+                        else
+                            out_learnt.push(q);
+                    }
+                    //printf("after for loop\n");
+                }
+            }
+        }
+        else
+        {
+            Clause& c = ca[confl];
 
-			if (c.learnt())
-		   {      claBumpActivity(c);}
-		   
-			 
-			for (int j = (p == lit_Undef) ? 0 : 1; j < c.size(); j++){
-			   // printf("c.size():%d\n",c.size());
-				Lit q = c[j];
-				//printf("var(q)=%d\n",var(q));
-				//printf("after bum act, size= %d \n", c.size()) ;
-			   // printf("var q before :%d, j= %d\n", var(q), j);
-				if (!seen[var(q)] && level(var(q)) > 0){
-				 //   printf("before var bump\n");
-					varBumpActivity(var(q));
-				//	printf("after var bump\n");
-					seen[var(q)] = 1;
-				//	printf("var(q)=%d \n", var(q) );
-					if (level(var(q)) >= decisionLevel())
-						pathC++;
-					else
-						out_learnt.push(q);
-				}
-				//printf("after for loop\n");
-			}
+            if (c.learnt())
+           {      claBumpActivity(c);}
+           
+             
+            for (int j = (p == lit_Undef) ? 0 : 1; j < c.size(); j++){
+               // printf("c.size():%d\n",c.size());
+                Lit q = c[j];
+                //printf("var(q)=%d\n",var(q));
+                //printf("after bum act, size= %d \n", c.size()) ;
+               // printf("var q before :%d, j= %d\n", var(q), j);
+                if (!seen[var(q)] && level(var(q)) > 0){
+                 //   printf("before var bump\n");
+                    varBumpActivity(var(q));
+                //    printf("after var bump\n");
+                    seen[var(q)] = 1;
+                //    printf("var(q)=%d \n", var(q) );
+                    if (level(var(q)) >= decisionLevel())
+                        pathC++;
+                    else
+                        out_learnt.push(q);
+                }
+                //printf("after for loop\n");
+            }
         }
         // Select next clause to look at:
         while (!seen[var(trail[index--])]);
-		//printf("begin trail\n");
+        //printf("begin trail\n");
         p     = trail[index+1];
-		//printf("var(p):%d\n", var(p));
+        //printf("var(p):%d\n", var(p));
         confl = reason(var(p)); 
         seen[var(p)] = 0;
         pathC--;
-		
-		//printf("after trail\n");
+        
+        //printf("after trail\n");
 
     }while (pathC > 0);
-	//if(p==lit_Undef)
+    //if(p==lit_Undef)
     // {printf("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");}
     out_learnt[0] = ~p;
    //printf("after do\n");
@@ -501,9 +501,9 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
             if (reason(x) == CRef_Undef)
                 out_learnt[j++] = out_learnt[i];
             else{
-			    //printf("in reason\n");
+                //printf("in reason\n");
                 Clause& c = ca[reason(var(out_learnt[i]))];
-				//printf("after reason\n");
+                //printf("after reason\n");
                 for (int k = 1; k < c.size(); k++)
                     if (!seen[var(c[k])] && level(var(c[k])) > 0){
                         out_learnt[j++] = out_learnt[i];
@@ -517,7 +517,7 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
     out_learnt.shrink(i - j);
     tot_literals += out_learnt.size();
     
-	//printf("after find\n");
+    //printf("after find\n");
     // Find correct backtrack level:
     //
     if (out_learnt.size() == 1)
@@ -536,7 +536,7 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
     }
     
     for (int j = 0; j < analyze_toclear.size(); j++) seen[var(analyze_toclear[j])] = 0;    // ('seen[]' is now cleared)
-	//printf("out of analyze\n");
+    //printf("out of analyze\n");
 }
 
 
@@ -549,64 +549,64 @@ bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
     int top = analyze_toclear.size();
     while (analyze_stack.size() > 0){
         //assert(reason(var(analyze_stack.last())) != CRef_Undef);
-		Lit k=analyze_stack.last();
-		CRef tobe_check=reason(var(k));analyze_stack.pop();
-		
-		if(tobe_check==CRef_Pure)
-		{
-		  // printf("in if\n");
-		   vec<int> *t=sign(k)?lit_cla0[var(k)]:lit_cla1[var(k)];
-		   if(t->size()>0)
-		   {
-			   for (int i = 1; i < t->size(); i++){
-					Lit h = clauses_data[(*t)[i]].dec_lit;
-					if (!seen[var(h)] && level(var(h)) > 0){
-						if (reason(var(h)) != CRef_Undef && (abstractLevel(var(h)) & abstract_levels) != 0){
-							seen[var(h)] = 1;
-							analyze_stack.push(h);
-							analyze_toclear.push(h);
-						}else{
-							for (int j = top; j < analyze_toclear.size(); j++)
-								seen[var(analyze_toclear[j])] = 0;
-							analyze_toclear.shrink(analyze_toclear.size() - top);
-							return false;
-						}
-					}
-				}
-			}
-			else
-			{printf("t.szie=0\n");}
-			//printf("out of if\n");
-		}
-		else
-		{
-		  //  printf("in else\n");
-			Clause& c = ca[tobe_check]; 
-			//printf("after to be check\n");
-			//if(c.learnt())
-			//{printf("learn c , size():%d\n",c.size());}
-			for (int i = 1; i < c.size(); i++){
-				Lit pp  = c[i];
-				//printf("var(pp):%d\n", var(pp));
-			//	printf("literal unassign:%d\n",var(lit_Undef));
-				if (!seen[var(pp)] && level(var(pp)) > 0){
-					if (reason(var(pp)) != CRef_Undef && (abstractLevel(var(pp)) & abstract_levels) != 0){
-						seen[var(pp)] = 1;
-						analyze_stack.push(pp);
-						analyze_toclear.push(pp);
-					}else{
-						for (int j = top; j < analyze_toclear.size(); j++)
-							seen[var(analyze_toclear[j])] = 0;
-						analyze_toclear.shrink(analyze_toclear.size() - top);
-						return false;
-					}
-				}
-			}
-			//printf("out of else\n");
-	    }
-		
-		
-		
+        Lit k=analyze_stack.last();
+        CRef tobe_check=reason(var(k));analyze_stack.pop();
+        
+        if(tobe_check==CRef_Pure)
+        {
+          // printf("in if\n");
+           vec<int> *t=sign(k)?lit_cla0[var(k)]:lit_cla1[var(k)];
+           if(t->size()>0)
+           {
+               for (int i = 1; i < t->size(); i++){
+                    Lit h = clauses_data[(*t)[i]].dec_lit;
+                    if (!seen[var(h)] && level(var(h)) > 0){
+                        if (reason(var(h)) != CRef_Undef && (abstractLevel(var(h)) & abstract_levels) != 0){
+                            seen[var(h)] = 1;
+                            analyze_stack.push(h);
+                            analyze_toclear.push(h);
+                        }else{
+                            for (int j = top; j < analyze_toclear.size(); j++)
+                                seen[var(analyze_toclear[j])] = 0;
+                            analyze_toclear.shrink(analyze_toclear.size() - top);
+                            return false;
+                        }
+                    }
+                }
+            }
+            else
+            {printf("t.szie=0\n");}
+            //printf("out of if\n");
+        }
+        else
+        {
+          //  printf("in else\n");
+            Clause& c = ca[tobe_check]; 
+            //printf("after to be check\n");
+            //if(c.learnt())
+            //{printf("learn c , size():%d\n",c.size());}
+            for (int i = 1; i < c.size(); i++){
+                Lit pp  = c[i];
+                //printf("var(pp):%d\n", var(pp));
+            //    printf("literal unassign:%d\n",var(lit_Undef));
+                if (!seen[var(pp)] && level(var(pp)) > 0){
+                    if (reason(var(pp)) != CRef_Undef && (abstractLevel(var(pp)) & abstract_levels) != 0){
+                        seen[var(pp)] = 1;
+                        analyze_stack.push(pp);
+                        analyze_toclear.push(pp);
+                    }else{
+                        for (int j = top; j < analyze_toclear.size(); j++)
+                            seen[var(analyze_toclear[j])] = 0;
+                        analyze_toclear.shrink(analyze_toclear.size() - top);
+                        return false;
+                    }
+                }
+            }
+            //printf("out of else\n");
+        }
+        
+        
+        
     }
   //printf("out of lit red\n");
     return true;
@@ -641,32 +641,32 @@ void Solver::analyzeFinal(Lit p, vec<Lit>& out_conflict)
                 assert(level(x) > 0);
                 out_conflict.push(~trail[i]);
             }else{
-			    if(reason(x)==CRef_Pure)
-				{
-				    vec<int> *t=sign(trail[i])?lit_cla0[x]:lit_cla1[x];
-					for(int j=1;j<t->size();j++)
-					   {
-					      Lit cj= clauses_data[(*t)[i]].dec_lit;
-				          if (level(var(cj)) > 0)
-							seen[var(cj)] = 1;
-						  
-						  
-				       }
-				}
-				else
-				{
-					Clause& c = ca[reason(x)];
-					for (int j = 1; j < c.size(); j++)
-						if (level(var(c[j])) > 0)
-							seen[var(c[j])] = 1;
-				}
+                if(reason(x)==CRef_Pure)
+                {
+                    vec<int> *t=sign(trail[i])?lit_cla0[x]:lit_cla1[x];
+                    for(int j=1;j<t->size();j++)
+                       {
+                          Lit cj= clauses_data[(*t)[i]].dec_lit;
+                          if (level(var(cj)) > 0)
+                            seen[var(cj)] = 1;
+                          
+                          
+                       }
+                }
+                else
+                {
+                    Clause& c = ca[reason(x)];
+                    for (int j = 1; j < c.size(); j++)
+                        if (level(var(c[j])) > 0)
+                            seen[var(c[j])] = 1;
+                }
             }
             seen[x] = 0;
         }
     }
 
     seen[var(p)] = 0;
-//	printf("out of analyze final\n");
+//    printf("out of analyze final\n");
 }
 
 
@@ -675,7 +675,7 @@ void Solver::uncheckedEnqueue(Lit p, CRef from)
     assert(value(p) == l_Undef);
     assigns[var(p)] = lbool(!sign(p));
     vardata[var(p)].reason=from;
-	vardata[var(p)].level= decisionLevel();
+    vardata[var(p)].level= decisionLevel();
     trail.push_(p);
 }
 
@@ -699,7 +699,7 @@ CRef Solver::propagate(bool ini=false)
     
     while (qhead < trail.size()){
         Lit            p   = trail[qhead++];     // 'p' is enqueued fact to propagate.
-		
+        
         vec<Watcher>&  ws  = watches[p];
         Watcher        *i, *j, *end;
         num_props++;
@@ -756,10 +756,10 @@ CRef Solver::propagate(bool ini=false)
         NextClause:;
         }
         ws.shrink(i - j);
-		if((confl  == CRef_Undef)&&(!ini)&&(slowdown_pure>restart||implement_pure))
-		{newDecisionLevel_more (p);}
-		//else if(confl== CRef_Undef&&(!ini)&&implement_pure)
-		//{ newDecisionLevel_more (p);}      
+        if((confl  == CRef_Undef)&&(!ini)&&(slowdown_pure>restart||implement_pure))
+        {newDecisionLevel_more (p);}
+        //else if(confl== CRef_Undef&&(!ini)&&implement_pure)
+        //{ newDecisionLevel_more (p);}      
           
     }
     propagations += num_props;
@@ -784,13 +784,29 @@ struct reduceDB_lt {
         return ca[x].size() > 2 && (ca[y].size() == 2 || ca[x].activity() < ca[y].activity());
     } 
 };
+
+
+struct community_lt {
+    ClauseAllocator& ca;
+    community_lt(ClauseAllocator& ca_) : ca(ca_) {}
+    bool operator () (CRef x, CRef y) { 
+        return ca[x].size() > 2 && (ca[y].size() == 2 || ca[x].communities > ca[y].communities);
+    }
+};
+
+
 void Solver::reduceDB()
 {
     //printf("in reduce db\n");
     int     i, j;
     double  extra_lim = cla_inc / learnts.size();    // Remove any clause below this activity
-
-    sort(learnts, reduceDB_lt(ca));
+    
+    // CoMinipure
+    //
+    sort(learnts, community_lt(ca));
+    //sort(learnts, reduceDB_lt(ca));
+    
+    
     // Don't delete binary or locked clauses. From the rest, delete clauses from the first half
     // and clauses with activity smaller than 'extra_lim':
     for (i = j = 0; i < learnts.size(); i++){
@@ -810,18 +826,18 @@ void Solver::reduceDB()
     }
     learnts.shrink(i - j);
     checkGarbage();
-	//printf("out of reduce db\n");
-	
-	            int m,n;
-				for( m=n=0;n<clauses_data.size();n++)
-					{
-					   if( !(clauses_data[n].deleted))
-						{
-						   clauses_data[n].cref=clauses[m];
-						   m++;
-						}
-					}
-		
+    //printf("out of reduce db\n");
+    
+                int m,n;
+                for( m=n=0;n<clauses_data.size();n++)
+                    {
+                       if( !(clauses_data[n].deleted))
+                        {
+                           clauses_data[n].cref=clauses[m];
+                           m++;
+                        }
+                    }
+        
 }
 
 
@@ -829,8 +845,8 @@ void Solver::removeSatisfied(vec<CRef>& cs)
 {
     int i, j;
     for (i = j = 0; i < cs.size(); i++){
-	
-	   // printf("in for\n");
+    
+       // printf("in for\n");
         Clause& c = ca[cs[i]];
         if (satisfied(c))
             removeClause(cs[i]);
@@ -845,123 +861,123 @@ void Solver::removeSatisfied_ori(vec<ClaData>& cs,bool ini)
   // printf("in remove sat_ori\n");
     int i, j;
     for (i = j = 0; i < cs.size(); i++){
-	
-	    //printf("in for\n");
-		if(cs[i].deleted==false)
-		{  // printf("in if\n");
-		    Clause& c = ca[cs[i].cref];
-			//printf("size:%d\n", c.size());
-			if (satisfied(c))
-				{
-					
-					removeClause_ori(i,ini);
-				      if(!ini)
-					{  cs[i].deleted=true;  }
-				}
-			else{j++;}
-		}
+    
+        //printf("in for\n");
+        if(cs[i].deleted==false)
+        {  // printf("in if\n");
+            Clause& c = ca[cs[i].cref];
+            //printf("size:%d\n", c.size());
+            if (satisfied(c))
+                {
+                    
+                    removeClause_ori(i,ini);
+                      if(!ini)
+                    {  cs[i].deleted=true;  }
+                }
+            else{j++;}
+        }
     }
-	//printf("out remove sat_ori\n");
-	///////////////
-	int m, n;
+    //printf("out remove sat_ori\n");
+    ///////////////
+    int m, n;
     for (m = n = 0; m < clauses.size(); m++){
-	
-	    //printf("in for\n");
+    
+        //printf("in for\n");
         Clause& c = ca[clauses[m]];
         if (c.mark()==0)
           {  clauses[n++] = clauses[m];
-		  }
-		else   {  ca.free(clauses[m]);}
-		  
+          }
+        else   {  ca.free(clauses[m]);}
+          
     }
     clauses.shrink(m - n);
-	//printf("clause.size=%d, cladata.size=%d\n",clauses.size(),j);
+    //printf("clause.size=%d, cladata.size=%d\n",clauses.size(),j);
 }
 
 void Solver::removeClause_ori(int index,bool ini) {
 
     //printf("in remove cla_or\n");
-	CRef cr  =clauses_data[index].cref;
+    CRef cr  =clauses_data[index].cref;
     Clause& c = ca[cr];
-	if(!ini&&(!clauses_data[index].deleted))
-	{
-	//printf("in removecla, %d\n", c.size());
-	clauses_data[index].deleted=true;
-	for(int j=0;j<c.size();j++)
-	{
-	   int m=-1;
-	   
-	   Lit L=c[j];
-	   //printf("var(L)=%d\n",var(L));
-	   vec<int> * t=sign(L)?lit_cla1[var(L)]:lit_cla0[var(L)];
-	   vec<int> * f=sign(~L)?lit_cla1[var(~L)]:lit_cla0[var(~L)];
-	   if(t->size()>0)
-	   {
-		   for(int k=0;k<(t->size());k++)
-		   {
-			  if((*t)[k]==index)
-			  {m=k;break;}
-		   }
-		   if(m!=-1)
-		   {
-				   if(m<(t->size()-1))
-				   {
-					 for(int l=m;l<(t->size()-1);l++)
-					  {(*t)[l]=(*t)[l+1];}
-					  t->shrink(1);
-				   }
-				   else
-					{ t->shrink(1);}
-					 
-					if(sign(L))
-							{ if(t->size()>0)   lit_cla1_blocker[var(L)]=t->size()-1; 
-							  else{
-							       if(value(L)==l_Undef&&f->size()>0)
+    if(!ini&&(!clauses_data[index].deleted))
+    {
+    //printf("in removecla, %d\n", c.size());
+    clauses_data[index].deleted=true;
+    for(int j=0;j<c.size();j++)
+    {
+       int m=-1;
+       
+       Lit L=c[j];
+       //printf("var(L)=%d\n",var(L));
+       vec<int> * t=sign(L)?lit_cla1[var(L)]:lit_cla0[var(L)];
+       vec<int> * f=sign(~L)?lit_cla1[var(~L)]:lit_cla0[var(~L)];
+       if(t->size()>0)
+       {
+           for(int k=0;k<(t->size());k++)
+           {
+              if((*t)[k]==index)
+              {m=k;break;}
+           }
+           if(m!=-1)
+           {
+                   if(m<(t->size()-1))
+                   {
+                     for(int l=m;l<(t->size()-1);l++)
+                      {(*t)[l]=(*t)[l+1];}
+                      t->shrink(1);
+                   }
+                   else
+                    { t->shrink(1);}
+                     
+                    if(sign(L))
+                            { if(t->size()>0)   lit_cla1_blocker[var(L)]=t->size()-1; 
+                              else{
+                                   if(value(L)==l_Undef&&f->size()>0)
                                    {
-								      uncheckedEnqueue(~L);
-								      for(int k=0;k<(f->size());k++)
-									  removeClause_ori((*f)[k],ini);
-								   }						  
-							       
-							  }
-							}
-					 else
-							{ if(t->size()>0)   lit_cla0_blocker[var(L)]=t->size()-1;
-							  else{
-							         if(value(L)==l_Undef&&f->size()>0)
+                                      uncheckedEnqueue(~L);
+                                      for(int k=0;k<(f->size());k++)
+                                      removeClause_ori((*f)[k],ini);
+                                   }                          
+                                   
+                              }
+                            }
+                     else
+                            { if(t->size()>0)   lit_cla0_blocker[var(L)]=t->size()-1;
+                              else{
+                                     if(value(L)==l_Undef&&f->size()>0)
                                    {
-								      uncheckedEnqueue(~L);
-								      for(int k=0;k<(f->size());k++)
-									  removeClause_ori((*f)[k],ini);
-								   }						  
-							       
-							  
-							      }
-							}
-		   }
-		}
-		else
-		{   if(ini==false&&value(L)==l_Undef&&f->size()>0)
-		    {
-			uncheckedEnqueue(~L);
-			 for(int k=0;k<(f->size());k++)
-			  removeClause_ori((*f)[k],ini);
-			}
-		}
-	}
-	//printf("out remove cal\n");
-	}
-	
+                                      uncheckedEnqueue(~L);
+                                      for(int k=0;k<(f->size());k++)
+                                      removeClause_ori((*f)[k],ini);
+                                   }                          
+                                   
+                              
+                                  }
+                            }
+           }
+        }
+        else
+        {   if(ini==false&&value(L)==l_Undef&&f->size()>0)
+            {
+            uncheckedEnqueue(~L);
+             for(int k=0;k<(f->size());k++)
+              removeClause_ori((*f)[k],ini);
+            }
+        }
+    }
+    //printf("out remove cal\n");
+    }
+    
     if(c.mark()==0)
-		{detachClause(cr);
-		// Don't leave pointers to free'd memory!
-		if (locked(c)) vardata[var(c[0])].reason = CRef_Undef;
-		
-		c.mark(1); }
+        {detachClause(cr);
+        // Don't leave pointers to free'd memory!
+        if (locked(c)) vardata[var(c[0])].reason = CRef_Undef;
+        
+        c.mark(1); }
     
     
-	
-	//printf("out of remove cla_ori\n");
+    
+    //printf("out of remove cla_ori\n");
 }
 
 
@@ -988,10 +1004,10 @@ void Solver::rebuildOrderHeap()
 bool Solver::simplify(bool  ini )
 {
    
-	assert(decisionLevel() == 0);
-	tenth_var=nVars()/10;
-	fourth_var=nVars()/4;
-	half_var=nVars()/2;
+    assert(decisionLevel() == 0);
+    tenth_var=nVars()/10;
+    fourth_var=nVars()/4;
+    half_var=nVars()/2;
        
     //printf("in simp\n");
     if (!ok || propagate(ini) != CRef_Undef)
@@ -1001,33 +1017,33 @@ bool Solver::simplify(bool  ini )
         return true;
 
     // Remove satisfied clauses:
-	//printf("in remove sat\n");
+    //printf("in remove sat\n");
     removeSatisfied(learnts);
-	//printf("after  removing learnt\n");
-	
-	if(remove_satisfied)
-	{  
-       if(ini)	
-	   removeSatisfied(clauses);
-	   else
-	   removeSatisfied_ori(clauses_data,ini);
-	}
+    //printf("after  removing learnt\n");
+    
+    if(remove_satisfied)
+    {  
+       if(ini)    
+       removeSatisfied(clauses);
+       else
+       removeSatisfied_ori(clauses_data,ini);
+    }
     if (!ok || propagate(ini) != CRef_Undef)
         return ok = false;
-		
-	//printf("after  removing\n");
+        
+    //printf("after  removing\n");
     checkGarbage();
-	if(!ini){
-	            int i,j;
-				for( i=j=0;j<clauses_data.size();j++)
-					{
-					   if( !(clauses_data[j].deleted))
-						{
-						   clauses_data[j].cref=clauses[i];
-						   i++;
-						}
-					}
-		}
+    if(!ini){
+                int i,j;
+                for( i=j=0;j<clauses_data.size();j++)
+                    {
+                       if( !(clauses_data[j].deleted))
+                        {
+                           clauses_data[j].cref=clauses[i];
+                           i++;
+                        }
+                    }
+        }
     rebuildOrderHeap();
 
     simpDB_assigns = nAssigns();
@@ -1059,21 +1075,21 @@ lbool Solver::search(int nof_conflicts)
     starts++;
 
     for (;;){
-	
+    
         CRef confl = propagate(false);
         
         dump();
         
         if (confl != CRef_Undef){
             // CONFLICT
-			//printf("in conflict\n");
+            //printf("in conflict\n");
             conflicts++; conflictC++;
             if (decisionLevel() == 0) return l_False;
 
             learnt_clause.clear();
-			//printf("begin analyze\n");
+            //printf("begin analyze\n");
             analyze(confl, learnt_clause, backtrack_level);
-			//printf("after analyze\n");
+            //printf("after analyze\n");
             cancelUntil(backtrack_level);
 
             if (learnt_clause.size() == 1){
@@ -1135,7 +1151,7 @@ lbool Solver::search(int nof_conflicts)
           // printf("out of conflict\n");
         }else{
             // NO CONFLICT
-			//printf("in no conflict\n");
+            //printf("in no conflict\n");
             if (nof_conflicts >= 0 && conflictC >= nof_conflicts || !withinBudget()){
                 // Reached bound on number of conflicts:
                 progress_estimate = progressEstimate();
@@ -1151,8 +1167,8 @@ lbool Solver::search(int nof_conflicts)
             if (learnts.size()-nAssigns() >= max_learnts)
                 // Reduce the set of learnt clauses:
                { reduceDB();
-			    // printf("in reduce\n");
-			   }
+                // printf("in reduce\n");
+               }
 
             Lit next = lit_Undef;
             while (decisionLevel() < assumptions.size()){
@@ -1161,9 +1177,9 @@ lbool Solver::search(int nof_conflicts)
                 if (value(p) == l_True){
                     // Dummy decision level:
                     newDecisionLevel();
-				//	printf("new deci level: %d\n", decisionLevel()-1);
-				 //   printf("clause trail size %d\n",clause_trail_sz);
-					clause_trail_lim[decisionLevel()-1]=clause_trail_sz;
+                //    printf("new deci level: %d\n", decisionLevel()-1);
+                 //   printf("clause trail size %d\n",clause_trail_sz);
+                    clause_trail_lim[decisionLevel()-1]=clause_trail_sz;
                 }else if (value(p) == l_False){
                     analyzeFinal(~p, conflict);
                     return l_False;
@@ -1193,167 +1209,167 @@ lbool Solver::search(int nof_conflicts)
             
             // Increase decision level and enqueue 'next'
             newDecisionLevel();
-			//printf("new deci level: %d\n", decisionLevel()-1);
-			//printf("clause trail size %d\n",clause_trail_sz);
-			clause_trail_lim[decisionLevel()-1]=clause_trail_sz;
-			//printf("finish deci level\n");
+            //printf("new deci level: %d\n", decisionLevel()-1);
+            //printf("clause trail size %d\n",clause_trail_sz);
+            clause_trail_lim[decisionLevel()-1]=clause_trail_sz;
+            //printf("finish deci level\n");
             uncheckedEnqueue(next);
-			
-			
-			//printf("out of no conlfict\n");
-			
-			
-			//
-			//
-			//
+            
+            
+            //printf("out of no conlfict\n");
+            
+            
+            //
+            //
+            //
         }
-		
+        
     }
 }
 
 
 void Solver::newDecisionLevel_more (Lit p)       { 
                                                                   // find clause contains p
-	
-	Var k=var(p);
-	//printf("in decision level\n");
-	//printf("in newdecision level\n");
-	vec<int> * affect_cla= (sign(p))?lit_cla1[k]:lit_cla0[k];
-	int howmany_cla;
-	if(affect_cla->size()>0){
-	//howmany_cla=affect_cla->size();
-	if(restart<slowdown_pure)
-	{
-		if(vardata[var(p)].level<tenth_var)
-		{howmany_cla=affect_cla->size();}
-		else if(vardata[var(p)].level<fourth_var)
-		{howmany_cla=(affect_cla->size())>>1;}
-		else if(vardata[var(p)].level<half_var)
-		{howmany_cla=(affect_cla->size())>>2;}
-		else
-		{howmany_cla=(affect_cla->size())>>3;}
-		if(howmany_cla<1)
-		{howmany_cla=1;}
-	}
-	else if(implement_pure)
-	{howmany_cla=affect_cla->size();}
-	else
-	{howmany_cla=1;}
-	//*/
-	for(int i=0;i<howmany_cla;i++)
-		{	
-		    int      thePos=(*affect_cla)[i];
-		    ClaData& ind=clauses_data[thePos];
-			
-			if (ind.is_sat==false)
-			{
-			  // printf("%d is sat \n", thePos);
-			   ind.is_sat=true;
-			   ind.dec_lit=p;
-			   clause_trail[clause_trail_sz++]=thePos;
-			   if(ind.watch_cla_sz>0)
-			   {   
-			       int j,y;
-				   for( y=0,j=0;j<ind.watch_cla_sz;j++)
-				   {
-						Lit& L =ind.watch_cla[j];
-						if(value(L)==l_Undef)
-						{ 
-						  
-									vec<int> * t=(sign(L))?lit_cla1[var(L)]:lit_cla0[var(L)];
-									int blk=(sign(L))?lit_cla1_blocker[var(L)]:lit_cla0_blocker[var(L)];
-								    if(blk>0)
-									{
-									   // printf("in blk\n");
-									    if(clauses_data[(*t)[blk]].is_sat==false) 
-										{
-										//  printf("in blk false\n ");
-										  (*t)[0]=(*t)[blk];
-										  (*t)[blk]=thePos;
-										  if((blk-1)==0)
-										  {
-										      if(sign(L))     lit_cla1_blocker[var(L)]=t->size()-1;
-										      else            lit_cla0_blocker[var(L)]=t->size()-1; 
-										  }
-										  
-										  else
-										  {  if(sign(L))     lit_cla1_blocker[var(L)]=blk-1;
-										     else            lit_cla0_blocker[var(L)]=blk-1; 
-										  }
-										  ClaData& c2=clauses_data[(*t)[0]];
-										  c2.watch_cla[c2.watch_cla_sz]=L;c2.watch_cla_sz++;
-										  //printf("after blk false\n");
-										}
-										else
-										{
-										   // printf("in  blk true\n");
-											int ini=(blk==1)?(t->size()-1):blk-1;
-											if(t->size()>2){
-											for(int m=ini;m!=blk;)
-										    {
-											    if(clauses_data[(*t)[m]].is_sat==false)
-											    {
-												   (*t)[0]=(*t)[m];
-												   (*t)[m]=thePos;
-												  if((m-1)==0)
-												  {
-												     if(sign(L))     lit_cla1_blocker[var(L)]=t->size()-1;
-										             else            lit_cla0_blocker[var(L)]=t->size()-1; 
-												  }
-												  else
-												  {  if(sign(L))     lit_cla1_blocker[var(L)]=m-1;
-													 else            lit_cla0_blocker[var(L)]=m-1; 
-												  }
-												  
-												  
-												  ClaData& c2=clauses_data[(*t)[0]];
-										          c2.watch_cla[c2.watch_cla_sz]=L; c2.watch_cla_sz++;
-												  
-												  goto nextstep;
-												} 
-												if(m==1)
-												m=t->size()-1;
-												else
-												m--;
-											}
-											}
-											/*if(reason(var(p))!=CRef_Undef)
-											uncheckedEnqueue(~L, reason(var(p)));
-											else
-											{uncheckedEnqueue(~L, CRef_Undef);}*/
-											
-											//printf("add L\n");
-											uncheckedEnqueue(~L,CRef_Pure);
-											ind.watch_cla[y]=L; y++;
-											nextstep:;
-											//printf("after blk true\n");
-											
-										}
-										//printf("after blk\n");
-									}
-									else
-									{/*if(reason(var(p))!=CRef_Undef)
-									  uncheckedEnqueue(~L, reason(var(p)));
-									  else
-									  uncheckedEnqueue(~L, CRef_Undef);*/
-									  //printf("add L\n");
-									  uncheckedEnqueue(~L,CRef_Pure);
-									  ind.watch_cla[y++]=L;
-									}
-							
-						} 
-						else
-						{ind.watch_cla[y++]=L;}
-				   }
-				   ind.watch_cla_sz=y;
-				 //  printf("ind wathc_cla_sz %d\n",y);
-			   }
-			}
-		}
+    
+    Var k=var(p);
+    //printf("in decision level\n");
+    //printf("in newdecision level\n");
+    vec<int> * affect_cla= (sign(p))?lit_cla1[k]:lit_cla0[k];
+    int howmany_cla;
+    if(affect_cla->size()>0){
+    //howmany_cla=affect_cla->size();
+    if(restart<slowdown_pure)
+    {
+        if(vardata[var(p)].level<tenth_var)
+        {howmany_cla=affect_cla->size();}
+        else if(vardata[var(p)].level<fourth_var)
+        {howmany_cla=(affect_cla->size())>>1;}
+        else if(vardata[var(p)].level<half_var)
+        {howmany_cla=(affect_cla->size())>>2;}
+        else
+        {howmany_cla=(affect_cla->size())>>3;}
+        if(howmany_cla<1)
+        {howmany_cla=1;}
+    }
+    else if(implement_pure)
+    {howmany_cla=affect_cla->size();}
+    else
+    {howmany_cla=1;}
+    //*/
+    for(int i=0;i<howmany_cla;i++)
+        {    
+            int      thePos=(*affect_cla)[i];
+            ClaData& ind=clauses_data[thePos];
+            
+            if (ind.is_sat==false)
+            {
+              // printf("%d is sat \n", thePos);
+               ind.is_sat=true;
+               ind.dec_lit=p;
+               clause_trail[clause_trail_sz++]=thePos;
+               if(ind.watch_cla_sz>0)
+               {   
+                   int j,y;
+                   for( y=0,j=0;j<ind.watch_cla_sz;j++)
+                   {
+                        Lit& L =ind.watch_cla[j];
+                        if(value(L)==l_Undef)
+                        { 
+                          
+                                    vec<int> * t=(sign(L))?lit_cla1[var(L)]:lit_cla0[var(L)];
+                                    int blk=(sign(L))?lit_cla1_blocker[var(L)]:lit_cla0_blocker[var(L)];
+                                    if(blk>0)
+                                    {
+                                       // printf("in blk\n");
+                                        if(clauses_data[(*t)[blk]].is_sat==false) 
+                                        {
+                                        //  printf("in blk false\n ");
+                                          (*t)[0]=(*t)[blk];
+                                          (*t)[blk]=thePos;
+                                          if((blk-1)==0)
+                                          {
+                                              if(sign(L))     lit_cla1_blocker[var(L)]=t->size()-1;
+                                              else            lit_cla0_blocker[var(L)]=t->size()-1; 
+                                          }
+                                          
+                                          else
+                                          {  if(sign(L))     lit_cla1_blocker[var(L)]=blk-1;
+                                             else            lit_cla0_blocker[var(L)]=blk-1; 
+                                          }
+                                          ClaData& c2=clauses_data[(*t)[0]];
+                                          c2.watch_cla[c2.watch_cla_sz]=L;c2.watch_cla_sz++;
+                                          //printf("after blk false\n");
+                                        }
+                                        else
+                                        {
+                                           // printf("in  blk true\n");
+                                            int ini=(blk==1)?(t->size()-1):blk-1;
+                                            if(t->size()>2){
+                                            for(int m=ini;m!=blk;)
+                                            {
+                                                if(clauses_data[(*t)[m]].is_sat==false)
+                                                {
+                                                   (*t)[0]=(*t)[m];
+                                                   (*t)[m]=thePos;
+                                                  if((m-1)==0)
+                                                  {
+                                                     if(sign(L))     lit_cla1_blocker[var(L)]=t->size()-1;
+                                                     else            lit_cla0_blocker[var(L)]=t->size()-1; 
+                                                  }
+                                                  else
+                                                  {  if(sign(L))     lit_cla1_blocker[var(L)]=m-1;
+                                                     else            lit_cla0_blocker[var(L)]=m-1; 
+                                                  }
+                                                  
+                                                  
+                                                  ClaData& c2=clauses_data[(*t)[0]];
+                                                  c2.watch_cla[c2.watch_cla_sz]=L; c2.watch_cla_sz++;
+                                                  
+                                                  goto nextstep;
+                                                } 
+                                                if(m==1)
+                                                m=t->size()-1;
+                                                else
+                                                m--;
+                                            }
+                                            }
+                                            /*if(reason(var(p))!=CRef_Undef)
+                                            uncheckedEnqueue(~L, reason(var(p)));
+                                            else
+                                            {uncheckedEnqueue(~L, CRef_Undef);}*/
+                                            
+                                            //printf("add L\n");
+                                            uncheckedEnqueue(~L,CRef_Pure);
+                                            ind.watch_cla[y]=L; y++;
+                                            nextstep:;
+                                            //printf("after blk true\n");
+                                            
+                                        }
+                                        //printf("after blk\n");
+                                    }
+                                    else
+                                    {/*if(reason(var(p))!=CRef_Undef)
+                                      uncheckedEnqueue(~L, reason(var(p)));
+                                      else
+                                      uncheckedEnqueue(~L, CRef_Undef);*/
+                                      //printf("add L\n");
+                                      uncheckedEnqueue(~L,CRef_Pure);
+                                      ind.watch_cla[y++]=L;
+                                    }
+                            
+                        } 
+                        else
+                        {ind.watch_cla[y++]=L;}
+                   }
+                   ind.watch_cla_sz=y;
+                 //  printf("ind wathc_cla_sz %d\n",y);
+               }
+            }
+        }
 
-	}
+    }
   
-		//printf("out of decision level\n");
+        //printf("out of decision level\n");
 }
 
 
@@ -1404,20 +1420,14 @@ lbool Solver::solve_()
 {
    // printf("in solve\n");
     clause_trail_lim=new  int [nVars()+1];    for(int x=0;x<nVars()+1;x++) clause_trail_lim[x]=0;
-	clause_trail    =new  int [nClauses()+1]; for(int y=0;y<nClauses()+1;y++) clause_trail[y]=0;
-	clause_trail_sz=0;
-	lit_cla0_blocker=new  int [nVars()+1];
-	lit_cla1_blocker=new  int [nVars()+1];
-	
+    clause_trail    =new  int [nClauses()+1]; for(int y=0;y<nClauses()+1;y++) clause_trail[y]=0;
+    clause_trail_sz=0;
+    lit_cla0_blocker=new  int [nVars()+1];
+    lit_cla1_blocker=new  int [nVars()+1];
+    
     model.clear();
     conflict.clear();
     if (!ok) return l_False;
-    
-    
-    // CoMinipure
-    //            Needed in order to be sure that communities are taken into account
-    rebuildOrderHeap();
-    
 
     solves++;
 
@@ -1426,94 +1436,94 @@ lbool Solver::solve_()
     learntsize_adjust_cnt     = (int)learntsize_adjust_confl;
     lbool   status            = l_Undef;
     tenth_var=nVars()/10;
-	fourth_var=nVars()/4;
-	half_var=nVars()/2;
-	threefourth_var=3*fourth_var;
-	
-	clauses_data.clear();
-	for(int r=0;r<clauses.size();r++)
-	{    
-	     Clause& cc=ca[clauses[r]];
-		 if(cc.mark()==0)
-		 {
-	     ClaData cd= ClaData(clauses[r],cc.size());
-		 clauses_data.push(cd);
-		 }
-	}
-	
-	for(int f=0;f<clauses_data.size();f++)
-		{
-		     CRef cr=clauses_data[f].cref;
-			 Clause& C=ca[cr];
-			 
-			// printf("berfore for\n");
-			 int z;
-				for( z=0;z<C.size();z++)
-				{ 
-				  if(sign(C[z]))
-				  {
-					
-				//	printf("lit cla1 size :%d   , var(c[r]) %d\n", lit_cla1.size(),(int)var(C[z]));
-				lit_cla1[(int)var(C[z])]->push(f);
-					}
-				  else
-				  {
-				  //printf("lit cla0 size :%d   , var(c[r]) %d\n", lit_cla0.size(),(int)var(C[z]));
-				  lit_cla0[(int)var(C[z])]->push(f);
-				  }
-				}
-			//printf("after for\n");
-		}
-	
-	
-	
-	
-	//printf("%d %d\n",lit_cla1.size(), lit_cla0.size());
+    fourth_var=nVars()/4;
+    half_var=nVars()/2;
+    threefourth_var=3*fourth_var;
+    
+    clauses_data.clear();
+    for(int r=0;r<clauses.size();r++)
+    {    
+         Clause& cc=ca[clauses[r]];
+         if(cc.mark()==0)
+         {
+         ClaData cd= ClaData(clauses[r],cc.size());
+         clauses_data.push(cd);
+         }
+    }
+    
+    for(int f=0;f<clauses_data.size();f++)
+        {
+             CRef cr=clauses_data[f].cref;
+             Clause& C=ca[cr];
+             
+            // printf("berfore for\n");
+             int z;
+                for( z=0;z<C.size();z++)
+                { 
+                  if(sign(C[z]))
+                  {
+                    
+                //    printf("lit cla1 size :%d   , var(c[r]) %d\n", lit_cla1.size(),(int)var(C[z]));
+                lit_cla1[(int)var(C[z])]->push(f);
+                    }
+                  else
+                  {
+                  //printf("lit cla0 size :%d   , var(c[r]) %d\n", lit_cla0.size(),(int)var(C[z]));
+                  lit_cla0[(int)var(C[z])]->push(f);
+                  }
+                }
+            //printf("after for\n");
+        }
+    
+    
+    
+    
+    //printf("%d %d\n",lit_cla1.size(), lit_cla0.size());
     for(int i=0;i<nVars();i++)
-	{
-       	vec<int> * t=lit_cla1[i];
-	    vec<int> * f=lit_cla0[i];
-		
-		
-		if(t->size()>0&&t!=NULL)
-		{
-		ClaData& c1=clauses_data[(*t)[0]]; 
-		//printf("c1 watch_sz %d\n", c1.watch_cla_sz);
-		 c1.watch_cla[c1.watch_cla_sz]=mkLit(i,true); c1.watch_cla_sz++;
-		 
-		 if(t->size()>1)
-		 lit_cla1_blocker[i]=t->size()-1;
-		 else
-		 lit_cla1_blocker[i]=0;
-		// printf("in c1\n");
-		}
-		if(f->size()>0&&f!=NULL)
-		{
-		ClaData& c0=clauses_data[(*f)[0]]; 
-		//printf("c0 watch_sz %d\n", c0.watch_cla_sz);
-		c0.watch_cla[c0.watch_cla_sz]=mkLit(i,false); c0.watch_cla_sz++;
-		
-		 if(f->size()>1)
-		 lit_cla0_blocker[i]=f->size()-1;
-		 else
-		 lit_cla0_blocker[i]=0;
-		 //printf("in c0\n");
-		}
-		//printf("after lit\n");
-		
-		/*if(t->size()>f->size())
-		{  polarity[i]=true; }
-		else
-		{  polarity[i]=false;  }*/
-		//printf("after polarity\n");
-		
-		//activity[i]=var_inc*(t->size()+f->size());
-		//printf("after activity\n");
-		//activity[i]=0;
-	}
-	
-	//rebuildOrderHeap();
-	
+    {
+           vec<int> * t=lit_cla1[i];
+        vec<int> * f=lit_cla0[i];
+        
+        
+        if(t->size()>0&&t!=NULL)
+        {
+        ClaData& c1=clauses_data[(*t)[0]]; 
+        //printf("c1 watch_sz %d\n", c1.watch_cla_sz);
+         c1.watch_cla[c1.watch_cla_sz]=mkLit(i,true); c1.watch_cla_sz++;
+         
+         if(t->size()>1)
+         lit_cla1_blocker[i]=t->size()-1;
+         else
+         lit_cla1_blocker[i]=0;
+        // printf("in c1\n");
+        }
+        if(f->size()>0&&f!=NULL)
+        {
+        ClaData& c0=clauses_data[(*f)[0]]; 
+        //printf("c0 watch_sz %d\n", c0.watch_cla_sz);
+        c0.watch_cla[c0.watch_cla_sz]=mkLit(i,false); c0.watch_cla_sz++;
+        
+         if(f->size()>1)
+         lit_cla0_blocker[i]=f->size()-1;
+         else
+         lit_cla0_blocker[i]=0;
+         //printf("in c0\n");
+        }
+        //printf("after lit\n");
+        
+        /*if(t->size()>f->size())
+        {  polarity[i]=true; }
+        else
+        {  polarity[i]=false;  }*/
+        //printf("after polarity\n");
+        
+        //activity[i]=var_inc*(t->size()+f->size());
+        //printf("after activity\n");
+        //activity[i]=0;
+    }
+    
+    //rebuildOrderHeap();
+    
     if (verbosity >= 1){
         printf("c ============================[ Search Statistics ]==============================\n");
         printf("c | Conflicts |          ORIGINAL         |          LEARNT          | Progress |\n");
@@ -1523,22 +1533,22 @@ lbool Solver::solve_()
     begin_solve=true;
     // Search:
     int curr_restarts = 0;
-	int puretimes=0;
+    int puretimes=0;
     while (status == l_Undef){
         double rest_base = luby_restart ? luby(restart_inc, curr_restarts-puretimes) : pow(restart_inc, curr_restarts-puretimes);
-		if(restart<stop_pure)
+        if(restart<stop_pure)
         {implement_pure=false;  status = search(rest_base * restart_first);}
-		else if(restart>stop_pure&&(restart-stop_pure)%freq_pure==0)
-		{ implement_pure=true;  status = search((2+puretimes)* restart_first); puretimes++;}
-		else
-		{implement_pure=false; status = search(rest_base * restart_first);}
-		
+        else if(restart>stop_pure&&(restart-stop_pure)%freq_pure==0)
+        { implement_pure=true;  status = search((2+puretimes)* restart_first); puretimes++;}
+        else
+        {implement_pure=false; status = search(rest_base * restart_first);}
+        
         if (!withinBudget()) break;
                 if(!dis_restart) {
         curr_restarts++;restart=curr_restarts;
                 }
-		//if(curr_restarts>stop_pure)
-		//{phase_saving=2;}
+        //if(curr_restarts>stop_pure)
+        //{phase_saving=2;}
     }
 
     if (verbosity >= 1)
@@ -1669,7 +1679,7 @@ void Solver::relocAll(ClauseAllocator& to)
     // All watchers:
     //
     // for (int i = 0; i < watches.size(); i++)
-	//printf("in relocAll\n");
+    //printf("in relocAll\n");
     watches.cleanAll();
     for (int v = 0; v < nVars(); v++)
         for (int s = 0; s < 2; s++){
@@ -1696,14 +1706,14 @@ void Solver::relocAll(ClauseAllocator& to)
 
     // All original:
     //
-	
-		for (int i = 0; i < clauses.size(); i++)
-			{
-			  if(ca[clauses[i]].mark()==0)
-			  ca.reloc(clauses[i], to);
-			}
-		//  printf("out of relocAll\n");
-		
+    
+        for (int i = 0; i < clauses.size(); i++)
+            {
+              if(ca[clauses[i]].mark()==0)
+              ca.reloc(clauses[i], to);
+            }
+        //  printf("out of relocAll\n");
+        
 }
 
 

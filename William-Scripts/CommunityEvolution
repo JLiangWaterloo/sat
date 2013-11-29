@@ -3,22 +3,18 @@
 #####################################
 
 echo "------ Community Evolution ------"
-mkdir -p output
-rm -f output/input.txt
 
-if [ -z "$2" ]; then
-  echo "Enter the dump frequency:"
-  read dump
-else
-  dump="$2"
-fi
-if [ -z "$3" ]; then
-  echo "To use GraphViz enter graphviz or to use UbiGraph enter ubigraph or to Plot edge informatin enter edgeplot or to plot modularity evolution enter modularity:"
-  read graph
-else
-  graph="$3"
-fi
+# Create necessary directories relative to path
+dir_name=$(dirname $0)
+dir_name=${dir_name#"./"}
+mkdir -p "$dir_name"/output
+rm -f "$dir_name"/output/input.txt
 
-mkfifo output/input.txt
-./Helpers/graphHelper.rb output/input.txt $graph n evolution $1 jpg & 
-./../Minipure/binary/minipure $1 -dump-freq=$dump -dump-file=output/input.txt > /dev/null
+if [ -z "$2" ] || [ -z "$3" ]; then
+  echo "Command should be of the following format: ./CommunityEvolution <file path> <dump-frequency> <graphviz or ubigraph or edgeplot or modularity>"
+else
+  # Pipe MiniPure's output to graphHelper
+  mkfifo "$dir_name"/output/input.txt
+./"$dir_name"/Helpers/graphHelper.rb output/input.txt $3 n evolution $1 jpg & 
+./"$dir_name"/../Minipure/binary/minipure $1 -dump-freq=$2 -dump-file=output/input.txt > /dev/null
+fi

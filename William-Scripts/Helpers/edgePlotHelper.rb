@@ -2,11 +2,13 @@
 
 class EdgePlotHelper
 
+  DIR_NAME_EDGE_PLOT = File.expand_path File.dirname(__FILE__)
+
   def initialize(dir_name)
-    @path = 'output/' + dir_name + '/'
+    @path = DIR_NAME_EDGE_PLOT + '/../output/' + dir_name + '/'
     @graph = GraphBuilder.new("edgeplot")
-    system 'rm -f output/edgeTypeCountData.txt'
-    system 'rm -f output/removedEdgeTypeCountData.txt'
+    system 'rm -f ' + DIR_NAME_EDGE_PLOT + '/../output/edgeTypeCountData.txt'
+    system 'rm -f ' + DIR_NAME_EDGE_PLOT + '/../output/removedEdgeTypeCountData.txt'
     @i = 0
   end
   
@@ -14,8 +16,8 @@ class EdgePlotHelper
     puts '  Applying Graph, Snap, and '
     @time1 = Time.now
     
-    system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
-    system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
+    system 'cat ' + @path + 'dump.dimacs | ' + DIR_NAME_EDGE_PLOT + '/../../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+    system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ' + DIR_NAME_EDGE_PLOT + '/../../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
     
     if @i == 0
       system 'diff /dev/null ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
@@ -39,8 +41,8 @@ class EdgePlotHelper
   def finish()
     puts "Finalizing"
     @i = 0
-    system 'gnuplot -persist GnuplotScripts/CommunityVsIntercommunityTotal.gnu'
-    system 'gnuplot -persist GnuplotScripts/CommunityVsIntercommunityRemoved.gnu'
+    system 'gnuplot -persist ' + DIR_NAME_EDGE_PLOT + '/../GnuplotScripts/CommunityVsIntercommunityTotal.gnu'
+    system 'gnuplot -persist ' + DIR_NAME_EDGE_PLOT + '/../GnuplotScripts/CommunityVsIntercommunityRemoved.gnu'
   end
   
   def createCommunities()
@@ -95,7 +97,7 @@ class EdgePlotHelper
     puts "  Populating Node and Edge Information"
     @time1 = Time.now
     
-    system 'echo "' + @i.to_s + ' ' + @graph.getRemovedCommunityEdgeCount().to_s + ' ' + @graph.getRemovedIntercommunityEdgeCount().to_s + '" >> output/removedEdgeTypeCountData.txt'
+    system 'echo "' + @i.to_s + ' ' + @graph.getRemovedCommunityEdgeCount().to_s + ' ' + @graph.getRemovedIntercommunityEdgeCount().to_s + '" >> ' + DIR_NAME_EDGE_PLOT + '/../output/removedEdgeTypeCountData.txt'
     printTime()
   end
   
@@ -103,7 +105,7 @@ class EdgePlotHelper
     puts "  Populating Community Information"
     @time1 = Time.now
     
-    system 'echo "' + @i.to_s + ' ' + @graph.getCommunityEdgeCount().to_s + ' ' + @graph.getIntercommunityEdgeCount().to_s + '" >> output/edgeTypeCountData.txt'
+    system 'echo "' + @i.to_s + ' ' + @graph.getCommunityEdgeCount().to_s + ' ' + @graph.getIntercommunityEdgeCount().to_s + '" >> ' + DIR_NAME_EDGE_PLOT + '/../output/edgeTypeCountData.txt'
     printTime()
   end
   

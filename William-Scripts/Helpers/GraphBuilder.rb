@@ -1,7 +1,9 @@
 #!/usr/bin/env ruby
-load 'Helpers/graphTools.rb'
-load 'Helpers/edgePlotTools.rb'
-load 'Helpers/ubigraphTools.rb'
+DIR_NAME_GRAPH_BUILDER = File.expand_path File.dirname(__FILE__)
+
+load DIR_NAME_GRAPH_BUILDER + '/graphTools.rb'
+load DIR_NAME_GRAPH_BUILDER + '/edgePlotTools.rb'
+load DIR_NAME_GRAPH_BUILDER + '/ubigraphTools.rb'
 
 class GraphBuilder
   

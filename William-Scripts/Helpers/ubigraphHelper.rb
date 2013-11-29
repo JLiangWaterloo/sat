@@ -1,11 +1,12 @@
 #!/usr/bin/env ruby
+DIR_NAME_UBIGRAPH_HELPER = File.expand_path File.dirname(__FILE__)
 
 class UbigraphHelper
 
   def initialize(dir_name, type)
     @graph = GraphBuilder.new("ubigraph")
     @i = 0
-    @path = 'output/' + dir_name + '/'
+    @path = DIR_NAME_UBIGRAPH_HELPER + '/../output/' + dir_name + '/'
     @type = type
   end
   
@@ -14,14 +15,14 @@ class UbigraphHelper
     @time1 = Time.now
     
     if @type == "evolution"
-      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+      system 'cat ' + @path + 'dump.dimacs | ' + DIR_NAME_UBIGRAPH_HELPER + '/../../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
     else
-      system 'cat ' + @path + 'dump.dimacs | ../Haskell/Bcp | ../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
+      system 'cat ' + @path + 'dump.dimacs | ' + DIR_NAME_UBIGRAPH_HELPER + '/../../Haskell/Bcp | ' + DIR_NAME_UBIGRAPH_HELPER + '/../../Haskell/Graph variable > ' + @path + 'graph' + @i.to_s + '.dot'
     end
     
     if @i == 0
       system 'diff /dev/null ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
-      system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
+      system 'cat ' + @path + 'graph' + @i.to_s + '.dot | ' + DIR_NAME_UBIGRAPH_HELPER + '/../../Bin/community -i:/dev/stdin -o:/dev/stdout | grep -v "#" > ' + @path + 'communityMapping.dot'
       createCommunities()
     else
       system 'diff ' + @path + 'graph' + (@i - 1).to_s + '.dot ' + @path + 'graph' + @i.to_s + '.dot > ' + @path + 'addRemoveNodesAndEdges.dot'
